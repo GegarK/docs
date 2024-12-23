@@ -1352,7 +1352,8 @@ export default sidebar(
       "yi",
       "tor",
       "client",
-      "winget"
+      "winget",
+      "wsl"
     ]
   },
 );
