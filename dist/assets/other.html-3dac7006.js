@@ -1,0 +1,1 @@
+import{_ as t,K as a,L as c,a5 as r,M as e,N as s,F as n}from"./framework-edebdfe1.js";const _={},d=e("h1",{id:"其它硬件",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#其它硬件","aria-hidden":"true"},"#"),s(" 其它硬件")],-1);function h(l,i){const o=n("DocsAD");return a(),c("div",null,[d,r(o)])}const m=t(_,[["render",h],["__file","other.html.vue"]]);export{m as default};

@@ -1,0 +1,1 @@
+import{_ as t,K as a,L as c,M as e,N as r}from"./framework-edebdfe1.js";const s={},o=e("h1",{id:"tl-b",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#tl-b","aria-hidden":"true"},"#"),r(" TL-B")],-1),n=[o];function _(l,d){return a(),c("div",null,n)}const h=t(s,[["render",_],["__file","tlb.html.vue"]]);export{h as default};

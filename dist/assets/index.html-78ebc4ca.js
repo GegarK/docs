@@ -1,0 +1,1 @@
+import{_ as c,K as t,L as r,M as e,N as a}from"./framework-edebdfe1.js";const o={},n=e("h1",{id:"ccproxy工具",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#ccproxy工具","aria-hidden":"true"},"#"),a(" CCProxy工具")],-1),s=[n];function _(d,i){return t(),r("div",null,s)}const l=c(o,[["render",_],["__file","index.html.vue"]]);export{l as default};

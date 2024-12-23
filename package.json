@@ -1,0 +1,38 @@
+{
+  "name": "geekfz-docs",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs && copy ads.txt dist/ads.txt",
+    "docs:test": "echo 1 && copy ads.txt dist/ads.txt",
+    "docs:lint": "prettier --check --write docs/",
+    "docs:clean-dev": "vuepress dev docs --no-cache"
+  },
+  "dependencies": {
+    "@vuepress/client": "2.0.0-beta.61",
+    "@vuepress/plugin-docsearch": "2.0.0-beta.61",
+    "@vuepress/utils": "2.0.0-beta.61",
+    "vue": "^3.2.47",
+    "vuepress": "2.0.0-beta.61",
+    "vuepress-theme-hope": "2.0.0-beta.190"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-register-components": "^2.0.0-beta.61",
+    "@vuepress/plugin-search": "^2.0.0-beta.61",
+    "prettier": "2.8.4",
+    "vuepress-plugin-components": "^2.0.0-beta.197",
+    "vuepress-plugin-copyright2": "^2.0.0-beta.197",
+    "vuepress-plugin-search-pro": "^2.0.0-beta.199",
+    "vuepress-plugin-seo2": "^2.0.0-beta.197"
+  },
+  "packageManager": "pnpm@7.29.1",
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search"
+      ]
+    }
+  }
+}

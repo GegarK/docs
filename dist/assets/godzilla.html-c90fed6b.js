@@ -1,0 +1,1 @@
+import{_ as a,K as o,L as t,M as e,N as l}from"./framework-edebdfe1.js";const c={},d=e("h1",{id:"哥斯拉godzilla",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#哥斯拉godzilla","aria-hidden":"true"},"#"),l(" 哥斯拉Godzilla")],-1),r=[d];function s(i,n){return o(),t("div",null,r)}const h=a(c,[["render",s],["__file","godzilla.html.vue"]]);export{h as default};

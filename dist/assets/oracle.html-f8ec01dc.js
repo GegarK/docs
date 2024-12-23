@@ -1,0 +1,1 @@
+import{_ as o,K as c,L as t,a5 as r,M as e,N as s,F as n}from"./framework-edebdfe1.js";const _={},d=e("h1",{id:"外部数据源",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#外部数据源","aria-hidden":"true"},"#"),s(" 外部数据源")],-1);function l(i,h){const a=n("DocsAD");return c(),t("div",null,[d,r(a)])}const m=o(_,[["render",l],["__file","oracle.html.vue"]]);export{m as default};

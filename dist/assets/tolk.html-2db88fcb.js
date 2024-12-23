@@ -1,0 +1,1 @@
+import{_ as t,K as o,L as a,M as e,N as c}from"./framework-edebdfe1.js";const r={},s=e("h1",{id:"tolk",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#tolk","aria-hidden":"true"},"#"),c(" TOLK")],-1),n=[s];function _(l,d){return o(),a("div",null,n)}const h=t(r,[["render",_],["__file","tolk.html.vue"]]);export{h as default};

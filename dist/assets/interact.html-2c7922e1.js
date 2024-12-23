@@ -1,0 +1,1 @@
+import{_ as t,K as a,L as c,M as e,N as r}from"./framework-edebdfe1.js";const n={},s=e("h1",{id:"合约交互",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#合约交互","aria-hidden":"true"},"#"),r(" 合约交互")],-1),o=[s];function _(d,i){return a(),c("div",null,o)}const l=t(n,[["render",_],["__file","interact.html.vue"]]);export{l as default};

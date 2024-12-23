@@ -1,0 +1,1 @@
+import{_ as t,K as a,L as r,M as e,N as o}from"./framework-edebdfe1.js";const c={},s=e("h1",{id:"其它设备",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#其它设备","aria-hidden":"true"},"#"),o(" 其它设备")],-1),n=[s];function _(d,h){return a(),r("div",null,n)}const l=t(c,[["render",_],["__file","other.html.vue"]]);export{l as default};

@@ -1,0 +1,1 @@
+import{_ as a,K as d,L as r,M as e,N as o}from"./framework-edebdfe1.js";const t={},n=e("h1",{id:"android",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#android","aria-hidden":"true"},"#"),o(" Android")],-1),c=[n];function s(i,_){return d(),r("div",null,c)}const l=a(t,[["render",s],["__file","android.html.vue"]]);export{l as default};

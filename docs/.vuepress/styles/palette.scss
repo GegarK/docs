@@ -1,0 +1,49 @@
+$bg-color: (
+  light: #fff,
+  dark: #1e1e1e,
+);
+
+.notice-footer-action {
+  margin-left: 144px;
+}
+
+.feature-item:hover {
+  background-color: #2e4c3f;
+  box-shadow: 0 2px 12px 0 var(--card-shadow);
+  transform: scale(1.05);
+}
+
+.sidebar-link.active {
+  background: #2e4c3f;
+  color: var(--theme-color);
+  font-weight: 500;
+}
+
+.sidebar-link:hover {
+  background: rgba(52, 134, 97, 0.15);
+}
+
+:root {
+  --notice-width: 290px;
+  --search-input-width: 12rem !important;
+}
+
+.notice-footer-action {
+  margin-left: 4px;
+}
+
+html[data-theme=dark] .reveal[data-theme=auto] .controls {
+  color: rgb(62 175 124);
+}
+
+html[data-theme=dark] .reveal[data-theme=auto] a {
+  color: rgb(62 175 124);
+}
+
+html[data-theme=dark] .reveal[data-theme=auto] .progress {
+  color: rgb(62 175 124);
+}
+
+html[data-theme=dark] .reveal[data-theme=auto] a:hover {
+  color: #43ffaa;
+}

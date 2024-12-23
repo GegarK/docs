@@ -1,0 +1,1 @@
+import{_ as s,K as a,L as o,a5 as t,M as e,N as n,F as r}from"./framework-edebdfe1.js";const _={},d=e("h1",{id:"jsfuck编码",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#jsfuck编码","aria-hidden":"true"},"#"),n(" JSFUCK编码")],-1);function f(l,i){const c=r("DocsAD");return a(),o("div",null,[d,t(c)])}const h=s(_,[["render",f],["__file","jsfuck.html.vue"]]);export{h as default};

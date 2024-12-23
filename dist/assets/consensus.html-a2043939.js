@@ -1,0 +1,1 @@
+import{_ as s,K as t,L as a,M as e,N as c}from"./framework-edebdfe1.js";const n={},o=e("h1",{id:"共识",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#共识","aria-hidden":"true"},"#"),c(" 共识")],-1),r=[o];function _(d,i){return t(),a("div",null,r)}const l=s(n,[["render",_],["__file","consensus.html.vue"]]);export{l as default};

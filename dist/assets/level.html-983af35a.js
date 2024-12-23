@@ -1,0 +1,1 @@
+import{_ as o,K as t,L as c,a5 as s,M as e,N as n,F as r}from"./framework-edebdfe1.js";const _={},l=e("h1",{id:"等级保护",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#等级保护","aria-hidden":"true"},"#"),n(" 等级保护")],-1);function d(i,h){const a=r("DocsAD");return t(),c("div",null,[l,s(a)])}const m=o(_,[["render",d],["__file","level.html.vue"]]);export{m as default};

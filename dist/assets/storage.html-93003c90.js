@@ -1,0 +1,1 @@
+import{_ as t,K as a,L as r,M as e,N as s}from"./framework-edebdfe1.js";const o={},c=e("h1",{id:"存储",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#存储","aria-hidden":"true"},"#"),s(" 存储")],-1),n=[c];function _(d,i){return a(),r("div",null,n)}const l=t(o,[["render",_],["__file","storage.html.vue"]]);export{l as default};

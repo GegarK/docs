@@ -1,0 +1,7 @@
+import{_ as e,K as a,L as i,W as d}from"./framework-edebdfe1.js";const l={},n=d(`<h1 id="smali动态调试" tabindex="-1"><a class="header-anchor" href="#smali动态调试" aria-hidden="true">#</a> SMALI动态调试</h1><h2 id="安卓调试apk-smali" tabindex="-1"><a class="header-anchor" href="#安卓调试apk-smali" aria-hidden="true">#</a> 安卓调试APK(Smali)</h2><ul><li>修改androikdmanifest</li></ul><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code> &lt;application
+        // 支持debug
+        android:debuggable=&quot;true&quot;
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul><li>开启调试APP</li></ul><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>adb shell am start -D -n com.deelmind.main.ctf/.MainActivity
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><ul><li>端口转发</li></ul><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>adb shell ps | findstr com.deelmind.main.ctf
+adb forward tcp:5005 jdwp:pid
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>`,8),s=[n];function t(r,c){return a(),i("div",null,s)}const m=e(l,[["render",t],["__file","smalidbg.html.vue"]]);export{m as default};

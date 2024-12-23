@@ -1,0 +1,1 @@
+import{_ as t,K as a,L as s,M as e,N as o}from"./framework-edebdfe1.js";const c={},r=e("h1",{id:"拒绝服务",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#拒绝服务","aria-hidden":"true"},"#"),o(" 拒绝服务")],-1),d=[r];function n(_,i){return a(),s("div",null,d)}const l=t(c,[["render",n],["__file","ddos.html.vue"]]);export{l as default};

@@ -1,0 +1,1 @@
+import{_ as t,K as a,L as c,M as e,N as o}from"./framework-edebdfe1.js";const r={},s=e("h1",{id:"逻辑漏洞",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#逻辑漏洞","aria-hidden":"true"},"#"),o(" 逻辑漏洞")],-1),n=[s];function _(d,i){return a(),c("div",null,n)}const h=t(r,[["render",_],["__file","logic.html.vue"]]);export{h as default};

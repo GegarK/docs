@@ -1,0 +1,25 @@
+# WEB2.0漏洞
+
+::: warning DeeLMind 推荐
+[PortSwigger的靶场](https://portswigger.net/web-security/all-labs)比较全面，建议新手先全部学习完毕，再去学习其它靶场! 你想学会就按照我的首页的视频[顺序学习](/pay/video)，否则容易浪费时间。
+:::
+
+<DocsAD/>
+
+## 小白WEB安全入门
+
+[YouTube系列教程](https://www.youtube.com/watch?v=k9_QbPCAvGs&list=PLgZqc0esdeS-NJms7NYexeMHKLpfAi5HY)
+<iframe width="720px" height="480px" src="https://www.youtube.com/embed/k9_QbPCAvGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[B站系列教程](https://www.bilibili.com/medialist/play/282616786?from=space&business=space_series&business_id=1744021&desc=1&spm_id_from=333.999.0.0)
+<iframe src="//player.bilibili.com/player.html?aid=60799620&bvid=BV1Ft41177FT&cid=105806441&page=1"  frameborder="no"  allowfullscreen="true" style="width:720px;height:480px"> 
+</iframe>
+
+## 其它漏洞
+
+[YouTube系列教程](https://www.youtube.com/watch?v=Dsy9CxjNCYE&list=PLgZqc0esdeS-AEqmdmoxroGu5b08Wbb0f)
+<iframe width="720px" height="480px" src="https://www.youtube.com/embed/Dsy9CxjNCYE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[B站系列教程](https://www.bilibili.com/medialist/play/282616786?from=space&business=space_series&business_id=2262479&desc=1&spm_id_from=333.999.0.0)
+<iframe src="//player.bilibili.com/player.html?aid=641345810&bvid=BV18Y4y1b7hk&cid=711950088&page=1"  frameborder="no"  allowfullscreen="true" style="width:720px;height:480px"> 
+</iframe>

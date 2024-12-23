@@ -1,0 +1,1 @@
+import{_ as t,K as a,L as s,M as e,N as c}from"./framework-edebdfe1.js";const n={},r=e("h1",{id:"钓鱼攻击",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#钓鱼攻击","aria-hidden":"true"},"#"),c(" 钓鱼攻击")],-1),o=[r];function _(i,h){return a(),s("div",null,o)}const l=t(n,[["render",_],["__file","phishing.html.vue"]]);export{l as default};

@@ -1,0 +1,1 @@
+import{_ as s,K as t,L as c,M as e,N as r}from"./framework-edebdfe1.js";const o={},i=e("h1",{id:"decision-trees",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#decision-trees","aria-hidden":"true"},"#"),r(" Decision Trees")],-1),n=[i];function a(d,_){return t(),c("div",null,n)}const l=s(o,[["render",a],["__file","decisiontrees.html.vue"]]);export{l as default};

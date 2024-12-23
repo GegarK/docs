@@ -1,0 +1,1 @@
+import{_ as t,K as a,L as c,M as e,N as r}from"./framework-edebdfe1.js";const s={},o=e("h1",{id:"jeb",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#jeb","aria-hidden":"true"},"#"),r(" JEB")],-1),n=[o];function _(d,i){return a(),c("div",null,n)}const l=t(s,[["render",_],["__file","jeb.html.vue"]]);export{l as default};

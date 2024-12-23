@@ -1,0 +1,1 @@
+import{_ as s,K as o,L as t,a5 as c,M as e,N as n,F as r}from"./framework-edebdfe1.js";const _={},d=e("h1",{id:"base编码",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#base编码","aria-hidden":"true"},"#"),n(" Base编码")],-1);function l(i,h){const a=r("DocsAD");return o(),t("div",null,[d,c(a)])}const m=s(_,[["render",l],["__file","base.html.vue"]]);export{m as default};

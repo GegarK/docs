@@ -1,0 +1,1 @@
+import{_ as a,K as t,L as r,M as e,N as o}from"./framework-edebdfe1.js";const c={},s=e("h1",{id:"主板",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#主板","aria-hidden":"true"},"#"),o(" 主板")],-1),n=[s];function _(d,i){return t(),r("div",null,n)}const l=a(c,[["render",_],["__file","mboard.html.vue"]]);export{l as default};

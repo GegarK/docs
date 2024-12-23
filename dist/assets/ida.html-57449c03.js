@@ -1,0 +1,1 @@
+import{_ as a,K as t,L as c,M as e,N as r}from"./framework-edebdfe1.js";const s={},d=e("h1",{id:"ida",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#ida","aria-hidden":"true"},"#"),r(" IDA")],-1),o=[d];function n(_,i){return t(),c("div",null,o)}const l=a(s,[["render",n],["__file","ida.html.vue"]]);export{l as default};

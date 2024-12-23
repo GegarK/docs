@@ -1,0 +1,1 @@
+import{_ as t,K as a,L as r,M as e,N as c}from"./framework-edebdfe1.js";const s={},o=e("h1",{id:"蜂鸣器模块",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#蜂鸣器模块","aria-hidden":"true"},"#"),c(" 蜂鸣器模块")],-1),n=[o];function _(d,i){return a(),r("div",null,n)}const l=t(s,[["render",_],["__file","buzzer.html.vue"]]);export{l as default};

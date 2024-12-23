@@ -1,0 +1,10 @@
+import{_ as e,K as t,L as o,a5 as l,M as n,N as s,W as c,F as p}from"./framework-edebdfe1.js";const i={},r=n("h1",{id:"编译生成",tabindex:"-1"},[n("a",{class:"header-anchor",href:"#编译生成","aria-hidden":"true"},"#"),s(" 编译生成")],-1),d=n("h2",{id:"编译优化",tabindex:"-1"},[n("a",{class:"header-anchor",href:"#编译优化","aria-hidden":"true"},"#"),s(" 编译优化")],-1),u=n("ul",null,[n("li",null,"tauri build --release")],-1),m=c(`<div class="language-toml line-numbers-mode" data-ext="toml"><pre class="language-toml"><code><span class="token punctuation">[</span><span class="token table class-name">profile.release</span><span class="token punctuation">]</span>
+<span class="token comment"># 优化等级为 z 会更专注于大小而非速度</span>
+<span class="token key property">opt-level</span> <span class="token punctuation">=</span> <span class="token string">&quot;z&quot;</span>
+<span class="token comment"># 移除调试信息</span>
+<span class="token key property">debug</span> <span class="token punctuation">=</span> <span class="token boolean">false</span>
+<span class="token comment"># 省略不常用的符号</span>
+<span class="token key property">lto</span> <span class="token punctuation">=</span> <span class="token boolean">true</span>  <span class="token comment"># 启用链式时间优化 (Link-Time Optimization)</span>
+<span class="token key property">codegen-units</span> <span class="token punctuation">=</span> <span class="token number">1</span>  <span class="token comment"># 减少代码生成单位数</span>
+<span class="token key property">panic</span> <span class="token punctuation">=</span> <span class="token string">&quot;abort&quot;</span>  <span class="token comment"># 减小错误处理部分的大小</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,1);function k(v,b){const a=p("DocsAD");return t(),o("div",null,[r,d,u,l(a),m])}const h=e(i,[["render",k],["__file","build.html.vue"]]);export{h as default};

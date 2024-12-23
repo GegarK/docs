@@ -1,0 +1,1 @@
+import{_ as t,K as a,L as r,M as e,N as o}from"./framework-edebdfe1.js";const c={},s=e("h1",{id:"portmap",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#portmap","aria-hidden":"true"},"#"),o(" PortMap")],-1),n=[s];function _(d,p){return a(),r("div",null,n)}const h=t(c,[["render",_],["__file","portmap.html.vue"]]);export{h as default};

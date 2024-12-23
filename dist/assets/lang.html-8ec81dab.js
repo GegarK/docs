@@ -1,0 +1,1 @@
+import{_ as a,K as t,L as o,M as e,N as c}from"./framework-edebdfe1.js";const n={},r=e("h1",{id:"move语法",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#move语法","aria-hidden":"true"},"#"),c(" MOVE语法")],-1),s=[r];function _(d,l){return t(),o("div",null,s)}const h=a(n,[["render",_],["__file","lang.html.vue"]]);export{h as default};

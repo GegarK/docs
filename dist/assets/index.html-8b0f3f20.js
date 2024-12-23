@@ -1,0 +1,1 @@
+import{_ as a,K as t,L as n,M as e,N as r}from"./framework-edebdfe1.js";const c={},d=e("h1",{id:"raiden",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#raiden","aria-hidden":"true"},"#"),r(" Raiden")],-1),s=[d];function o(i,_){return t(),n("div",null,s)}const l=a(c,[["render",o],["__file","index.html.vue"]]);export{l as default};

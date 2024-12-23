@@ -1,0 +1,1 @@
+import{_ as t,K as a,L as r,M as e,N as o}from"./framework-edebdfe1.js";const c={},s=e("h1",{id:"代理升级",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#代理升级","aria-hidden":"true"},"#"),o(" 代理升级")],-1),n=[s];function _(d,i){return a(),r("div",null,n)}const l=t(c,[["render",_],["__file","proxy.html.vue"]]);export{l as default};

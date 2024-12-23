@@ -1,0 +1,1 @@
+import{_ as o,K as t,L as c,a5 as n,M as e,N as s,F as r}from"./framework-edebdfe1.js";const _={},d=e("h1",{id:"模拟电路",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#模拟电路","aria-hidden":"true"},"#"),s(" 模拟电路")],-1);function l(i,h){const a=r("DocsAD");return t(),c("div",null,[d,n(a)])}const m=o(_,[["render",l],["__file","analog.html.vue"]]);export{m as default};

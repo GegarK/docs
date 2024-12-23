@@ -1,0 +1,1 @@
+import{_ as o,K as t,L as a,M as e,N as n}from"./framework-edebdfe1.js";const c={},r=e("h1",{id:"mongodb编程",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#mongodb编程","aria-hidden":"true"},"#"),n(" MONGODB编程")],-1),s=[r];function d(_,i){return t(),a("div",null,s)}const l=o(c,[["render",d],["__file","mongodb.html.vue"]]);export{l as default};

@@ -1,0 +1,1 @@
+import{_ as s,K as a,L as o,a5 as c,M as e,N as n,F as r}from"./framework-edebdfe1.js";const _={},d=e("h1",{id:"sftp",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#sftp","aria-hidden":"true"},"#"),n(" SFTP")],-1);function f(l,i){const t=r("DocsAD");return a(),o("div",null,[d,c(t)])}const h=s(_,[["render",f],["__file","sftp.html.vue"]]);export{h as default};

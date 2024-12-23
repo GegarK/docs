@@ -1,0 +1,1 @@
+import{_ as a,K as s,L as t,M as e,N as c}from"./framework-edebdfe1.js";const r={},o=e("h1",{id:"消息",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#消息","aria-hidden":"true"},"#"),c(" 消息")],-1),n=[o];function _(d,i){return s(),t("div",null,n)}const l=a(r,[["render",_],["__file","message.html.vue"]]);export{l as default};

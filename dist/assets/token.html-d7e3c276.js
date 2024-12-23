@@ -1,0 +1,1 @@
+import{_ as t,K as o,L as a,M as e,N as n}from"./framework-edebdfe1.js";const c={},r=e("h1",{id:"token代币",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#token代币","aria-hidden":"true"},"#"),n(" TOKEN代币")],-1),s=[r];function _(d,i){return o(),a("div",null,s)}const l=t(c,[["render",_],["__file","token.html.vue"]]);export{l as default};

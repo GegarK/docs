@@ -1,0 +1,1 @@
+import{_ as r,K as t,L as a,M as e,N as s}from"./framework-edebdfe1.js";const o={},n=e("h1",{id:"transformer",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#transformer","aria-hidden":"true"},"#"),s(" Transformer")],-1),c=[n];function _(d,f){return t(),a("div",null,c)}const m=r(o,[["render",_],["__file","transformer.html.vue"]]);export{m as default};

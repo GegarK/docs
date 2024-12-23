@@ -1,0 +1,1 @@
+import{_ as t,K as o,L as n,M as e,N as a}from"./framework-edebdfe1.js";const c={},r=e("h1",{id:"jetton",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#jetton","aria-hidden":"true"},"#"),a(" Jetton")],-1),s=[r];function _(d,i){return o(),n("div",null,s)}const l=t(c,[["render",_],["__file","jetton.html.vue"]]);export{l as default};

@@ -1,0 +1,4 @@
+import{_ as a,K as n,L as t,a5 as o,M as e,N as c,W as r,F as i}from"./framework-edebdfe1.js";const d={},l=e("h1",{id:"代理搭建",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#代理搭建","aria-hidden":"true"},"#"),c(" 代理搭建")],-1),h=r(`<div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token function">wget</span> https://git.io/v2ray.sh
+<span class="token function">chmod</span> <span class="token number">777</span> ./v2ray.sh
+<span class="token function">sudo</span> ./v2ray.sh
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,1);function p(u,_){const s=i("DocsAD");return n(),t("div",null,[l,o(s),h])}const v=a(d,[["render",p],["__file","proxy.html.vue"]]);export{v as default};

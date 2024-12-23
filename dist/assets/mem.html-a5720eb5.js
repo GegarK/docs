@@ -1,0 +1,1 @@
+import{_ as t,K as a,L as c,M as e,N as r}from"./framework-edebdfe1.js";const s={},o=e("h1",{id:"内存操作",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#内存操作","aria-hidden":"true"},"#"),r(" 内存操作")],-1),n=[o];function _(d,i){return a(),c("div",null,n)}const l=t(s,[["render",_],["__file","mem.html.vue"]]);export{l as default};
