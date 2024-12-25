@@ -1,0 +1,1 @@
+import{_ as t,K as a,L as c,M as e,N as r}from"./framework-edebdfe1.js";const o={},n=e("h1",{id:"创建账户",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#创建账户","aria-hidden":"true"},"#"),r(" 创建账户")],-1),s=[n];function _(d,i){return a(),c("div",null,s)}const l=t(o,[["render",_],["__file","accountcreate.html.vue"]]);export{l as default};

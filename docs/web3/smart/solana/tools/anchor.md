@@ -38,4 +38,8 @@ pub struct Initialize {}
 
 * anchor deploy
 
+* 上传IDL
+
+`anchor idl init -f ./target/idl/hello.json HHpyXUa97M6v9i5C5qK375JiYjckMEEDBaCLAA1SMSmv`
+
 <DocsAD/>

@@ -1,0 +1,1 @@
+import{_ as t,K as c,L as o,a5 as n,M as e,N as s,F as r}from"./framework-edebdfe1.js";const _={},d=e("h1",{id:"账号数据",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#账号数据","aria-hidden":"true"},"#"),s(" 账号数据")],-1);function l(i,h){const a=r("DocsAD");return c(),o("div",null,[d,n(a)])}const m=t(_,[["render",l],["__file","accountdata.html.vue"]]);export{m as default};

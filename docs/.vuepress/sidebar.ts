@@ -675,6 +675,10 @@ export default sidebar(
     "/web3/smart/solana/rust":[
       "",
       "helloworld",
+      "accountcreate",
+      "accountclose",
+      "accountcheck",
+      "accountdata",
       "pda",
       "cpi",
       "spl",

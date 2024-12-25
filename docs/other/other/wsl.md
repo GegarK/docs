@@ -18,6 +18,8 @@ WSL（Windows Subsystem for Linux）是微软推出的一种在 Windows 上运�
    - 打开 PowerShell 以管理员身份运行，并输入以下命令：
    
      ```powershell
+     dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+     dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all
      wsl --install
      wsl --unregister ubuntu 卸载
      ```
@@ -88,9 +90,15 @@ WSL（Windows Subsystem for Linux）是微软推出的一种在 Windows 上运�
 ## 安装目录
 
 * [下载指定Linux](https://learn.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions)
-* 手动安装
+* 导入Linux
 
-## 虚拟机冲突
+`wsl --export ubuntu D://wsl_linux/ubuntu`
+
+* 导入Linux
+
+` wsl --import ubuntu D:\WSL_Linux\ubuntu\ubuntu D:\WSL_Linux\ubuntu\ubuntu.tar`
+
+## 虚拟机冲突W
 
 * WSL 2 和 Hyper-V 是兼容的，因为 WSL 2 依赖 Hyper-V 来虚拟化 Linux 内核。
 

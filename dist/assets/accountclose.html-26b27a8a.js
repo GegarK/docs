@@ -1,0 +1,1 @@
+import{_ as c,K as t,L as a,M as e,N as o}from"./framework-edebdfe1.js";const s={},n=e("h1",{id:"关闭账户",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#关闭账户","aria-hidden":"true"},"#"),o(" 关闭账户")],-1),r=[n];function _(d,l){return t(),a("div",null,r)}const h=c(s,[["render",_],["__file","accountclose.html.vue"]]);export{h as default};

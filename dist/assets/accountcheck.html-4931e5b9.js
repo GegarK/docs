@@ -1,0 +1,1 @@
+import{_ as c,K as t,L as a,M as e,N as o}from"./framework-edebdfe1.js";const n={},r=e("h1",{id:"账号检查",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#账号检查","aria-hidden":"true"},"#"),o(" 账号检查")],-1),s=[r];function _(d,h){return t(),a("div",null,s)}const l=c(n,[["render",_],["__file","accountcheck.html.vue"]]);export{l as default};
