@@ -1357,6 +1357,7 @@ export default sidebar(
       "client",
       "winget",
       "wsl",
+      "hyperv",
       "discourse",
       "flarum",
     ]

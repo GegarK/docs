@@ -98,6 +98,13 @@ WSL（Windows Subsystem for Linux）是微软推出的一种在 Windows 上运�
 
 ` wsl --import ubuntu D:\WSL_Linux\ubuntu\ubuntu D:\WSL_Linux\ubuntu\ubuntu.tar`
 
+* Kali
+
+`sudo apt install -y kali-win-kex`
+
+`kex stop`
+
+
 ## 虚拟机冲突W
 
 * WSL 2 和 Hyper-V 是兼容的，因为 WSL 2 依赖 Hyper-V 来虚拟化 Linux 内核。
