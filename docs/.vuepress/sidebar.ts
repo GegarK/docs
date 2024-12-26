@@ -578,7 +578,6 @@ export default sidebar(
       "dep",
       "mint",
       "monitor",
-      "trade",
       "script"
     ],
 
@@ -1357,7 +1356,9 @@ export default sidebar(
       "tor",
       "client",
       "winget",
-      "wsl"
+      "wsl",
+      "discourse",
+      "flarum",
     ]
   },
 );

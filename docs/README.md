@@ -24,7 +24,7 @@ actions:
     link: /pay/platform
     type: primary
 
-  - text: 新手免费渗透课程路线👇
+  - text: 新手【免费】渗透安全【视频教程】学习👇路线👇
     link: /pay/video
     type: primary
 

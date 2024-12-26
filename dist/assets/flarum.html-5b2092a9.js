@@ -1,0 +1,1 @@
+import{_ as a,K as r,L as t,M as e,N as c}from"./framework-edebdfe1.js";const s={},o=e("h1",{id:"flarum",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#flarum","aria-hidden":"true"},"#"),c(" Flarum")],-1),n=[o];function _(l,d){return r(),t("div",null,n)}const i=a(s,[["render",_],["__file","flarum.html.vue"]]);export{i as default};
