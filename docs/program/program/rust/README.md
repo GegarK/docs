@@ -1,5 +1,10 @@
 # RUST编程
 
+::: warning 極客方舟 RUST安全
+[https://github.com/DeeLMind](https://github.com/DeeLMind)`RustSecArk`
+:::
+
+
 ## 帮助文档
 
 * [官网](https://www.rust-lang.org/)

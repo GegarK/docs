@@ -4,6 +4,12 @@
 
 <DocsAD/>
 
+## 安装目录修改环境变量
+
+* CARGO_HOME
+* RUSTUP_HOME
+
+
 ## [下载换源](https://rsproxy.cn/)
 
 ```sh

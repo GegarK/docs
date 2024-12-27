@@ -45,6 +45,7 @@ export default navbar([
       { text: "漏洞挖掘", link: "/reverse/exploits/", icon: "arrow" },
       { text: "游戏安全", link: "/reverse/game/", icon: "arrow" },
       { text: "病毒分析", link: "/reverse/virus/", icon: "arrow" },
+      { text: "RUST安全", link: "/program/program/rust", icon: "arrow" },
     ]
   },
   {
