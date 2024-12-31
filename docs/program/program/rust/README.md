@@ -7,6 +7,12 @@
 
 ## 帮助文档
 
+::: warning 極客方舟 RUST开发
+Rust教程文档会更新到Github
+
+[https://github.com/DeeLMind](https://github.com/DeeLMind)`RustSecArk`
+:::
+
 * [官网](https://www.rust-lang.org/)
 
 * [帮助文档](https://course.rs/)
