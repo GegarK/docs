@@ -1101,6 +1101,12 @@ export default sidebar(
       "se",
       "ddos/",
       "app/",
+      "dnshajack/",
+    ],
+
+    "/pentest/dnshajack/":[
+      "",
+      "exp",
     ],
 
     "/pentest/app/":[
