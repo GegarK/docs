@@ -8,7 +8,7 @@
 ## 帮助文档
 
 ::: warning 極客方舟 RUST开发
-Rust教程文档会更新到Github
+Rust教程文档会更新到Github，所有的Rust相关内容以后都会分享到以下的网站！！！
 
 [https://github.com/DeeLMind](https://github.com/DeeLMind)`RustSecArk`
 :::
