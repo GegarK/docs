@@ -11,10 +11,13 @@
 export default {
     setup(){
           onMounted(() => {
-            var deelmind = document.getElementsByClassName("deelmind");
-            for (var i = 0; i < deelmind.length; i++) {
-                deelmind[i].style.color = "#de283b"; // Replace "red" with any color you prefer
-            }
+            setInterval(function() {
+                var deelmind = document.getElementsByClassName("deelmind");
+            
+                for (var i = 0; i < deelmind.length; i++) {
+                    deelmind[i].style.color = "#de283b"; // Replace "red" with any color you prefer
+                }
+            }, 100);
 
             function isMobile() {
                 return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
