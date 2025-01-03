@@ -459,7 +459,8 @@ export default sidebar(
       "arb",
       "mp",
       "qt",
-      "runes"
+      "runes",
+      "fin"
     ],
 
     "/web3/bc/":[

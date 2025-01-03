@@ -15,7 +15,7 @@ export default {
                 var deelmind = document.getElementsByClassName("deelmind");
             
                 for (var i = 0; i < deelmind.length; i++) {
-                    deelmind[i].style.color = "#de283b"; // Replace "red" with any color you prefer
+                    deelmind[i].style.color = "#c94251"; // Replace "red" with any color you prefer
                 }
             }, 100);
 
