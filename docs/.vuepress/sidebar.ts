@@ -426,7 +426,8 @@ export default sidebar(
       "data",
       "alg",
       "ethusdt",
-      "predict"
+      "predict",
+      "freqtrade"
     ],
 
     "/web3/wallet/":[
