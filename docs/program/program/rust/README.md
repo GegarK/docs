@@ -1,7 +1,7 @@
 # RUST编程
 
 ::: warning 極客方舟 RUST安全
-[https://github.com/DeeLMind](https://github.com/DeeLMind)`RustSecArk`
+[https://github.com/DeeLMind/RustSecArk](https://github.com/DeeLMind/RustSecArk)
 :::
 
 
@@ -10,7 +10,7 @@
 ::: warning 極客方舟 RUST开发
 Rust教程文档会更新到Github，所有的Rust相关内容以后都会分享到以下的网站！！！
 
-[https://github.com/DeeLMind](https://github.com/DeeLMind)`RustSecArk`
+[https://github.com/DeeLMind/RustSecArk](https://github.com/DeeLMind/RustSecArk)
 :::
 
 * [官网](https://www.rust-lang.org/)

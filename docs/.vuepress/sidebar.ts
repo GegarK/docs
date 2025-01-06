@@ -394,12 +394,12 @@ export default sidebar(
       "coin",
       "tokenrescue",
       "smart",
-      "analyse",
       "ai",
       "poc",
       "vulns",
       "tools",
-      "other"
+      "other",
+      "analyse",
     ],
 
     "/web3/other/":[

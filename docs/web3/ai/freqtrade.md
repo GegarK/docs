@@ -1,6 +1,6 @@
 # Freqtrade
 
-[Freqtrade](https://www.freqtrade.io/) 是一个开源的加密货币交易机器人框架，专为自动化交易而设计，支持各种策略和技术分析。
+[Freqtrade](https://www.freqtrade.io/) 是一个开源的加密货币交易机器人框架，专为自动化交易而设计，支持各种策略和技术分析。[教学](../../pay/alive.md)
 
 <DocsAD/>
 
