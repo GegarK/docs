@@ -1,4 +1,4 @@
-# K8S
+# Kubernetes
 
 ## 什么是 [Kubernetes](https://kubernetes.io/)
 

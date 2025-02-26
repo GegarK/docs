@@ -57,6 +57,16 @@ export default sidebar(
       "forensics"
     ],
 
+    "/mind/group/":[
+      "",
+      "LazarusGroup",
+    ],
+
+    "/mind/news/":[
+      "",
+      "bybit20250221"
+    ],
+
     "/program/":[
       "program/",
     ],
@@ -524,6 +534,7 @@ export default sidebar(
     "/web3/tools/":[
       "",
       "protect",
+      "fk",
       "slither",
       "ityfuzz",
       "trident"

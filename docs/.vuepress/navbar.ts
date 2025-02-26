@@ -17,6 +17,8 @@ export default navbar([
       { text: "人工智能", link: "/mind/ai/", icon: "arrow" },
       { text: "技能组合", link: "/mind/skill/", icon: "arrow" },
       { text: "抵制八股", link: "/mind/bagu", icon: "arrow" },
+      { text: "安全事件", link: "/mind/news", icon: "arrow" },
+      { text: "黑客组织", link: "/mind/group", icon: "arrow" },
     ]
   },
   { 

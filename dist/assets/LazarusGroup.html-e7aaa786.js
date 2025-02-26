@@ -1,0 +1,1 @@
+import{_ as a,K as r,L as s,M as e,N as o}from"./framework-edebdfe1.js";const t={},c=e("h1",{id:"lazarusgroup",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#lazarusgroup","aria-hidden":"true"},"#"),o(" LazarusGroup")],-1),n=[c];function u(_,d){return r(),s("div",null,n)}const i=a(t,[["render",u],["__file","LazarusGroup.html.vue"]]);export{i as default};
