@@ -1276,7 +1276,8 @@ export default sidebar(
       "chat",
       "image",
       "mvideo",
-      "ollama"
+      "ollama",
+      "mcp"
     ],
     "/ctf/":[
       "",
