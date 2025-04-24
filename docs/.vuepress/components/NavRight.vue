@@ -74,7 +74,7 @@
       window.open("https://tool.deelmind.com"); 
     },
     clickTspaceY(){
-      window.open("https://tspacey.deelmind.com/"); 
+      window.open("https://tspacey.com/"); 
     },
     clickpan(){
       window.open("#"); 
