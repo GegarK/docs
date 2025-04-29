@@ -1332,6 +1332,7 @@ export default sidebar(
         collapsible: true,
         children: ["","pentest","bin","iosmac","windows","androidlinux","ai","tiny"],
       },
+      "me",
       "group",
       "services",
       "alive",

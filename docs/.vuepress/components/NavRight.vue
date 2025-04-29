@@ -89,6 +89,7 @@
 }
 </script>
 
+
 <style scoped>
 
 .img{
@@ -178,10 +179,10 @@
   transform: scale(1.2)
 }
 
-.platform{
-  position:absolute;
-  margin-left:340px;
-  margin-top:200px;
+.platform {
+  position: fixed; /* 改为 fixed，使其固定在浏览器窗口 */
+  right: 30px; /* 距离浏览器右边 20px */
+  top: 300px; /* 保持原来的垂直位置 */
 }
 
 .btiptext {
