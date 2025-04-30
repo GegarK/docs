@@ -1341,7 +1341,7 @@ export default sidebar(
       "video",
     ],
     "/other/":[
-      ""
+      "",
     ],
     "/other/setup/":[
       "",
@@ -1382,6 +1382,7 @@ export default sidebar(
       "hyperv",
       "discourse",
       "flarum",
+      "info"
     ]
   },
 );
