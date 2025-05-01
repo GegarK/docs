@@ -392,7 +392,8 @@ export default sidebar(
     "/reverse/virus/":[
       "",
       "vyoudao",
-      "cad"
+      "cad",
+      "Ransomware"
     ],
 
     "/web3/":[
