@@ -887,6 +887,7 @@ export default sidebar(
       "sqlmap/",
       "shodan/",
       "beef",
+      "devtool",
       "burpsuite/",
       "metasploit/",
       "cobaltstrike/",
