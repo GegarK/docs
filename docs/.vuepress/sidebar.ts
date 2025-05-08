@@ -239,7 +239,8 @@ export default sidebar(
       "vagrant",
       "server",
       "vpn",
-      "proxy"
+      "proxy",
+      "ip_proxy"
     ],
     "/program/secops/":[
       "",
