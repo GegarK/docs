@@ -1333,7 +1333,7 @@ export default sidebar(
         // icon: "creative",
         prefix: "class/",
         collapsible: true,
-        children: ["","pentest","bin","iosmac","windows","androidlinux","ai","tiny"],
+        children: ["pentest","","bin","iosmac","windows","androidlinux","ai","tiny"],
       },
       "me",
       "group",
