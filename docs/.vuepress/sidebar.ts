@@ -64,7 +64,8 @@ export default sidebar(
 
     "/mind/news/":[
       "",
-      "bybit20250221"
+      "bybit20250221",
+      "Stuxnet"
     ],
 
     "/program/":[
