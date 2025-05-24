@@ -264,6 +264,7 @@ export default sidebar(
       "",
       'port',
       "zip",
+      "report"
     ],
 
     "/reverse/":[
