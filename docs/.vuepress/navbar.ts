@@ -65,6 +65,20 @@ export default navbar([
       { text: "密码算法安全", link: "https://mathph.org", icon: "arrow" },
     ]
   },
+    {
+    text: "WEB3",
+    icon: "network",
+    children:[
+      { text: "区块链", link: "/web3/", icon: "arrow" },
+      { text: "虚拟货币", link: "/web3/", icon: "arrow" },
+      { text: "WEB3安全", link: "/web3/", icon: "arrow" },
+      { text: "量化分析", link: "/web3/", icon: "arrow" },
+      { text: "漏洞复现", link: "/web3/", icon: "arrow" },
+      { text: "区块链开发", link: "/web3/", icon: "arrow" },
+      { text: "DAPP开发", link: "/web3/", icon: "arrow" },
+      { text: "智能合约开发", link: "/web3/", icon: "arrow" },
+    ]
+  },
   {
     text: "硬件",
     icon: "process",

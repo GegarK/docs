@@ -474,7 +474,8 @@ export default sidebar(
       "mp",
       "qt",
       "runes",
-      "fin"
+      "fin",
+      "cork"
     ],
 
     "/web3/bc/":[
