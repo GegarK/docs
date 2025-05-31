@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs && copy ads.txt dist/ads.txt",
+    "docs:build": "vuepress build docs && copy ads.txt dist/ads.txt && copy ads.html dist/ads.html",
     "docs:test": "echo 1 && copy ads.txt dist/ads.txt",
     "docs:lint": "prettier --check --write docs/",
     "docs:clean-dev": "vuepress dev docs --no-cache"
