@@ -656,6 +656,7 @@ export default sidebar(
       "erc20",
       "nft",
       "erc1115",
+      "eip7702",
       "permit",
       "proxy",
       "cross",

@@ -4,6 +4,10 @@
 CTF（Capture The Flag）是一个```游戏```，是专门给网络安全人员玩的一个```游戏```，所以你要知道你还不是安全人员之前请先想办法学习一下安全技术，先变成一名网络安全人员，而不是只知道```玩游戏```。
 :::
 
+::: info DeeLMind 推荐
+[https://github.com/DeeLMind/CTF](https://github.com/DeeLMind/CTF) 我的所有CTF教学以后更新在这里。
+:::
+
 <DocsAD/>
 
 ## 什么是CTF

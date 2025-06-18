@@ -105,6 +105,7 @@ export default navbar([
     text: "CTF", 
     icon: "creative",
     children:[
+      { text: "WriteUp", link: "https://github.com/DeeLMind/CTF", icon: "arrow" },
       { text: "CTF教程", link: "/ctf/", icon: "arrow" },
       { text: "杂项题目", link: "/ctf/misc/", icon: "arrow" },
       { text: "WEB题目", link: "/ctf/web/", icon: "arrow" },
