@@ -11,6 +11,16 @@
 export default {
     setup(){
           onMounted(() => {
+            const main = document.querySelector("#main-title");
+            if (main) {
+                // 添加动画类前，先等 DOM/CSS 完成渲染（确保字体加载完）
+                requestAnimationFrame(() => {
+                setTimeout(() => {
+                    main.classList.remove("text-normal");
+                    main.classList.add("fancy-text");
+                }, 100); // 延迟100ms可以确保初始正常渲染
+                });
+            }
             setInterval(function() {
                 var deelmind = document.getElementsByClassName("deelmind");
             
@@ -26,7 +36,7 @@ export default {
             if (isMobile()) {
                 // 移动端执行的代码
                 let checkIntervalmobile = setInterval(function() {
-                    let jiedan = document.getElementsByClassName("navbar-links-item")[8];
+                    let jiedan = document.getElementsByClassName("navbar-links-item")[9];
                     if (jiedan) {
                         clearInterval(checkIntervalmobile); 
 
@@ -48,7 +58,7 @@ export default {
             } else {
                 // 客户端执行的代码
                 let checkInterval = setInterval(function() {
-                    let jiedan = document.getElementsByClassName("nav-item hide-in-mobile")[8];
+                    let jiedan = document.getElementsByClassName("nav-item hide-in-mobile")[9];
                     if (jiedan) {
                         clearInterval(checkInterval); 
 
@@ -73,24 +83,103 @@ export default {
 }
 </script>
 
-  
-  
-  <style>
-  .footer-wrapper {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center; /* 使内容水平居中 */
-      padding: 0.3rem;
-      border-top: 1px solid #30363d;
-      background: #1e1e1e;
-      text-align: center;
-      z-index: 50;
-  }
-  .footer {
-      font-size: 14px;
-  }
-  </style>
+
+<style>
+    .footer-wrapper {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* 使内容水平居中 */
+        padding: 0.3rem;
+        border-top: 1px solid #30363d;
+        background: #1e1e1e;
+        text-align: center;
+        z-index: 50;
+    }
+    .footer {
+        font-size: 14px;
+    }
+    .fancy-text {
+    font-size: 34px; /* Slightly larger for more impact */
+    font-weight: 900; /* Bolder for a raw, commanding look */
+    font-family: 'Share Tech Mono', 'Orbitron', 'Courier New', monospace; /* Monospace fonts for terminal-like hacker vibe */
+    background: linear-gradient(90deg, #ff00ff, #00ff88, #ff004d, #00ccff, #ff00ff); /* Tighter neon palette with hacker colors */
+    background-size: 400% 400%; /* Reduced for faster, more erratic animation */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: glitchGlow 6s ease-in-out infinite, glitchShift 1.5s steps(2) infinite; /* Dual animation for glow and glitch */
+    text-shadow:
+        0 0 3px rgba(0, 255, 136, 0.8), /* Neon green glow for hacker terminals */
+        0 0 6px rgba(0, 255, 136, 0.6),
+        0 0 12px rgba(255, 0, 77, 0.5), /* Reddish-pink for contrast */
+        0 0 24px rgba(255, 0, 77, 0.3);
+
+    letter-spacing: 1.5px; /* Wider spacing for a digital, spread-out look */
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out, filter 0.2s ease-out;
+    filter: brightness(1.2) saturate(1.5); /* Boost vibrancy for neon pop */
+    position: relative; /* For glitch pseudo-elements */
+    }
+
+    /* Glitch animation */
+    @keyframes glitchGlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+    }
+
+    @keyframes glitchShift {
+    0%, 40%, 44%, 58%, 61%, 65%, 69%, 73%, 100% { transform: skewX(0deg) translateX(0); }
+    41% { transform: skewX(10deg) translateX(2px); }
+    42% { transform: skewX(-10deg) translateX(-2px); }
+    59% { transform: skewX(20deg) translateX(3px); }
+    60% { transform: skewX(-20deg) translateX(-3px); }
+    }
+
+    /* Optional pseudo-elements for glitchy overlays */
+    .fancy-text::before,
+    .fancy-text::after {
+    content: attr(data-text); /* Requires data-text="your text" in HTML */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+
+    .fancy-text::before {
+    background: linear-gradient(90deg, rgba(255, 0, 255, 0.5), rgba(0, 255, 136, 0.5));
+    animation: glitchOverlay 1.2s steps(3) infinite;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    }
+
+    .fancy-text::after {
+    background: linear-gradient(90deg, rgba(0, 204, 255, 0.5), rgba(255, 0, 77, 0.5));
+    animation: glitchOverlay 1.8s steps(4) infinite reverse;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    }
+
+    @keyframes glitchOverlay {
+    0%, 40%, 44%, 58%, 61%, 65%, 69%, 73%, 100% { opacity: 0.6; transform: translate(0, 0); }
+    41% { opacity: 0.8; transform: translate(2px, -1px); }
+    42% { opacity: 0.4; transform: translate(-2px, 1px); }
+    59% { opacity: 0.7; transform: translate(3px, -2px); }
+    60% { opacity: 0.3; transform: translate(-3px, 2px); }
+    }
+
+    /* Hover effect for interactivity */
+    .fancy-text:hover {
+    transform: scale(1.05) translateY(-2px); /* Slight lift and scale */
+    filter: brightness(1.5) saturate(2); /* Amplify neon intensity */
+    text-shadow:
+        0 0 5px rgba(0, 255, 136, 1),
+        0 0 10px rgba(0, 255, 136, 0.8),
+        0 0 20px rgba(255, 0, 77, 0.7),
+        0 0 40px rgba(255, 0, 77, 0.5);
+    }
+</style>
   
