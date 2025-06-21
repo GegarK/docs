@@ -21,11 +21,16 @@ export default {
                 }, 100); // 延迟100ms可以确保初始正常渲染
                 });
             }
-            setInterval(function() {
-                var deelmind = document.getElementsByClassName("deelmind");
-            
-                for (var i = 0; i < deelmind.length; i++) {
-                    deelmind[i].style.color = "#c94251"; // Replace "red" with any color you prefer
+            const intervalId = setInterval(function() {
+                const listItems = document.querySelectorAll('.notice-content ul li');
+                if (listItems.length >= 6) {  // 找到6个li了
+                    listItems[5].classList.add('cool-highlight');
+                    // 修改 class 为 deelmind 的元素颜色
+                    const deelmind = document.getElementsByClassName("deelmind");
+                    for (let i = 0; i < deelmind.length; i++) {
+                        deelmind[i].style.color = "#c94251";
+                    }
+                    clearInterval(intervalId);  // 找到并修改完成，停止定时器
                 }
             }, 100);
 
@@ -181,5 +186,55 @@ export default {
         0 0 20px rgba(255, 0, 77, 0.7),
         0 0 40px rgba(255, 0, 77, 0.5);
     }
+
+    @keyframes neonGlow {
+  0%, 100% {
+    text-shadow:
+      0 0 5px #f40,
+      0 0 10px #f40,
+      0 0 20px #f40,
+      0 0 40px #ff4500,
+      0 0 80px #ff4500,
+      0 0 90px #ff4500;
+    color: #ff6a00;
+  }
+  50% {
+    text-shadow:
+      0 0 10px #ff0,
+      0 0 20px #ff0,
+      0 0 30px #ff0,
+      0 0 50px #ffff00,
+      0 0 70px #ffff00,
+      0 0 100px #ffff00;
+    color: #fff700;
+  }
+}
+
+@keyframes bgPulse {
+  0%, 100% {
+    background-color: #1a1a1a;
+  }
+  50% {
+    background-color: #330000;
+  }
+}
+
+.cool-highlight {
+  animation: neonGlow 2s infinite alternate,
+             bgPulse 3s infinite alternate;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.cool-highlight:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ff4500, 0 0 30px #ff4500;
+}
+
 </style>
   

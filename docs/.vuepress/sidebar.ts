@@ -540,6 +540,7 @@ export default sidebar(
       "",
       "protect",
       "fk",
+      "coq",
       "slither",
       "ityfuzz",
       "trident"
