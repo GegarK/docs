@@ -273,7 +273,8 @@ export default sidebar(
       "opcode/",
       "ffile/",
       "debug",
-      "shellcode"
+      "shellcode",
+      "function"
     ],
 
     "/reverse/example/":[
