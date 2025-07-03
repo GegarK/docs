@@ -12,7 +12,7 @@
 * 安装Solana
 
 ```sh
-sh -c "$(curl -sSfL https://release.solana.com/v1.18.18/install)"
+https://solana.com/zh/docs/intro/installation
 ```
 
 

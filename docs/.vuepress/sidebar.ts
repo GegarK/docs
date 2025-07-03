@@ -415,6 +415,7 @@ export default sidebar(
       "tools",
       "other",
       "analyse",
+      "interview"
     ],
 
     "/web3/other/":[
@@ -544,8 +545,9 @@ export default sidebar(
       "coq",
       "slither",
       "ityfuzz",
-      "trident"
-      
+      "trident",
+      "mythril",
+      "solhint"
     ],
 
     "/web3/smart/":[
