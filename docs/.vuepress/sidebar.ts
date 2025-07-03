@@ -477,7 +477,8 @@ export default sidebar(
       "qt",
       "runes",
       "fin",
-      "cork"
+      "cork",
+      "thegraph"
     ],
 
     "/web3/bc/":[
