@@ -2,6 +2,8 @@
 
 ::: warning DeeLMind 提示
 WEB3.0安全相对于以前给大家讲解的传统安全属于新的知识(与传统安全本质不变)，渗透逆向分析是本质，WEB3只是再此基础上的排列组合，本质相同！
+
+代码更新[https://github.com/DeeLMind/WEB3](https://github.com/DeeLMind/WEB3)
 :::
 
 [YouTube系列教程](https://www.youtube.com/watch?v=3aMp6GWsC_Q&list=PLgZqc0esdeS-i08Nx5MLdcAKr3XA4KxN8)
