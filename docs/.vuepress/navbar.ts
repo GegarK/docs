@@ -136,5 +136,5 @@ export default navbar([
   // },20.11.1
   { text: "接单", icon: "plugin", link: "/pay/" },
   { text: "论坛", icon: "article", link: "https://forum.deelmind.com" },
-  { text: "资源", icon: "cache", link: "https://deelmind.org" },
+  // { text: "资源", icon: "cache", link: "https://deelmind.org" },
 ]);

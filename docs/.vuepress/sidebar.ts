@@ -478,7 +478,8 @@ export default sidebar(
       "runes",
       "fin",
       "cork",
-      "thegraph"
+      "thegraph",
+      "slippage",
     ],
 
     "/web3/bc/":[
