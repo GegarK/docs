@@ -415,6 +415,7 @@ export default sidebar(
       "tools",
       "other",
       "analyse",
+      "finance",
       "interview"
     ],
 
@@ -582,7 +583,7 @@ export default sidebar(
       "layer3",
       "cross",
       "faucet",
-      "trade",
+      "trade"
     ],
 
     "/web3/smart/rootstock":[
@@ -623,6 +624,7 @@ export default sidebar(
       "solidity",
       "vyper",
       "huff",
+      "flashbots"
     ],
 
     "/web3/smart/polygen":[
