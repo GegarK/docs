@@ -12,7 +12,7 @@ actions:
     link: /pay/class/
     type: primary
 
-  - text: 加群资源
+  - text: 加群提问资源
     link: /pay/group
     type: primary
   
