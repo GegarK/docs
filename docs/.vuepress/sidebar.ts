@@ -1110,7 +1110,8 @@ export default sidebar(
       "riskcontrol/",
       "er/",
       "devsecops/",
-      "pk"
+      "pk",
+      "rasp"
       
     ],
     "/pentest/":[
