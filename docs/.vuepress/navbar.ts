@@ -62,7 +62,7 @@ export default navbar([
       { text: "WEB2.0漏洞", link: "/web/", icon: "arrow" },
       { text: "WEB3.0安全", link: "/web3/", icon: "arrow" },
       { text: "Metaverse安全", link: "/metaverse/", icon: "arrow" },
-      { text: "密码算法安全", link: "https://mathph.org", icon: "arrow" },
+      // { text: "密码算法安全", link: "https://mathph.org", icon: "arrow" },
     ]
   },
     {
@@ -101,6 +101,7 @@ export default navbar([
       { text: "LLM大模型", link: "/ai/llm/", icon: "arrow" },
     ]
   },
+  { text: "密码学", link: "https://mathph.org", icon: "arrow" },
   { 
     text: "CTF", 
     icon: "creative",

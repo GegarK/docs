@@ -20,11 +20,15 @@ actions:
     link: https://tspacey.deelmind.com/
     type: primary
 
+  # - text: 密码学
+  #   link: https://mathph.org
+  #   type: primary
+
   - text: 攻防平台
     link: /pay/platform
     type: primary
 
-  - text: 新手【免费】渗透安全【视频教程】学习👇路线👇
+  - text: 新手【免费】网络安全【视频教程】学习👇路线👇
     link: /pay/video
     type: primary
 
