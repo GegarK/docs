@@ -41,7 +41,7 @@ export default {
             if (isMobile()) {
                 // 移动端执行的代码
                 let checkIntervalmobile = setInterval(function() {
-                    let jiedan = document.getElementsByClassName("navbar-links-item")[9];
+                    let jiedan = document.getElementsByClassName("navbar-links-item")[10];
                     if (jiedan) {
                         clearInterval(checkIntervalmobile); 
 
@@ -63,7 +63,7 @@ export default {
             } else {
                 // 客户端执行的代码
                 let checkInterval = setInterval(function() {
-                    let jiedan = document.getElementsByClassName("nav-item hide-in-mobile")[9];
+                    let jiedan = document.getElementsByClassName("nav-item hide-in-mobile")[10];
                     if (jiedan) {
                         clearInterval(checkInterval); 
 
