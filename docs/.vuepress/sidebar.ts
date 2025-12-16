@@ -1254,6 +1254,10 @@ export default sidebar(
       "shor"
     ],
 
+    "/hardware/robot/":[
+      ""
+    ],
+
     "/ai/":[
       "",
       "examples/",

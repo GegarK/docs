@@ -22,7 +22,7 @@ export default navbar([
     ]
   },
   { 
-    text: "正向", 
+    text: "编程", 
     icon: "script",
     children:[
       { text: "编程开发", link: "/program/program/", icon: "arrow" },
@@ -71,11 +71,11 @@ export default navbar([
     children:[
       { text: "区块链", link: "/web3/", icon: "arrow" },
       { text: "虚拟货币", link: "/web3/", icon: "arrow" },
-      { text: "WEB3安全", link: "/web3/", icon: "arrow" },
       { text: "量化分析", link: "/web3/", icon: "arrow" },
       { text: "漏洞复现", link: "/web3/", icon: "arrow" },
-      { text: "区块链开发", link: "/web3/", icon: "arrow" },
       { text: "DAPP开发", link: "/web3/", icon: "arrow" },
+      { text: "WEB3安全", link: "/web3/", icon: "arrow" },
+      { text: "区块链开发", link: "/web3/", icon: "arrow" },
       { text: "智能合约开发", link: "/web3/", icon: "arrow" },
     ]
   },
@@ -88,6 +88,7 @@ export default navbar([
       { text: "量子计算", link: "/hardware/quantum/", icon: "arrow" },
       { text: "工控安全", link: "/hardware/incontrol/", icon: "arrow" },
       { text: "IOT-安全", link: "/hardware/iot/", icon: "arrow" },
+      { text: "机器人安全", link: "/hardware/robot/", icon: "arrow" },
     ]
   },
   { 
