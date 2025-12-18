@@ -136,7 +136,7 @@ export default navbar([
   //     { text: "工具平台", link: "https://tool.deelmind.com", icon: "arrow" },
   //   ]
   // },20.11.1
-  { text: "接单", icon: "plugin", link: "/pay/" },
+  { text: "接单", icon: "plugin", link: "/pay/services" },
   // { text: "论坛", icon: "article", link: "https://forum.deelmind.com" },
   // { text: "资源", icon: "cache", link: "https://deelmind.org" },
 ]);

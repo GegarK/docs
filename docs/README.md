@@ -17,7 +17,7 @@ actions:
     type: primary
   
   - text: TSPACEY
-    link: https://tspacey.deelmind.com/
+    link: https://tspacey.com/
     type: primary
 
   # - text: 密码学
