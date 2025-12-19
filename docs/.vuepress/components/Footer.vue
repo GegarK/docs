@@ -29,51 +29,51 @@ export default {
                 return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
             }
 
-            if (isMobile()) {
-                // 移动端执行的代码
-                let checkIntervalmobile = setInterval(function() {
-                    let jiedan = document.getElementsByClassName("navbar-links-item")[10];
-                    if (jiedan) {
-                        clearInterval(checkIntervalmobile); 
+            // if (isMobile()) {
+            //     // 移动端执行的代码
+            //     let checkIntervalmobile = setInterval(function() {
+            //         let jiedan = document.getElementsByClassName("navbar-links-item")[10];
+            //         if (jiedan) {
+            //             clearInterval(checkIntervalmobile); 
 
-                        // 修改 jiedan 元素的样式
-                        jiedan.style.backgroundColor = "rgb(28 76 55)";
-                        jiedan.style.color = "yellow";
-                        jiedan.style.fontWeight = "bold";
-                        jiedan.style.padding = ".2px";
-                        jiedan.style.borderRadius = "5px";
+            //             // 修改 jiedan 元素的样式
+            //             jiedan.style.backgroundColor = "rgb(28 76 55)";
+            //             jiedan.style.color = "yellow";
+            //             jiedan.style.fontWeight = "bold";
+            //             jiedan.style.padding = ".2px";
+            //             jiedan.style.borderRadius = "5px";
                         
-                        let childElements = jiedan.children;
-                        for (let child of childElements) {
-                            child.style.color = "white";
-                        }
-                    } else {
-                        console.log("元素未找到，继续查找Mobile...");
-                    }
-                }, 100);
-            } else {
-                // 客户端执行的代码
-                let checkInterval = setInterval(function() {
-                    let jiedan = document.getElementsByClassName("nav-item hide-in-mobile")[10];
-                    if (jiedan) {
-                        clearInterval(checkInterval); 
+            //             let childElements = jiedan.children;
+            //             for (let child of childElements) {
+            //                 child.style.color = "white";
+            //             }
+            //         } else {
+            //             console.log("元素未找到，继续查找Mobile...");
+            //         }
+            //     }, 100);
+            // } else {
+            //     // 客户端执行的代码
+            //     let checkInterval = setInterval(function() {
+            //         let jiedan = document.getElementsByClassName("nav-item hide-in-mobile")[10];
+            //         if (jiedan) {
+            //             clearInterval(checkInterval); 
 
-                        // 修改 jiedan 元素的样式
-                        jiedan.style.backgroundColor = "rgb(28 76 55)";
-                        jiedan.style.color = "yellow";
-                        jiedan.style.fontWeight = "bold";
-                        jiedan.style.padding = "3px";
-                        jiedan.style.borderRadius = "5px";
+            //             // 修改 jiedan 元素的样式
+            //             jiedan.style.backgroundColor = "rgb(28 76 55)";
+            //             jiedan.style.color = "yellow";
+            //             jiedan.style.fontWeight = "bold";
+            //             jiedan.style.padding = "3px";
+            //             jiedan.style.borderRadius = "5px";
                         
-                        let childElements = jiedan.children;
-                        for (let child of childElements) {
-                            child.style.color = "white";
-                        }
-                    } else {
-                        console.log("元素未找到，继续查找...");
-                    }
-                }, 100);
-            }
+            //             let childElements = jiedan.children;
+            //             for (let child of childElements) {
+            //                 child.style.color = "white";
+            //             }
+            //         } else {
+            //             console.log("元素未找到，继续查找...");
+            //         }
+            //     }, 100);
+            // }
             })
     }
 }
