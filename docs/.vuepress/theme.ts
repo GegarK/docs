@@ -65,9 +65,8 @@ export default hopeTheme({
             path: "/",
             title: "重要公告（核心基础）",
             content:
-              '<ul><li>思维教程：<a class="deelmind" target="_blank" href="https://all.deelmind.com.cn/">《随缘自然而然》</a></li><li>群内课程：<a href="/pay/class/tiny">《群内直播课程》</a></li><li>群内课程：<a href="/pay/class/bin">《二进制安全》</a></li><li>群内课程：<a href="/pay/class/ai">《网络安全AI课程》</a></li><li>群内课程：<a href="/pay/group">《WEB3区块链虚拟货币》</a></li><li><a href="/pay/one2one">付费辅导：《一对一辅导》</a></li><li><a href="/pay/zixun">付费咨询:《项目技术咨询》</a></li></ul>'
+              '<ul><li>思维教程：<a class="deelmind" target="_blank" href="https://all.deelmind.com.cn/">《随缘自然而然》</a></li><li>一对一课程：<a href="/pay/one2one">《二进制安全》</a></li><li>一对一课程：<a href="/pay/one2one">《网络安全AI课程》</a></li><li>一对一课程：<a href="/pay/one2one">《WEB3区块链虚拟货币》</a></li><li><a href="/pay/one2one">付费辅导：《一对一辅导》</a></li><li><a href="/pay/zixun">付费咨询:《项目技术咨询》</a></li></ul>'
           },
-          
         ],
       },
     },

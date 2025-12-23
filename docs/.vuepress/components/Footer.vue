@@ -15,7 +15,7 @@ export default {
                 const listItems = document.querySelectorAll('.notice-content ul li');
                 if (listItems.length >= 6) {  // 找到6个li了
                     listItems[5].classList.add('cool-highlight');
-                    listItems[6].classList.add('cool-highlight');
+                    listItems[4].classList.add('cool-highlight');
                     // 修改 class 为 deelmind 的元素颜色
                     const deelmind = document.getElementsByClassName("deelmind");
                     for (let i = 0; i < deelmind.length; i++) {
