@@ -8,12 +8,8 @@ tagline: 懂進攻，知防守；先正向，後逆向
 
 
 actions:
-  - text: 付费课程
-    link: /pay/class/
-    type: primary
-
-  - text: 加群提问资源
-    link: /pay/group
+  - text: 一对一辅导
+    link: /pay/one2one
     type: primary
   
   - text: TSPACEY

@@ -1345,13 +1345,13 @@ export default sidebar(
     ],
 
     "/pay/":[
-      {
-        text: "付费课程",
-        // icon: "creative",
-        prefix: "class/",
-        collapsible: true,
-        children: ["","bin","iosmac","windows","androidlinux","ai","tiny"],
-      },
+      // {
+      //   text: "付费课程",
+      //   // icon: "creative",
+      //   prefix: "class/",
+      //   collapsible: true,
+      //   children: ["","bin","iosmac","windows","androidlinux","ai","tiny"],
+      // },
       "me",
       // "group",
       "services",
