@@ -54,6 +54,7 @@ export default navbar([
     text: "渗透",
     icon: "network",
     children:[
+      { text: "NullMind", link: "/nullmind/", icon: "arrow" },
       { text: "渗透测试", link: "/pentest/", icon: "arrow" },
       { text: "安全建设", link: "/defense/", icon: "arrow" },
       { text: "渗透工具", link: "/tools/", icon: "arrow" },
