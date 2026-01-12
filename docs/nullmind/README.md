@@ -2,7 +2,7 @@
   
 > 是思考，是判断，是出击
 >  
-> **NullMind** —— AI 驱动的自主渗透智能体。
+> **NullMind** —— AI-Null-State Penetration' Security OS Brain
 
 ## 🌐 项目主页
 👉 [https://nullmind.org](https://nullmind.org)
@@ -20,7 +20,7 @@
 ## ⬇️ 下载
 
 **最新版本**  
-👉 [https://nullmind.org/nullmind.zip](https://nullmind.org/nullmind.zip)
+👉 [点击下载Download](https://nullmind.org/nullmind.zip)
 
 > *For research, defense, and controlled adversarial simulation only.*
 
@@ -87,12 +87,11 @@ AI 主动分析目标环境，构建攻击上下文，
 ---
 
 ## 宣言
+ 
+**NullMind，就是攻击者**
 
-**NullMind** 不模拟攻击者。  
-**NullMind，就是攻击者。**
+它进入
+它思考
+它出击
 
-它进入。  
-它思考。  
-它出击。
-
-> **Welcome to Null-State Intelligence...NullMind**
+> **Welcome to AI-Null-State Penetration' Security OS Brain...NullMind**

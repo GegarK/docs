@@ -1,116 +1,139 @@
 <template>
-    <div class="footer-wrapper">
-      <div class="footer">
-        Copyright © 2023 <a href="https://deelmind.com" target="_blank">極客方舟</a>
-      </div>
+  <div class="footer-wrapper">
+    <div class="footer">
+      Copyright © 2023 
+      <a href="https://deelmind.com" target="_blank">極客方舟</a>
     </div>
-  </template>
+  </div>
+</template>
 
 <script>
-    import { onMounted } from 'vue';
+import { onMounted } from 'vue';
+
 export default {
-    setup(){
-          onMounted(() => {
-            const intervalId = setInterval(function() {
-                const listItems = document.querySelectorAll('.notice-content ul li');
-                if (listItems.length >= 6) {  // 找到6个li了
-                    listItems[5].classList.add('cool-highlight');
-                    listItems[4].classList.add('cool-highlight');
-                    // 修改 class 为 deelmind 的元素颜色
-                    const deelmind = document.getElementsByClassName("deelmind");
-                    for (let i = 0; i < deelmind.length; i++) {
-                        deelmind[i].style.color = "#c94251";
-                    }
-                    clearInterval(intervalId);  // 找到并修改完成，停止定时器
-                }
-            }, 100);
+  setup() {
+    onMounted(() => {
+      // 高亮 notice 列表
+      const intervalId = setInterval(() => {
+        const listItems = document.querySelectorAll('.notice-content ul li');
+        if (listItems.length >= 6) {
+          listItems[5].classList.add('cool-highlightside');
+          listItems[4].classList.add('cool-highlightside');
 
-            function isMobile() {
-                return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-            }
+          const deelmind = document.getElementsByClassName('deelmind');
+          for (let i = 0; i < deelmind.length; i++) {
+            deelmind[i].style.color = '#c94251';
+          }
 
-            // if (isMobile()) {
-            //     // 移动端执行的代码
-            //     let checkIntervalmobile = setInterval(function() {
-            //         let jiedan = document.getElementsByClassName("navbar-links-item")[10];
-            //         if (jiedan) {
-            //             clearInterval(checkIntervalmobile); 
+          clearInterval(intervalId);
+        }
+      }, 100);
 
-            //             // 修改 jiedan 元素的样式
-            //             jiedan.style.backgroundColor = "rgb(28 76 55)";
-            //             jiedan.style.color = "yellow";
-            //             jiedan.style.fontWeight = "bold";
-            //             jiedan.style.padding = ".2px";
-            //             jiedan.style.borderRadius = "5px";
-                        
-            //             let childElements = jiedan.children;
-            //             for (let child of childElements) {
-            //                 child.style.color = "white";
-            //             }
-            //         } else {
-            //             console.log("元素未找到，继续查找Mobile...");
-            //         }
-            //     }, 100);
-            // } else {
-            //     // 客户端执行的代码
-            //     let checkInterval = setInterval(function() {
-            //         let jiedan = document.getElementsByClassName("nav-item hide-in-mobile")[10];
-            //         if (jiedan) {
-            //             clearInterval(checkInterval); 
+      const actionsP = document.querySelector('p.actions');
+      if (!actionsP) return;
 
-            //             // 修改 jiedan 元素的样式
-            //             jiedan.style.backgroundColor = "rgb(28 76 55)";
-            //             jiedan.style.color = "yellow";
-            //             jiedan.style.fontWeight = "bold";
-            //             jiedan.style.padding = "3px";
-            //             jiedan.style.borderRadius = "5px";
-                        
-            //             let childElements = jiedan.children;
-            //             for (let child of childElements) {
-            //                 child.style.color = "white";
-            //             }
-            //         } else {
-            //             console.log("元素未找到，继续查找...");
-            //         }
-            //     }, 100);
-            // }
-            })
-    }
-}
+      const links = actionsP.querySelectorAll('.nav-link.action-button.primary');
+      if (links.length >= 3) {
+        const thirdLink = links[2];
+
+        const nullMindBtn = document.createElement('a');
+        nullMindBtn.href = 'https://nullmind.org';
+        nullMindBtn.target = '_blank';
+        nullMindBtn.className = 'nav-link action-button primary nullmind-btn cool-highlight';
+        nullMindBtn.innerText = 'NullMind';
+
+        thirdLink.parentNode.insertBefore(nullMindBtn, thirdLink.nextSibling);
+
+        // 联动悬停效果
+        const toggleHighlight = (add) => {
+          if (add) {
+            nullMindBtn.classList.add('cool-highlight');
+            thirdLink.classList.add('cool-highlight');
+          } else {
+            nullMindBtn.classList.remove('cool-highlight');
+            thirdLink.classList.remove('cool-highlight');
+          }
+        };
+
+        // thirdLink.addEventListener('mouseenter', () => toggleHighlight(true));
+        // thirdLink.addEventListener('mouseleave', () => toggleHighlight(false));
+        nullMindBtn.addEventListener('mouseenter', () => toggleHighlight(true));
+        nullMindBtn.addEventListener('mouseleave', () => toggleHighlight(false));
+      }
+    });
+  },
+};
 </script>
 
-
 <style>
-    .footer-wrapper {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center; /* 使内容水平居中 */
-        padding: 0.3rem;
-        border-top: 1px solid #30363d;
-        background: #1e1e1e;
-        text-align: center;
-        z-index: 50;
-    }
-    .footer {
-        font-size: 14px;
-    }
+.footer-wrapper {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem;
+  background: #1e1e1e;
+  border-top: 1px solid #222;
+  z-index: 50;
+}
 
+.footer {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.footer a {
+  color: #00ff9c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* 霓虹按钮样式 */
+/* 针对 NullMind 按钮 */
 .cool-highlight {
+  color: #ff3b3b; /* 血红文字 */
+  background: rgba(30, 0, 0, 0.9); /* 血红背景 */
+  border-color: rgba(255, 59, 59, 0.8); /* 血红边框 */
+  text-shadow:
+    0 0 4px rgba(255, 59, 59, 0.6),
+    0 0 12px rgba(255, 59, 59, 0.7);
+
+  animation:
+    neonGlow 1.8s ease-in-out infinite alternate,
+    glitchFlicker 3.5s infinite;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.cool-highlight:hover {
+  transform: scale(1.08);
+  box-shadow:
+    0 0 8px rgba(0, 255, 200, 0.6),
+    0 0 20px rgba(0, 255, 200, 0.8),
+    inset 0 0 10px rgba(0, 255, 200, 0.3);
+  /* 不改变 color 或 animation，保持默认霓虹效果 */
+}
+
+
+
+.cool-highlightside {
   position: relative;
-  padding: 12px 22px;
+  padding: 12px 24px;
   border-radius: 6px;
 
   color: #00ff9c;
-  background: rgba(0, 20, 10, 0.85);
+  background: rgba(20, 0, 0, 0.85);
   border: 1px solid rgba(0, 255, 156, 0.4);
 
-  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
   font-weight: 600;
   letter-spacing: 0.5px;
-
   cursor: pointer;
   user-select: none;
 
@@ -124,55 +147,32 @@ export default {
     color 0.25s ease;
 }
 
-/* 悬停强化：像“锁定目标” */
-.cool-highlight:hover {
+.cool-highlightside:hover {
   transform: scale(1.08);
   color: #0affff;
   box-shadow:
-    0 0 6px rgba(0, 255, 200, 0.6),
-    0 0 18px rgba(0, 255, 200, 0.8),
-    inset 0 0 8px rgba(0, 255, 200, 0.3);
+    0 0 8px rgba(0, 255, 200, 0.6),
+    0 0 20px rgba(0, 255, 200, 0.8),
+    inset 0 0 10px rgba(0, 255, 200, 0.3);
 }
 
-/* 点击时像终端确认 */
-.cool-highlight:active {
-  transform: scale(0.97);
-  box-shadow: 0 0 6px rgba(0, 255, 200, 0.4);
-}
-
-/* 霓虹呼吸 */
 @keyframes neonGlow {
-  from {
-    text-shadow:
-      0 0 4px rgba(0, 255, 156, 0.6),
-      0 0 8px rgba(0, 255, 156, 0.4);
+  0% {
+    text-shadow: 0 0 4px rgba(0, 255, 156, 0.6),
+                 0 0 10px rgba(0, 255, 156, 0.4);
     border-color: rgba(0, 255, 156, 0.4);
   }
-  to {
-    text-shadow:
-      0 0 6px rgba(0, 255, 200, 0.9),
-      0 0 14px rgba(0, 255, 200, 0.7);
+  100% {
+    text-shadow: 0 0 8px rgba(0, 255, 200, 0.9),
+                 0 0 16px rgba(0, 255, 200, 0.7);
     border-color: rgba(0, 255, 200, 0.8);
   }
 }
 
-/* 微弱“故障闪烁” */
 @keyframes glitchFlicker {
-  0%, 100% {
-    opacity: 1;
-  }
-  92% {
-    opacity: 0.95;
-  }
-  94% {
-    opacity: 0.85;
-  }
-  96% {
-    opacity: 1;
-  }
+  0%, 100% { opacity: 1; }
+  92% { opacity: 0.95; }
+  94% { opacity: 0.85; }
+  96% { opacity: 1; }
 }
-
-
-
 </style>
-  
