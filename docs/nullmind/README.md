@@ -8,23 +8,13 @@
 👉 [https://nullmind.org](https://nullmind.org)
 
 ---
+<DocsAD/>
 
 ## 什么是 NullMind
 
 **NullMind** 是一套面向真实对抗场景的  **Autonomous AI Attack Intelligence System**。
   
 像高级攻击者一样 **理解系统、推理风险、寻找突破口**。
-
----
-
-## ⬇️ 下载
-
-**最新版本**  
-👉 [点击下载Download](https://nullmind.org/nullmind.zip)
-
-> *For research, defense, and controlled adversarial simulation only.*
-
----
 
 ## 核心能力
 

@@ -1403,6 +1403,12 @@ export default sidebar(
       "discourse",
       "flarum",
       "info"
+    ],
+    "/nullmind/":[
+      "",
+      "document",
+      "roadmap",
+      "license",
     ]
   },
 );
