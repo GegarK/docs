@@ -29,6 +29,7 @@ export default navbar([
       { text: "黑客编程", link: "/safep/", icon: "arrow" },
       { text: "路由协议", link: "/program/protocal/", icon: "arrow" },
       { text: "密码编码", link: "/program/encode/", icon: "arrow" },
+      { text: "算法ACM", link: "/program/alg/", icon: "arrow" },
       { text: "算法讲解", link: "/program/alg/", icon: "arrow" },
       { text: "设计模式", link: "/program/design/", icon: "arrow" },
       { text: "软件测试", link: "/program/test/", icon: "arrow" },
