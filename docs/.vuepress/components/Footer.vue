@@ -3,6 +3,8 @@
     <div class="footer">
       Copyright © 2023
       <a href="https://deelmind.com" target="_blank">極客方舟</a>
+    |
+      <a href="/pay/" target="_blank">关于我们</a>
     </div>
   </div>
 </template>

@@ -20,7 +20,7 @@
 
 <!-- .element: class="r-fit-text" -->
 
-网络安全技术分享团队
+网络安全
 
 ---
 
@@ -47,6 +47,24 @@ QKSword
 ## 团队成员
 * DeeLMind(QQ:759256729 | 微信:DeeLMind)[微博@DeeLMind](https://www.weibo.com/u/5588510745/home)[Twitter@DeeLMind](https://twitter.com/DeeLMind)
 * QKSword
+
+::: warning DeeLMind 提示
+国内聊天软件有风控，加我好友太多，如果添加不了我微信，就添加QQ或者其他，或者到各种视频网站，私聊我即可！！！
+:::
+
+## 我的微信DeeLMind （微信加不了加QQ获取其他）
+
+![er](/imgs/wechat.jpg)
+
+## 我的QQ：759256729
+
+## 我的联系方式TG
+
+[TG @DeeLMind](https://t.me/DeeLMind)
+
+## 我的联系方式Discord
+
+`deelmind`
 
 <iframe width="720px" height="480px" src="https://www.youtube.com/embed/oqy2XWlolSo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
