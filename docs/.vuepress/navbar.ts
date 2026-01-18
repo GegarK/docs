@@ -71,6 +71,7 @@ export default navbar([
     text: "WEB3",
     icon: "network",
     children:[
+      { text: "ChainMind", link: "https://deelmind.org", icon: "arrow" },
       { text: "区块链", link: "/web3/", icon: "arrow" },
       { text: "虚拟货币", link: "/web3/", icon: "arrow" },
       { text: "量化分析", link: "/web3/", icon: "arrow" },
