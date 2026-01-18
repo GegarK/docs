@@ -1288,7 +1288,6 @@ export default sidebar(
       "rnn",
       "gru",
       "lstm",
-      "transformer",
       "autoencoder",
       "stablediffusion"
       
@@ -1298,7 +1297,8 @@ export default sidebar(
       "image",
       "mvideo",
       "ollama",
-      "mcp"
+      "mcp",
+      "transformer"
     ],
     "/ctf/":[
       "",
