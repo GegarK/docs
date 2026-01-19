@@ -65,6 +65,7 @@ document.querySelectorAll('.notice-content ul li').forEach(li => {
 
         const listItems = document.querySelectorAll('.notice-content ul li');
         if (listItems.length >= 6) {
+          listItems[4].classList.add('cool-highlightside');
           listItems[5].classList.add('cool-highlightside');
           listItems[6].classList.add('cool-highlightside');
 
