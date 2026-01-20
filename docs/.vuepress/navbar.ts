@@ -21,6 +21,7 @@ export default navbar([
       { text: "黑客组织", link: "/mind/group", icon: "arrow" },
     ]
   },
+{ text: "ORG", link: "/org", icon: "arrow" },
   { 
     text: "编程", 
     icon: "script",
