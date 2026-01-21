@@ -11,7 +11,8 @@ export default sidebar(
       "cso",
       "cfo",
       "cio",
-      "chro"
+      "chro",
+      "nist"
     ],
     "/mind/":[
       "attack",
