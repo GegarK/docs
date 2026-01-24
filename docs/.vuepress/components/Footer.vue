@@ -46,16 +46,25 @@ export default {
           }
           let title = notice.querySelector('.notice-title');
           if (title) {
-  title.style.textAlign = 'center'; // 水平居中
-}
+            title.style.textAlign = 'center'; // 水平居中
+          }
 document.querySelectorAll('.notice-content ul li').forEach(li => {
+  // 创建头像元素
+  const avatar = document.createElement('img');
+  avatar.src = 'ME.png'; // 替换为你的头像 URL
+  avatar.alt = 'avatar';
+  avatar.className = 'notice-avatar';
+
+  // 插入到 li 前面
+  li.prepend(avatar);
+
+  // 保留点击跳转逻辑
   li.addEventListener('click', () => {
     const link = li.querySelector('a');
-    if (link) {
-      link.click();
-    }
+    if (link) link.click();
   });
 });
+
 
         }
 
@@ -118,6 +127,22 @@ document.querySelectorAll('.notice-content ul li').forEach(li => {
 /* ================================
    NOTICE · Minimal Hacker Style
 ================================ */
+/* ================================
+   NOTICE AVATAR
+================================ */
+.notice-avatar {
+  width: 30px;       /* 调整头像大小 */
+  height: 30px;
+  border-radius: 50%; /* 圆形头像 */
+  margin-right: 10px; /* 和文字间距 */
+  vertical-align: middle;
+  border: 1px solid #00ffd5;
+  box-shadow: 0 0 4px rgba(0, 255, 200, 0.5);
+}
+.notice-content ul li {
+  display: flex;
+  align-items: center;
+}
 
 .notice-wrapper {
   position: fixed;
