@@ -90,6 +90,7 @@ export default sidebar(
       "driver/",
       "full/",
       "spider/",
+      "gpu",
       "rust/",
       "c/",
       "iosmac/",
@@ -121,6 +122,10 @@ export default sidebar(
       // "ctype",
       // "spointer",
       // "macro",
+    ],
+
+    "/program/program/gpu":[
+      ""
     ],
 
     "/program/program/rust/tauri":[
