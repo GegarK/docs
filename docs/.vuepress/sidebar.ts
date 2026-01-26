@@ -12,7 +12,10 @@ export default sidebar(
       "cfo",
       "cio",
       "chro",
-      "nist"
+      "iso",
+      "nist",
+      "soc",
+      "dengbao"
     ],
     "/mind/":[
       "attack",

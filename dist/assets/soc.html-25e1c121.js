@@ -1,0 +1,1 @@
+import{_ as c,K as s,L as t,M as e,N as o}from"./framework-edebdfe1.js";const a={},r=e("h1",{id:"soc",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#soc","aria-hidden":"true"},"#"),o(" SOC")],-1),n=[r];function _(d,i){return s(),t("div",null,n)}const l=c(a,[["render",_],["__file","soc.html.vue"]]);export{l as default};
