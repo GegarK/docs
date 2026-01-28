@@ -1309,7 +1309,8 @@ export default sidebar(
       "gru",
       "lstm",
       "autoencoder",
-      "stablediffusion"
+      "stablediffusion",
+      "llm"
       
     ],
     "/ai/llm/":[
