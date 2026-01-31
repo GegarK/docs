@@ -15,7 +15,16 @@ export default sidebar(
       "iso",
       "nist",
       "soc",
-      "dengbao"
+      "dengbao",
+      "arc",
+      "ingress",
+      "api",
+      "service",
+      "mesh",
+      "db",
+      "infra",
+      "ops",
+      "gcp"
     ],
     "/mind/":[
       "attack",
