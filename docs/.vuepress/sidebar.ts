@@ -1293,7 +1293,8 @@ export default sidebar(
       "math",
       "python",
       "data",
-      "feature"
+      "feature",
+      "vul"
     ],
     "/ai/examples/":[
       "",
