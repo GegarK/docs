@@ -6,9 +6,8 @@
 
 ## 合约开发
 
-* rust
-
+- rust
 
 ## 浏览器
 
-* [https://polkadot.subscan.io/](https://polkadot.subscan.io/)
+- [https://polkadot.subscan.io/](https://polkadot.subscan.io/)

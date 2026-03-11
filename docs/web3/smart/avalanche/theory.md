@@ -6,9 +6,8 @@
 
 ## 合约开发
 
-* solidity
-
+- solidity
 
 ## 浏览器
 
-* [https://subnets.avax.network/](https://subnets.avax.network/)
+- [https://subnets.avax.network/](https://subnets.avax.network/)

@@ -29,7 +29,7 @@ library LibSwap {
     }
 }
 interface  LiFiDiamond{
-    
+
    function depositToGasZipERC20(
         LibSwap.SwapData calldata _swapData,
         uint256 _destinationChains,

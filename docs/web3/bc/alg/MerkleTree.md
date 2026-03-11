@@ -23,9 +23,11 @@ Merkle Tree 是一种 **二叉树**，每个叶子节点存储数据块的哈希
 假设我们有四个数据块 `A`, `B`, `C`, `D`：
 
 1. 对每个数据块进行哈希：
+
    - `Hash(A)`，`Hash(B)`，`Hash(C)`，`Hash(D)`
 
 2. 组合相邻的哈希值，生成父节点：
+
    - `Hash(Hash(A) + Hash(B)) = H1`
    - `Hash(Hash(C) + Hash(D)) = H2`
 
@@ -39,6 +41,7 @@ Merkle Tree 是一种 **二叉树**，每个叶子节点存储数据块的哈希
     /  \            /  \
 Hash(A) Hash(B)  Hash(C) Hash(D)
 ```
+
 <DocsAD/>
 
 ## 4. Merkle Tree 的优势
@@ -50,15 +53,18 @@ Hash(A) Hash(B)  Hash(C) Hash(D)
 ## 5. Merkle Proof 示例
 
 为了验证某个数据块是否属于 Merkle Tree，通常只需要：
+
 - 该数据块的哈希值。
 - 从该数据块到 Merkle Root 的路径上的其他哈希值。
 
 例如，要验证 `A` 是否在 Merkle Tree 中，我们需要提供：
+
 - `Hash(A)`
 - `Hash(B)` (与 `A` 的同级兄弟节点)
 - `H2` (与 `H1` 的同级兄弟节点)
 
 通过以下步骤，可以验证 `A` 是否存在：
+
 1. 计算 `Hash(A) + Hash(B)`。
 2. 计算 `Hash(H1 + H2)` 并与 Merkle Root 进行对比。
 
@@ -71,123 +77,124 @@ Hash(A) Hash(B)  Hash(C) Hash(D)
 
 ```js
 // 引入 Node.js 的加密库
-const crypto = require('crypto');
+const crypto = require("crypto");
 
 // 使用 SHA-256 计算哈希值的函数
 function hash(data) {
-    return crypto.createHash('sha256').update(data).digest('hex');
+  return crypto.createHash("sha256").update(data).digest("hex");
 }
 
 // 构建 Merkle Tree 类
 class MerkleTree {
-    constructor(leaves) {
-        // 将数据块进行哈希并存储为叶子节点
-        this.leaves = leaves.map(leaf => hash(leaf));
-        this.tree = [this.leaves]; // 初始化树
+  constructor(leaves) {
+    // 将数据块进行哈希并存储为叶子节点
+    this.leaves = leaves.map((leaf) => hash(leaf));
+    this.tree = [this.leaves]; // 初始化树
 
-        // 构建 Merkle Tree
-        this.buildTree();
+    // 构建 Merkle Tree
+    this.buildTree();
+  }
+
+  // 构建整棵 Merkle Tree
+  buildTree() {
+    let currentLevel = this.leaves;
+
+    // 按照二叉树方式逐层构建
+    while (currentLevel.length > 1) {
+      currentLevel = this.buildNextLevel(currentLevel);
+      this.tree.push(currentLevel);
+    }
+  }
+
+  // 构建每一层的节点
+  buildNextLevel(currentLevel) {
+    let nextLevel = [];
+
+    for (let i = 0; i < currentLevel.length; i += 2) {
+      // 如果是奇数个节点，最后一个节点直接复制
+      if (i + 1 === currentLevel.length) {
+        nextLevel.push(currentLevel[i]);
+      } else {
+        const combinedHash = hash(currentLevel[i] + currentLevel[i + 1]);
+        nextLevel.push(combinedHash);
+      }
     }
 
-    // 构建整棵 Merkle Tree
-    buildTree() {
-        let currentLevel = this.leaves;
+    return nextLevel;
+  }
 
-        // 按照二叉树方式逐层构建
-        while (currentLevel.length > 1) {
-            currentLevel = this.buildNextLevel(currentLevel);
-            this.tree.push(currentLevel);
-        }
+  // 获取 Merkle Tree 的根节点（Merkle Root）
+  getRoot() {
+    return this.tree[this.tree.length - 1][0];
+  }
+
+  // 获取 Merkle Proof 用于验证某个叶子节点
+  getProof(leaf) {
+    let index = this.leaves.indexOf(hash(leaf));
+    if (index === -1) {
+      throw new Error("叶子节点不在树中");
     }
 
-    // 构建每一层的节点
-    buildNextLevel(currentLevel) {
-        let nextLevel = [];
+    let proof = [];
+    for (let i = 0; i < this.tree.length - 1; i++) {
+      const level = this.tree[i];
+      const pairIndex = index % 2 === 0 ? index + 1 : index - 1;
 
-        for (let i = 0; i < currentLevel.length; i += 2) {
-            // 如果是奇数个节点，最后一个节点直接复制
-            if (i + 1 === currentLevel.length) {
-                nextLevel.push(currentLevel[i]);
-            } else {
-                const combinedHash = hash(currentLevel[i] + currentLevel[i + 1]);
-                nextLevel.push(combinedHash);
-            }
-        }
-
-        return nextLevel;
-    }
-
-    // 获取 Merkle Tree 的根节点（Merkle Root）
-    getRoot() {
-        return this.tree[this.tree.length - 1][0];
-    }
-
-    // 获取 Merkle Proof 用于验证某个叶子节点
-    getProof(leaf) {
-        let index = this.leaves.indexOf(hash(leaf));
-        if (index === -1) {
-            throw new Error('叶子节点不在树中');
-        }
-
-        let proof = [];
-        for (let i = 0; i < this.tree.length - 1; i++) {
-            const level = this.tree[i];
-            const pairIndex = index % 2 === 0 ? index + 1 : index - 1;
-
-            if (pairIndex < level.length) {
-                proof.push({
-                    hash: level[pairIndex],
-                    position: index % 2 === 0 ? 'right' : 'left'
-                });
-            }
-
-            // 计算下一个层级的索引
-            index = Math.floor(index / 2);
-        }
-
-        return proof;
-    }
-
-    // 验证某个叶子节点的 Merkle Proof
-    verifyProof(leaf, proof, root) {
-        let hashValue = hash(leaf);
-
-        // 遍历 Merkle Proof，逐步验证
-        for (const proofElement of proof) {
-            hashValue = proofElement.position === 'left' 
-                ? hash(proofElement.hash + hashValue) 
-                : hash(hashValue + proofElement.hash);
-        }
-
-        return hashValue === root;
-    }
-
-    // 打印树中的所有节点哈希值
-    printTree() {
-        this.tree.forEach((level, index) => {
-            console.log(`Level ${index}:`);
-            level.forEach((node, nodeIndex) => {
-                console.log(`  Node ${nodeIndex}: ${node}`);
-            });
+      if (pairIndex < level.length) {
+        proof.push({
+          hash: level[pairIndex],
+          position: index % 2 === 0 ? "right" : "left",
         });
+      }
+
+      // 计算下一个层级的索引
+      index = Math.floor(index / 2);
     }
+
+    return proof;
+  }
+
+  // 验证某个叶子节点的 Merkle Proof
+  verifyProof(leaf, proof, root) {
+    let hashValue = hash(leaf);
+
+    // 遍历 Merkle Proof，逐步验证
+    for (const proofElement of proof) {
+      hashValue =
+        proofElement.position === "left"
+          ? hash(proofElement.hash + hashValue)
+          : hash(hashValue + proofElement.hash);
+    }
+
+    return hashValue === root;
+  }
+
+  // 打印树中的所有节点哈希值
+  printTree() {
+    this.tree.forEach((level, index) => {
+      console.log(`Level ${index}:`);
+      level.forEach((node, nodeIndex) => {
+        console.log(`  Node ${nodeIndex}: ${node}`);
+      });
+    });
+  }
 }
 
 // 示例：创建一个 Merkle Tree
-const leaves = ['A', 'B', 'C', 'D']; // 示例数据块
+const leaves = ["A", "B", "C", "D"]; // 示例数据块
 const merkleTree = new MerkleTree(leaves);
 
 // 输出 Merkle Root
-console.log('Merkle Root:', merkleTree.getRoot());
+console.log("Merkle Root:", merkleTree.getRoot());
 
 // 打印所有节点的哈希值
 merkleTree.printTree();
 
 // 获取某个叶子节点的 Merkle Proof
-const proof = merkleTree.getProof('A');
+const proof = merkleTree.getProof("A");
 console.log('Merkle Proof for leaf "A":', proof);
 
 // 验证某个叶子节点是否存在于 Merkle Tree 中
-const isValid = merkleTree.verifyProof('A', proof, merkleTree.getRoot());
+const isValid = merkleTree.verifyProof("A", proof, merkleTree.getRoot());
 console.log('Is valid proof for leaf "A"?', isValid);
 ```

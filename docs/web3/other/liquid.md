@@ -1,6 +1,7 @@
 # Liquid
 
 ## 历史
+
 Liquid 是由 Blockstream 开发的一个比特币侧链，首次发布于 2018 年。其设计旨在提升比特币的可扩展性和隐私性。Blockstream 作为比特币开发的先锋之一，希望通过 Liquid 解决比特币网络在交易速度和隐私方面的局限。
 
 <DocsAD/>
@@ -8,6 +9,7 @@ Liquid 是由 Blockstream 开发的一个比特币侧链，首次发布于 2018 
 [Liquid](https://www.liquid.com/) 的推出也与去中心化金融（DeFi）和数字资产市场的迅速发展密切相关，目的是为交易所、金融机构和企业提供一个高效、安全的交易平台。
 
 ## [原理](https://blockstream.info/liquid/)
+
 Liquid 基于侧链技术，允许用户将比特币转移到 Liquid 网络，并在此基础上进行快速、低成本的交易。以下是 Liquid 的主要原理：
 
 1. **侧链技术**：Liquid 作为比特币的侧链，用户可以通过“锚定”比特币（将比特币转移到 Liquid 网络）并获得 Liquid 代币（L-BTC）。这些代币可以在 Liquid 网络上进行交易。

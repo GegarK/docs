@@ -6,9 +6,8 @@ Kusama 是 Polkadot 的实验性网络，专为测试和创新设计，它常被
 
 ## 合约开发
 
-* rust
-
+- rust
 
 ## 浏览器
 
-* [https://polkadot.subscan.io/](https://polkadot.subscan.io/)
+- [https://polkadot.subscan.io/](https://polkadot.subscan.io/)

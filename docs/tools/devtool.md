@@ -1,12 +1,12 @@
 # DevTool
 
-## 什么是DevTool
+## 什么是 DevTool
 
 DevTools，全名 Developer Tools，几乎是所有主流浏览器都内置的前端开发利器。它能查看页面源代码、实时编辑样式、审查元素、查看请求数据、直接调试 JavaScript 脚本。
 
 ## 检测绕过
 
-* [https://github.com/AEPKILL/devtools-detector](https://github.com/AEPKILL/devtools-detector)
+- [https://github.com/AEPKILL/devtools-detector](https://github.com/AEPKILL/devtools-detector)
 
 ## 代码实例
 
@@ -24,7 +24,7 @@ DevTools，全名 Developer Tools，几乎是所有主流浏览器都内置的�
           // 核心检测控制器
           const DevToolsDetector = {
             isOpen: false,
-        
+
             // 方法1：检测 console 是否调用 getter（有效率较高）
             detectGetter: function() {
               const element = new Image();
@@ -36,7 +36,7 @@ DevTools，全名 Developer Tools，几乎是所有主流浏览器都内置的�
               });
               console.log('detectGetter %c', element);
             },
-        
+
             // 方法2：利用窗口尺寸检测
             detectSize: function(threshold = 160) {
               const widthDiff = window.outerWidth - window.innerWidth;
@@ -47,7 +47,7 @@ DevTools，全名 Developer Tools，几乎是所有主流浏览器都内置的�
                 console.warn('DevTools detected via window size');
               }
             },
-        
+
             // 方法3：利用 debugger 卡顿检测
             detectDebuggerPause: function(threshold = 100) {
               const start = Date.now();
@@ -58,7 +58,7 @@ DevTools，全名 Developer Tools，几乎是所有主流浏览器都内置的�
                 console.warn('DevTools detected via debugger pause');
               }
             },
-        
+
             // 方法4：定时综合检测（建议用 setInterval 定时运行）
             run: function(interval = 3000) {
               setInterval(() => {
@@ -66,13 +66,13 @@ DevTools，全名 Developer Tools，几乎是所有主流浏览器都内置的�
                 // this.detectGetter();
                 this.detectSize();
                 // this.detectDebuggerPause();
-        
+
                 if (this.isOpen) {
                   this.onDetect();
                 }
               }, interval);
             },
-        
+
             // 检测到 DevTools 打开后的操作（可自定义）
             onDetect: function() {
               console.error("检测到 DevTools 被打开！");
@@ -81,7 +81,7 @@ DevTools，全名 Developer Tools，几乎是所有主流浏览器都内置的�
               // location.href = "/404.html";
             }
           };
-        
+
           // 启动检测
           DevToolsDetector.run();
         })();

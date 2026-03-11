@@ -6,19 +6,19 @@
 
 ## 语言工具
 
-| 工具 / 语言                   | 适用平台            | 说明                                     |
-|------------------------------|---------------------|------------------------------------------|
-| **Coq**                      | 多领域，支持建模     | 交互式定理证明器，基于高阶逻辑             |
-| **Isabelle/HOL**             | 多领域              | 功能类似 Coq，更偏重自动化推理              |
-| **Certora Prover**           | Solidity            | 商用级规则式验证，语法接近自然语言           |
-| **KEVM**                     | Ethereum / EVM      | EVM 的形式化语义实现                         |
-| **Move Prover**              | Move（Aptos / Sui） | 用于 Move 合约的自动验证                    |
-| **F\***                      | 多用途安全验证语言   | 微软开发，适合高安全场景                     |
-| **Michelson + Mi-Cho-Coq**   | Tezos               | 支持形式化验证 Michelson 合约                |
+| 工具 / 语言                | 适用平台            | 说明                               |
+| -------------------------- | ------------------- | ---------------------------------- |
+| **Coq**                    | 多领域，支持建模    | 交互式定理证明器，基于高阶逻辑     |
+| **Isabelle/HOL**           | 多领域              | 功能类似 Coq，更偏重自动化推理     |
+| **Certora Prover**         | Solidity            | 商用级规则式验证，语法接近自然语言 |
+| **KEVM**                   | Ethereum / EVM      | EVM 的形式化语义实现               |
+| **Move Prover**            | Move（Aptos / Sui） | 用于 Move 合约的自动验证           |
+| **F\***                    | 多用途安全验证语言  | 微软开发，适合高安全场景           |
+| **Michelson + Mi-Cho-Coq** | Tezos               | 支持形式化验证 Michelson 合约      |
 
 ## Coq
 
-* coqc wallet.v
+- coqc wallet.v
 
 ```coqc
 (* Wallet.v *)

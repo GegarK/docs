@@ -4,14 +4,13 @@
 
 <DocsAD/>
 
-
-| 风险类型           | 描述 |
-|--------------------|------|
-| 安全攻击           | 端口复用可能被用于 IDS/防火墙绕过、数据隐藏通道、端口欺骗等攻击场景。 |
-| 调试困难           | 多个进程或线程绑定相同端口，可能导致日志和连接追踪复杂，排查问题困难。 |
-| 配置易误           | 未正确设置 `SO_REUSEPORT` 或 `SO_REUSEADDR`，可能导致绑定失败或冲突行为。 |
-| 跨平台差异         | 不同操作系统（如 Windows、Linux、macOS）对端口复用的支持和行为存在差异。 |
-| 性能影响           | 大量复用监听 socket 时，系统需做额外的调度判断，可能引入开销。 |
+| 风险类型   | 描述                                                                      |
+| ---------- | ------------------------------------------------------------------------- |
+| 安全攻击   | 端口复用可能被用于 IDS/防火墙绕过、数据隐藏通道、端口欺骗等攻击场景。     |
+| 调试困难   | 多个进程或线程绑定相同端口，可能导致日志和连接追踪复杂，排查问题困难。    |
+| 配置易误   | 未正确设置 `SO_REUSEPORT` 或 `SO_REUSEADDR`，可能导致绑定失败或冲突行为。 |
+| 跨平台差异 | 不同操作系统（如 Windows、Linux、macOS）对端口复用的支持和行为存在差异。  |
+| 性能影响   | 大量复用监听 socket 时，系统需做额外的调度判断，可能引入开销。            |
 
 ## Socket
 
@@ -64,8 +63,8 @@ fn main() -> std::io::Result<()> {
 
 ## EBPF
 
-* sudo apt install clang llvm bpftool
-* clang -O2 -g -target bpf -I/usr/include/$(uname -m)-linux-gnu -c ./ebpf.c -o reuse.o
+- sudo apt install clang llvm bpftool
+- clang -O2 -g -target bpf -I/usr/include/$(uname -m)-linux-gnu -c ./ebpf.c -o reuse.o
 
 ```c
 

@@ -6,9 +6,8 @@
 
 ## 合约开发
 
-* move
-
+- move
 
 ## 浏览器
 
-* [https://explorer.aptoslabs.com/](https://explorer.aptoslabs.com/?network=mainnet)
+- [https://explorer.aptoslabs.com/](https://explorer.aptoslabs.com/?network=mainnet)

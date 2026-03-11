@@ -7,6 +7,7 @@
 <DocsAD/>
 
 ## 攻击方法
-* Bluesnarf
-* Bluesnarf++
-* BluePrinting
+
+- Bluesnarf
+- Bluesnarf++
+- BluePrinting

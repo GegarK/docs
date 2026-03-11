@@ -1,13 +1,14 @@
-# Move开发
+# Move 开发
 
 **Move 语言** 是由 Meta（前身为 Facebook）为其区块链项目 **Diem**（原名 Libra）开发的编程语言。Move 语言专为区块链和智能合约设计，重点是资产和资源的安全管理。虽然它最初是为 Diem 项目开发的，但在 Meta 宣布停止该项目后，Move 语言的使用并未结束，反而得到了广泛的应用。
 
-* [https://move-language.github.io/move/](https://move-language.github.io/move/)
-* [https://move-book.com/index.html](https://move-book.com/index.html)
+- [https://move-language.github.io/move/](https://move-language.github.io/move/)
+- [https://move-book.com/index.html](https://move-book.com/index.html)
 
 <DocsAD/>
 
 ## 1. **Aptos**
+
 Aptos 是目前最著名的使用 Move 语言的区块链平台。Aptos 由前 Meta 的 Diem 团队成员创建，继承了 Diem 的许多技术和设计理念，并继续使用 Move 语言。Aptos 的目标是提供一个高效、安全、可扩展的区块链，尤其注重去中心化金融（DeFi）、数字资产和智能合约的开发。
 
 - **Aptos 的特点**：
@@ -16,6 +17,7 @@ Aptos 是目前最著名的使用 Move 语言的区块链平台。Aptos 由前 M
   - **智能合约**：Aptos 使用 Move 语言来实现高效且安全的智能合约，确保代码在执行时不违反资源安全的基本规则。
 
 ## 2. **Sui**
+
 Sui 是由 **Mysten Labs** 开发的另一个基于 Move 语言的区块链项目。Sui 与 Aptos 同样来自 Diem 的前团队，旨在构建一个高性能、高可扩展性的智能合约平台。Sui 的设计理念侧重于低延迟、高吞吐量，并利用 Move 语言的资源管理能力来提高区块链系统的效率和安全性。
 
 - **Sui 的特点**：

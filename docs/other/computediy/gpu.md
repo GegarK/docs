@@ -1,6 +1,7 @@
 # GPU
 
 ## 1. **NVIDIA**
+
 - **官网**: [https://www.nvidia.com](https://www.nvidia.com)
 - **主要系列**:
   - **GeForce 系列**（主要用于游戏和消费者市场）
@@ -21,6 +22,7 @@
 <DocsAD/>
 
 ## 2. **AMD**
+
 - **官网**: [https://www.amd.com](https://www.amd.com)
 - **主要系列**:
   - **Radeon 系列**（主要用于游戏和消费者市场）
@@ -34,6 +36,7 @@
       - Radeon Pro WX 8200
 
 ## 3. **Intel**
+
 - **官网**: [https://www.intel.com](https://www.intel.com)
 - **主要系列**:
   - **Intel Arc 系列**（新推出的用于游戏和创意工作负载的显卡）
@@ -44,6 +47,7 @@
 ## 4. **其他 GPU 厂商**
 
 ### **ARM**
+
 - **官网**: [https://www.arm.com](https://www.arm.com)
 - **主要系列**:
   - **Mali GPU 系列**（用于移动设备和嵌入式系统）
@@ -52,6 +56,7 @@
       - Mali-G77
 
 ### **Apple**
+
 - **官网**: [https://www.apple.com](https://www.apple.com)
 - **主要系列**:
   - **Apple GPU**（集成在 M 系列芯片中）
@@ -61,6 +66,7 @@
       - Apple M1 Max GPU
 
 ### **Matrox**
+
 - **官网**: [https://www.matrox.com](https://www.matrox.com)
 - **主要系列**:
   - **Matrox G 系列**（用于专业图形和多显示器设置）

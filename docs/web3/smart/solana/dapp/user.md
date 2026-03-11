@@ -76,7 +76,7 @@ async function restoreUser(){
         79, 223, 151,  30,  88, 238, 130, 189, 103, 105, 184,
        211,  27, 159,  38,  58, 167, 163, 159,  73
      ]);
-     
+
     const keypair = Keypair.fromSecretKey(keypairBytes);
     console.log(keypair.publicKey);
     console.log(keypair.secretKey);
@@ -111,40 +111,40 @@ await restoreUserBase58();
 
 ```js
 import { Keypair, PublicKey } from "@solana/web3.js";
- 
+
 const publicKey = new PublicKey("24PNhTaNtomHhoy3fTRaMhAFCRj4uHqhZEEoWrKDbR5p");
- 
+
 const keypair = Keypair.fromSecretKey(
   Uint8Array.from([
     174, 47, 154, 16, 202, 193, 206, 113, 199, 190, 53, 133, 169, 175, 31, 56,
     222, 53, 138, 189, 224, 216, 117, 173, 10, 149, 53, 45, 73, 251, 237, 246,
     15, 185, 186, 82, 177, 240, 148, 69, 241, 227, 167, 80, 141, 89, 240, 121,
     121, 35, 172, 247, 68, 251, 226, 218, 48, 63, 176, 109, 168, 89, 238, 135,
-  ]),
+  ])
 );
 
 console.log(keypair.publicKey.toBase58() === publicKey.toBase58());
 ```
 
-* sol v2
+- sol v2
 
 ```js
 import { isAddress } from "@solana/web3.js";
- 
+
 // Note that generateKeyPair() will always give a public key that is valid for users
- 
+
 // Valid public key
 const key = "5oNDL3swdJJF1g9DzJiZ4ynHXgszjAEpUkxVYejchzrY";
- 
+
 // Lies on the ed25519 curve and is suitable for users
 console.log("Valid Address: ", isAddress(key));
- 
+
 // // Valid public key
 const offCurveAddress = "4BJXYkfvg37zEmBbsacZjeQDpTNx91KppxFJxRqrz48e";
- 
+
 // // Not on the ed25519 curve, therefore not suitable for users
 console.log("Valid Off Curve Address: ", isAddress(offCurveAddress));
- 
+
 // // Not a valid public key
 const errorPubkey = "testPubkey";
 console.log("Invalid Address: ", isAddress(errorPubkey));

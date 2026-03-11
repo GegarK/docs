@@ -2,4 +2,4 @@
 
 <DocsAD/>
 
-* [https://docs.ton.org/mandarin/develop/dapps/tutorials/jetton-minter](https://docs.ton.org/mandarin/develop/dapps/tutorials/jetton-minter)
+- [https://docs.ton.org/mandarin/develop/dapps/tutorials/jetton-minter](https://docs.ton.org/mandarin/develop/dapps/tutorials/jetton-minter)

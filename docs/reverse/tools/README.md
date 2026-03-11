@@ -112,7 +112,7 @@
   preview="https://imgs.deelmind.com.cn/nav/reflector.png"
 />
 
-# 针对Python
+# 针对 Python
 
 <SiteInfo
   name="Decompile3"

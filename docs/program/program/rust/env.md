@@ -6,9 +6,8 @@
 
 ## 安装目录修改环境变量
 
-* CARGO_HOME
-* RUSTUP_HOME
-
+- CARGO_HOME
+- RUSTUP_HOME
 
 ## [下载换源](https://rsproxy.cn/)
 
@@ -29,4 +28,3 @@ index = "https://rsproxy.cn/crates.io-index"
 [net]
 git-fetch-with-cli = true
 ```
-

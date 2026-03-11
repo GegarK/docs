@@ -1,6 +1,6 @@
-# WEB服务
+# WEB 服务
 
-## [Rocket库](https://rocket.rs/)
+## [Rocket 库](https://rocket.rs/)
 
 ```rust
 #[macro_use] extern crate rocket;

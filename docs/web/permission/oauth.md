@@ -1,29 +1,34 @@
-# OAuth漏洞
+# OAuth 漏洞
 
-## 什么是[OAuth2认证](https://oauth.net/2/)
+## 什么是[OAuth2 认证](https://oauth.net/2/)
+
 ![OAUTH](/imgs/web/exploits/permission/oauth/oauth-2-flow-diagram.png)
 
-## OAuth2分类
-* implicit
-* authorization code
-* password
-* client credentials
-* refresh token
+## OAuth2 分类
+
+- implicit
+- authorization code
+- password
+- client credentials
+- refresh token
 
 <DocsAD/>
 
 ## OAuth2 implicit
-* 第一步 跳转到授权网站
+
+- 第一步 跳转到授权网站
+
 ```JS
 GET /social-login
 ```
+
 ![OAUTH](/imgs/web/exploits/permission/oauth/redirect.png)
 
 用户名密码登录
 
 ![OAUTH](/imgs/web/exploits/permission/oauth/auth.png)
 
-* 第二步 获取授权码
+- 第二步 获取授权码
 
 ```JS
 GET /auth?client_id=neivpmi71bz7h7wiosar2&redirect_uri=https://ac401ffa1e91fb3ac01854c700520092.web-security-academy.net/oauth-callback&response_type=token&nonce=814077241&scope=openid%20profile%20email HTTP/1.1
@@ -37,7 +42,6 @@ Host: oauth-ac4c1fd21e8afbfdc06854a902f800de.web-security-academy.net
 Cookie: _interaction=30HW15ukE9HP7NxVOnW-G; _session=gAhcfl4Hb04WDf_y1ZOeI; _session.legacy=gAhcfl4Hb04WDf_y1ZOeI
 Origin: https://oauth-ac4c1fd21e8afbfdc06854a902f800de.web-security-academy.net
 ```
-
 
 ```JS
 HTTP/1.1 302 Found
@@ -55,7 +59,8 @@ Content-Length: 459
 
 Redirecting to <a href="https://ac401ffa1e91fb3ac01854c700520092.web-security-academy.net/oauth-callback#access_token=vGQhDtCFPnvSWSJPOHpkBu_8JJGNspW97D9qKcyr4hV&amp;expires_in=3600&amp;token_type=Bearer&amp;scope=openid%20profile%20email">https://ac401ffa1e91fb3ac01854c700520092.web-security-academy.net/oauth-callback#access_token=vGQhDtCFPnvSWSJPOHpkBu_8JJGNspW97D9qKcyr4hV&amp;expires_in=3600&amp;token_type=Bearer&amp;scope=openid%20profile%20email</a>.
 ```
-* 第三步 获取access token
+
+- 第三步 获取 access token
 
 ```JS
 GET /oauth-callback HTTP/1.1
@@ -80,7 +85,7 @@ fetch('https://oauth-ac4c1fd21e8afbfdc06854a902f800de.web-security-academy.net/m
     }
 })
 .then(r => r.json())
-.then(j => 
+.then(j =>
     fetch('/authenticate', {
         method: 'POST',
         headers: {
@@ -96,7 +101,7 @@ fetch('https://oauth-ac4c1fd21e8afbfdc06854a902f800de.web-security-academy.net/m
 </script>
 ```
 
-* 第四步 获取资源
+- 第四步 获取资源
 
 ```JS
 GET /me HTTP/1.1

@@ -8,11 +8,11 @@
 
 ## Tutorial Video
 
-* DeeLMind
+- DeeLMind
 
 ## Env
 
-* Kali
+- Kali
 
 ## Usage
 

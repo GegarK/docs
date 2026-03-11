@@ -6,7 +6,7 @@
 
 <DocsAD/>
 
-* 后缀sys
+- 后缀 sys
 
 ```c
 // 示例：Windows设备驱动程序代码
@@ -47,7 +47,7 @@ static void __exit hello_exit(void) {
 
 ## MacOS
 
-* 后缀kext
+- 后缀 kext
 
 ```c
 #include <mach/mach_types.h>

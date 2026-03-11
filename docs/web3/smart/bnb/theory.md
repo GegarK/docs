@@ -6,9 +6,8 @@ BSC 是一个与以太坊兼容的区块链，它支持与以太坊虚拟机（E
 
 ## 合约开发
 
-* solidity
-
+- solidity
 
 ## 浏览器
 
-* [https://bscscan.com/](https://bscscan.com/)
+- [https://bscscan.com/](https://bscscan.com/)

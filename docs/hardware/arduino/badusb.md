@@ -1,12 +1,12 @@
-# BADUSB攻击
+# BADUSB 攻击
 
-## 什么是BADUSB攻击
+## 什么是 BADUSB 攻击
 
 计算机或者其它设备"承认"我们插入的硬件为键盘鼠标，硬件版本模拟键盘鼠标操作。
 
 <DocsAD/>
 
-## BADUSB代码
+## BADUSB 代码
 
 ```JS
 #include "Keyboard.h"

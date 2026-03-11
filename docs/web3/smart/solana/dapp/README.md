@@ -1,4 +1,4 @@
-# DAPP开发
+# DAPP 开发
 
 ## [Solana SDK](https://solana-labs.github.io/solana-web3.js/)
 
@@ -12,22 +12,28 @@ npm i @solana/web3.js@2
 ## JS
 
 ```js
-const solanaWeb3 = require('@solana/web3.js');
+const solanaWeb3 = require("@solana/web3.js");
 
 // Connect to the Solana Devnet
-const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('testnet'), 'confirmed');
+const connection = new solanaWeb3.Connection(
+  solanaWeb3.clusterApiUrl("testnet"),
+  "confirmed"
+);
 
 // Generate a new keypair (wallet)
 const wallet = solanaWeb3.Keypair.generate();
-console.log("Generated new wallet with public key:", wallet.publicKey.toBase58());
+console.log(
+  "Generated new wallet with public key:",
+  wallet.publicKey.toBase58()
+);
 
 // Request an airdrop of 1 SOL to the generated wallet
 async function requestAirdrop() {
   const airdropSignature = await connection.requestAirdrop(
     wallet.publicKey,
-    solanaWeb3.LAMPORTS_PER_SOL, // 1 SOL
+    solanaWeb3.LAMPORTS_PER_SOL // 1 SOL
   );
-  
+
   // Confirm the transaction
   await connection.confirmTransaction(airdropSignature);
 
@@ -46,7 +52,7 @@ async function main() {
   await checkBalance();
 }
 
-main().catch(err => {
+main().catch((err) => {
   console.error(err);
 });
 ```

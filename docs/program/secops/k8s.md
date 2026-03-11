@@ -14,7 +14,7 @@ Kubernetes（常简称为 k8s）是一个开源的容器编排平台，最初由
 - **服务发现和负载均衡**：自动为 Pod 提供 DNS 名称和 IP 地址，并在 Pod 之间分配流量。
 - **滚动更新和回滚**：无中断地发布新版本，并支持快速回滚到之前的版本。
 
-## K8S常用命令
+## K8S 常用命令
 
 ```bash
 # 创建一个名为nginx的Deployment
@@ -85,3 +85,4 @@ kubectl get roles
 
 # 查看特定ServiceAccount的详细信息
 kubectl describe serviceaccount <serviceaccount-name>
+```

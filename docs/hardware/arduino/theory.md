@@ -1,4 +1,4 @@
-# Arduino原理
+# Arduino 原理
 
 ## Arduino Leonardo
 
@@ -15,18 +15,19 @@ Arduino Leonardo 可以通过微型 USB 连接或外部电源供电，外部（�
 IOREF。 电路板 I/O 引脚的工作电压（即电路板的 VCC）。 这是 Leonardo 上的 5V。
 
 ## 管脚
-* VIN - 输入电压
-* 5V - 输出5V电压
-* 3.3V - 输出3.3V
-* GND - 接地
-* A0-A5 - 模拟输入输出
-* D0-D13 - 数字输入输出
-* RX - 
-* TX - 
-* ~ - PWM功能
-* ESET - 复位开发板
-* IOREF - 该引脚是输入/输出参考，提供参考电压。
-* AREF - 提供模拟参考电压
-* SCL - 是用于同步数据传输的时钟线
-* SDA - 是用于传输数据的通讯线
-* ICSP - 烧录BootLoader
+
+- VIN - 输入电压
+- 5V - 输出 5V 电压
+- 3.3V - 输出 3.3V
+- GND - 接地
+- A0-A5 - 模拟输入输出
+- D0-D13 - 数字输入输出
+- RX -
+- TX -
+- ~ - PWM 功能
+- ESET - 复位开发板
+- IOREF - 该引脚是输入/输出参考，提供参考电压。
+- AREF - 提供模拟参考电压
+- SCL - 是用于同步数据传输的时钟线
+- SDA - 是用于传输数据的通讯线
+- ICSP - 烧录 BootLoader

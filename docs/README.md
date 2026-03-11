@@ -6,14 +6,13 @@ heroImage: /geekfz.png
 heroText: 極客方舟
 tagline: 懂進攻，知防守；先正向，後逆向
 
-
 actions:
   - text: 一对一辅导
     link: /pay/one2one
     type: primary
-  
-  - text: TSPACEY
-    link: https://tspacey.com/
+
+  - text: 商品购买
+    link: https://deelmind.org
     type: primary
 
   # - text: 密码学
@@ -111,7 +110,7 @@ features:
 
   - title: XXE漏洞
     icon: svg
-    details: 代码审计，XML外部实体注入(XML External Entity Injection) 
+    details: 代码审计，XML外部实体注入(XML External Entity Injection)
     link: /web/xxe/
 
   - title: SSRF漏洞
@@ -133,7 +132,7 @@ features:
     icon: lock
     details: 代码审计，登录，鉴权，权限控制，访问控制
     link: /web/permission/
-  
+
   - title: 其它漏洞
     icon: more
     details: 代码审计，点击劫持，请求走私，跨域，APP渗透
@@ -188,7 +187,7 @@ features:
     icon: linux
     details: Metasploit教程
     link: /tools/metasploit/
-  
+
   - title: Cobalt Strike
     icon: OS
     details: Cobalt Strike教程
@@ -243,7 +242,7 @@ features:
     icon: news
     details: 智能合约漏洞
     link: /web3/
-  
+
   - title: 逆向 - C/C++语言
     icon: back-stage
     details: C/C++语言,逆向分析前置知识
@@ -268,8 +267,6 @@ features:
     icon: news
     details: 安全开发，逆向分析
     link: /program/program/rust
-
-
 
 copyright: false
 footer: Copyright © 2023 <a href="https://deelmind.com" target="_blank">極客方舟</a>

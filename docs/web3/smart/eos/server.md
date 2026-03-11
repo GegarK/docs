@@ -17,8 +17,8 @@ CONTRACT mycontract : public contract {
          name     eos_account;
          uint8_t  is_admin;
 
-         uint64_t primary_key() const { 
-            return eos_account.value; 
+         uint64_t primary_key() const {
+            return eos_account.value;
          }
       };
 

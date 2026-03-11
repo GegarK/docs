@@ -2,8 +2,7 @@
 
 ## HelloWorld
 
-
-* 安装Anchor
+- 安装 Anchor
 
 ```sh
 cargo install --git https://github.com/coral-xyz/anchor avm --locked --force
@@ -14,8 +13,8 @@ avm use latest
 npm install @coral-xyz/anchor
 ```
 
-* anchor init test1
-* anchor build
+- anchor init test1
+- anchor build
 
 ```rust
 use anchor_lang::prelude::*;
@@ -36,9 +35,9 @@ pub mod test1 {
 pub struct Initialize {}
 ```
 
-* anchor deploy
+- anchor deploy
 
-* 上传IDL
+- 上传 IDL
 
 `anchor idl init -f ./target/idl/hello.json HHpyXUa97M6v9i5C5qK375JiYjckMEEDBaCLAA1SMSmv`
 

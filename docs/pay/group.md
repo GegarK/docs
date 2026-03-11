@@ -5,13 +5,13 @@
 
 大陆同学最好加`微信群`,国外同学尽量加`微信群`
 
-2025年更新群内直播课程全部包含二进制安全，包含[Windows逆向分析](./windows.md)，[安卓&LINUX逆向分析](./androidlinux.md)，[IOS&MAC逆向分析](./iosmac.md)，以及其它平台逆向分析（鸿蒙、路由器等等），[AI网络安全](./class/ai.md)
+2025 年更新群内直播课程全部包含二进制安全，包含[Windows 逆向分析](./windows.md)，[安卓&LINUX 逆向分析](./androidlinux.md)，[IOS&MAC 逆向分析](./iosmac.md)，以及其它平台逆向分析（鸿蒙、路由器等等），[AI 网络安全](./class/ai.md)
 
-* [直播课程](./alive.md)
-* 学习资源
-* 安全工具
-* 时间永久
-:::
+- [直播课程](./alive.md)
+- 学习资源
+- 安全工具
+- 时间永久
+  :::
 
 <DocsAD/>
 
@@ -22,8 +22,9 @@
 :::
 
 ## 加微信群流程
-* 费用`100`¥(RMB/CNY)
-* 看完群规
+
+- 费用`100`¥(RMB/CNY)
+- 看完群规
 
 ```JS
 1 日常群友可以正常讨论问题，不要讨论任何非技术问题，有偿等等。
@@ -37,7 +38,7 @@
 不要讨论任何与技术不相干的事情！！！
 ```
 
-* 同意群规后，付费，请加我微信号（DeeLMind），我拉你进入微信群
+- 同意群规后，付费，请加我微信号（DeeLMind），我拉你进入微信群
 
 我的微信：DeeLMind
 
@@ -51,10 +52,10 @@
 
 ![er](/imgs/wx.jpg)
 
+## 加入 Discord 群組流程
 
-## 加入Discord群組流程
-* 費用`20`$
-* 看完群規
+- 費用`20`$
+- 看完群規
 
 ```JS
 在這裡輸入要轉換1 日常群友可以正常討論問題，不要討論任何非技術問題，有償等等。
@@ -68,14 +69,14 @@
 不要討論任何與技術不相幹的事情！！！的內容
 ```
 
-* 同意群规后，付费
+- 同意群规后，付费
 
-* [付費PayPal鏈接](https://paypal.me/DeeLMind)
+- [付費 PayPal 鏈接](https://paypal.me/DeeLMind)
 
-* 加我Discord，或者TG發我付費截圖
+- 加我 Discord，或者 TG 發我付費截圖
 
 `DeeLMind`
 
-如果加不上我的Discord也可以添加我的Telegram發我截圖：[TG @DeeLMind](https://t.me/DeeLMind)
+如果加不上我的 Discord 也可以添加我的 Telegram 發我截圖：[TG @DeeLMind](https://t.me/DeeLMind)
 
-* 我拉你進群
+- 我拉你進群

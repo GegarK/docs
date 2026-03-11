@@ -1,1 +1,0 @@
-import{_ as c,K as t,L as a,M as e,N as r}from"./framework-edebdfe1.js";const s={},o=e("h1",{id:"lcx文档",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#lcx文档","aria-hidden":"true"},"#"),r(" LCX文档")],-1),n=[o];function _(l,d){return t(),a("div",null,n)}const h=c(s,[["render",_],["__file","lcx.html.vue"]]);export{h as default};

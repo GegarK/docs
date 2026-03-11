@@ -7,15 +7,17 @@
 ## 工作原理
 
 1. **感染途径**：
+
    - 钓鱼邮件附件
    - 恶意网站下载
    - 软件漏洞（如通过远程桌面协议 RDP）
-   - U盘等可移动设备传播
+   - U 盘等可移动设备传播
    - 渗透漏洞攻击
 
 2. **加密过程**：
+
    - 一旦感染，病毒会扫描系统中的文件
-   - 使用加密算法（如AES、RSA）对文件进行加密
+   - 使用加密算法（如 AES、RSA）对文件进行加密
    - 更改文件扩展名，并删除原始文件
    - 弹出勒索信息，要求支付赎金
 
@@ -25,27 +27,27 @@
 
 ## 常见勒索病毒家族
 
-| 恶意后缀名          | 活跃时间         | 名称                | 特点与说明                                                                 |
-|---------------------|------------------|---------------------|--------------------------------------------------------------------------|
-| `.wncry`             | 2017             | **WannaCry**        | 利用 SMB 协议漏洞（EternalBlue）传播，影响全球超过 150 个国家           |
-| `.locky`             | 2016             | **Locky**           | 通过恶意邮件传播，采用加密扩展名（如 .locky），加密速度快               |
-| `.ryk`（变种较多）   | 2018–至今        | **Ryuk**            | 针对企业与政府部门，要求高额赎金，经常与 TrickBot 联合攻击               |
-| `.revil` / `.sodinokibi` | 2019–2021    | **REvil (Sodinokibi)** | 勒索即服务（RaaS）代表，攻击大型企业，2021年被FBI打击                     |
-| `.maze`              | 2019–2020        | **Maze**            | 首个采用“双重勒索”（数据加密 + 数据泄露）策略的勒索病毒                   |
-| `.conti`             | 2020–2022        | **Conti**           | Maze 的继承者，同样使用双重勒索策略，2022年源代码泄露                    |
-| `.darkside`          | 2020–2021        | **DarkSide**        | 攻击 Colonial Pipeline 引发美国全国关注，后宣布“关闭”                    |
-| `.dharma`, `.wallet` | 2016–至今        | **Dharma (CrySiS)** | 中小企业的高频攻击目标，RaaS形式，多个变种                               |
-| `.nw`, `.netwalker`  | 2019–2021        | **NetWalker**       | 针对教育与医疗机构，采用 PowerShell 和文件脚本                            |
-| `.clop`              | 2019–至今        | **Clop**            | 以大规模数据泄露著称，攻击金融、医疗行业，利用 Zero-day 漏洞             |
-| `.avdn`              | 2020–2021        | **Avaddon**         | 采用多线程加密和 DDoS 威胁，攻击范围广                                   |
-| `.egregor`           | 2020             | **Egregor**         | Maze 衍生版本，攻击者要求赎金后直接泄露数据                              |
-| `.hive`              | 2021–2023        | **Hive**            | 医疗行业重点攻击目标，被FBI渗透并关闭服务器                               |
-| `.alphv` / `.blackcat` | 2021–至今     | **BlackCat (ALPHV)**| 使用 Rust 编写，支持多平台攻击，被认为是 Conti 成员所创建                 |
-| `.ragnar` / `.ragnarlocker` | 2019–至今 | **Ragnar Locker**   | 在虚拟机中运行自身以避开杀毒软件，主要攻击关键基础设施                   |
-| `.medusa`            | 2019–至今        | **MedusaLocker**    | 自动化传播方式为主，常借助 RDP 渗透系统                                   |
-| `.locked`, `.lkg`    | 2019             | **LockerGoga**      | 攻击工业公司，文件加密后导致部分工厂瘫痪                                  |
-| `.petya`, `.3ra`     | 2016/2017        | **Petya/NotPetya**  | Petya 通过主引导记录加密系统，NotPetya 实为破坏性攻击                     |
-| `.ekans`             | 2020             | **Snake (Ekans)**   | 专门针对工业控制系统（ICS）的勒索病毒                                      |
+| 恶意后缀名                  | 活跃时间  | 名称                   | 特点与说明                                                    |
+| --------------------------- | --------- | ---------------------- | ------------------------------------------------------------- |
+| `.wncry`                    | 2017      | **WannaCry**           | 利用 SMB 协议漏洞（EternalBlue）传播，影响全球超过 150 个国家 |
+| `.locky`                    | 2016      | **Locky**              | 通过恶意邮件传播，采用加密扩展名（如 .locky），加密速度快     |
+| `.ryk`（变种较多）          | 2018–至今 | **Ryuk**               | 针对企业与政府部门，要求高额赎金，经常与 TrickBot 联合攻击    |
+| `.revil` / `.sodinokibi`    | 2019–2021 | **REvil (Sodinokibi)** | 勒索即服务（RaaS）代表，攻击大型企业，2021 年被 FBI 打击      |
+| `.maze`                     | 2019–2020 | **Maze**               | 首个采用“双重勒索”（数据加密 + 数据泄露）策略的勒索病毒       |
+| `.conti`                    | 2020–2022 | **Conti**              | Maze 的继承者，同样使用双重勒索策略，2022 年源代码泄露        |
+| `.darkside`                 | 2020–2021 | **DarkSide**           | 攻击 Colonial Pipeline 引发美国全国关注，后宣布“关闭”         |
+| `.dharma`, `.wallet`        | 2016–至今 | **Dharma (CrySiS)**    | 中小企业的高频攻击目标，RaaS 形式，多个变种                   |
+| `.nw`, `.netwalker`         | 2019–2021 | **NetWalker**          | 针对教育与医疗机构，采用 PowerShell 和文件脚本                |
+| `.clop`                     | 2019–至今 | **Clop**               | 以大规模数据泄露著称，攻击金融、医疗行业，利用 Zero-day 漏洞  |
+| `.avdn`                     | 2020–2021 | **Avaddon**            | 采用多线程加密和 DDoS 威胁，攻击范围广                        |
+| `.egregor`                  | 2020      | **Egregor**            | Maze 衍生版本，攻击者要求赎金后直接泄露数据                   |
+| `.hive`                     | 2021–2023 | **Hive**               | 医疗行业重点攻击目标，被 FBI 渗透并关闭服务器                 |
+| `.alphv` / `.blackcat`      | 2021–至今 | **BlackCat (ALPHV)**   | 使用 Rust 编写，支持多平台攻击，被认为是 Conti 成员所创建     |
+| `.ragnar` / `.ragnarlocker` | 2019–至今 | **Ragnar Locker**      | 在虚拟机中运行自身以避开杀毒软件，主要攻击关键基础设施        |
+| `.medusa`                   | 2019–至今 | **MedusaLocker**       | 自动化传播方式为主，常借助 RDP 渗透系统                       |
+| `.locked`, `.lkg`           | 2019      | **LockerGoga**         | 攻击工业公司，文件加密后导致部分工厂瘫痪                      |
+| `.petya`, `.3ra`            | 2016/2017 | **Petya/NotPetya**     | Petya 通过主引导记录加密系统，NotPetya 实为破坏性攻击         |
+| `.ekans`                    | 2020      | **Snake (Ekans)**      | 专门针对工业控制系统（ICS）的勒索病毒                         |
 
 > 📌 注：后缀名可能因变种、配置差异而不同，仅列出常见/默认后缀。
 
@@ -55,12 +57,12 @@
 - 不随意打开陌生邮件和附件
 - 更新操作系统和软件，打补丁
 - 安装并更新杀毒软件
-- 限制RDP访问权限，使用强密码和多因素认证
+- 限制 RDP 访问权限，使用强密码和多因素认证
 
 ## 📌 解密工具
 
 > 即使支付赎金，也不能保证数据一定会被解密。应优先考虑数据恢复与法律手段。
 
-* [卡巴斯基](https://noransom.kaspersky.com/zh/)
-* [Emsisoft](https://www.emsisoft.com/en/ransomware-decryption/)
-* [欧洲刑警](https://www.nomoreransom.org/crypto-sheriff.php?lang=en)
+- [卡巴斯基](https://noransom.kaspersky.com/zh/)
+- [Emsisoft](https://www.emsisoft.com/en/ransomware-decryption/)
+- [欧洲刑警](https://www.nomoreransom.org/crypto-sheriff.php?lang=en)

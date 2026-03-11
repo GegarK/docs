@@ -1,14 +1,13 @@
-# SO动态调试
+# SO 动态调试
 
-
-* 文件上传
+- 文件上传
 
 ```
 android_server在IDA目录dbgsrv下,找到对应版面然后将这个软件安装到调试平台上，也就是Android手机上
 adb push android_server /data/local/tmp
 ```
 
-* 权限提升
+- 权限提升
 
 ```
 执行提升权限命令 su
@@ -16,9 +15,9 @@ adb push android_server /data/local/tmp
 chmod 777 /data/local/tmp/android_server
 ```
 
-* 执行/data/local/tmp/android_server
+- 执行/data/local/tmp/android_server
 
-* 端口转发
+- 端口转发
 
 ```
 adb forward tcp:23946 tcp:23946

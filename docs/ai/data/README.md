@@ -6,7 +6,7 @@
 
 ## 在线搜索
 
-* [导航数据集](../../nav/ai.md)
-* [https://www.kaggle.com/datasets](https://www.kaggle.com/datasets)
+- [导航数据集](../../nav/ai.md)
+- [https://www.kaggle.com/datasets](https://www.kaggle.com/datasets)
 
 <DocsAD/>

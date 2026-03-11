@@ -16,13 +16,13 @@ Transformer 是一种**基于注意力机制（Attention）**的深度学习模�
 
 在 Transformer 之前，序列建模主要依赖：
 
-* RNN / LSTM / GRU
+- RNN / LSTM / GRU
 
 这些模型存在明显瓶颈：
 
-* ❌ **无法并行计算**（必须按时间步顺序处理）
-* ❌ **长距离依赖困难**（梯度消失 / 记忆衰减）
-* ❌ **训练效率低、难以规模化**
+- ❌ **无法并行计算**（必须按时间步顺序处理）
+- ❌ **长距离依赖困难**（梯度消失 / 记忆衰减）
+- ❌ **训练效率低、难以规模化**
 
 Transformer 的核心突破是：
 
@@ -42,14 +42,14 @@ Transformer 的核心突破是：
 
 > “The animal didn’t cross the street because **it** was too tired.”
 
-模型需要知道 **it** 指代的是 *animal*，而不是 *street*。
+模型需要知道 **it** 指代的是 _animal_，而不是 _street_。
 
 Self-Attention 正是为了解决这种**全局依赖建模**问题。
 
 ### 可视化
 
-* [https://bbycroft.net/llm](https://bbycroft.net/llm)
-* [https://poloclub.github.io/transformer-explainer/](https://poloclub.github.io/transformer-explainer/)
+- [https://bbycroft.net/llm](https://bbycroft.net/llm)
+- [https://poloclub.github.io/transformer-explainer/](https://poloclub.github.io/transformer-explainer/)
 
 ---
 

@@ -1,14 +1,17 @@
-# DNS协议
+# DNS 协议
 
-## 什么是DNS协议?
-域名系统（英语：Domain Name System，缩写：DNS）是互联网的一项服务。它作为将域名和IP地址相互映射的一个分布式数据库，能够使人更方便地访问互联网。DNS使用TCP和UDP端口53。当前，对于每一级域名长度的限制是63个字符，域名总长度则不能超过253个字符。
+## 什么是 DNS 协议?
 
-## DNS系统组成
-* root 根域名
-* 顶级域名
-* 二级域名
-* 三级域名
-* 四级域名
+域名系统（英语：Domain Name System，缩写：DNS）是互联网的一项服务。它作为将域名和 IP 地址相互映射的一个分布式数据库，能够使人更方便地访问互联网。DNS 使用 TCP 和 UDP 端口 53。当前，对于每一级域名长度的限制是 63 个字符，域名总长度则不能超过 253 个字符。
+
+## DNS 系统组成
+
+- root 根域名
+- 顶级域名
+- 二级域名
+- 三级域名
+- 四级域名
+
 ```JS
 deelmind.com.
 . root域名
@@ -18,11 +21,12 @@ deelmind 二级域名
 
 <DocsAD/>
 
-## DNS解析流程
+## DNS 解析流程
 
 ![er](/imgs/other/protocal/dns/1.png)
 
-* 本地HOSTS文件解析
+- 本地 HOSTS 文件解析
+
 ```JS
 C:\Windows\System32\drivers\etc\hosts
 
@@ -49,17 +53,19 @@ C:\Windows\System32\drivers\etc\hosts
 ```
 
 ## [DNS Records Types](https://www.cloudflare.com/zh-cn/learning/dns/dns-records/)
+
 ![er](/imgs/other/protocal/dns/3.png)
 
-* A 记录（IPv4 Address Record）
-* MX 记录（Mail Exchanger Record）
-* NS 记录（Name Server Record）
-* PTR 记录（Pointer Record）
-* SOA 记录（Start of Authority Record）
-* SRV 记录（Service Record）
-* TXT 记录（Text Record）
-* AAAA 记录（IPv6 Address Record）
-* CNAME 记录（Canonical Name Record）
+- A 记录（IPv4 Address Record）
+- MX 记录（Mail Exchanger Record）
+- NS 记录（Name Server Record）
+- PTR 记录（Pointer Record）
+- SOA 记录（Start of Authority Record）
+- SRV 记录（Service Record）
+- TXT 记录（Text Record）
+- AAAA 记录（IPv6 Address Record）
+- CNAME 记录（Canonical Name Record）
 
 ## [DNS Root Server](https://www.iana.org/domains/root/servers)
+
 ![er](/imgs/other/protocal/dns/2.png)

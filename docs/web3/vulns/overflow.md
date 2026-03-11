@@ -20,7 +20,7 @@ contract Token {
   constructor() {
     balances[msg.sender] = 250;
   }
-  
+
   function deposit(uint8 _value) public returns (bool) {
     unchecked{
         balances[msg.sender] += _value;

@@ -8,9 +8,8 @@
 
 ## 论坛模板
 
-* [https://flarum.org/](https://flarum.org/)
-* [https://www.discuz.vip/](https://www.discuz.vip/)
-* [https://nodebb.org/](https://nodebb.org/)
-
+- [https://flarum.org/](https://flarum.org/)
+- [https://www.discuz.vip/](https://www.discuz.vip/)
+- [https://nodebb.org/](https://nodebb.org/)
 
 ## [快速搭建](https://freeflarum.com/?ref=flarum.org)

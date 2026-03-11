@@ -1,7 +1,7 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar";
 import sidebar from "./sidebar";
-import { resolve } from 'path';
+import { resolve } from "path";
 
 export default hopeTheme({
   hostname: "https://deelmind.com",
@@ -11,8 +11,8 @@ export default hopeTheme({
   },
   iconPrefix: "iconfont icon-",
 
-    // 关键词: "iconfont", "iconify", "fontawesome", "fontawesome-with-brands"
-    iconAssets: "fontawesome",
+  // 关键词: "iconfont", "iconify", "fontawesome", "fontawesome-with-brands"
+  iconAssets: "fontawesome",
 
   logo: "/geekfz.png",
   darkmode: "enable",
@@ -30,11 +30,11 @@ export default hopeTheme({
 
   plugins: {
     // 全局复制100字数以上，开启版权复制
-    copyright:{
-      global:true
+    copyright: {
+      global: true,
     },
     // SEO
-    seo:true,
+    seo: true,
     components: {
       components: [
         "ArtPlayer",
@@ -65,7 +65,7 @@ export default hopeTheme({
             path: "/",
             title: "课程与服务",
             content:
-              '<ul><li>思 维 教程：<a class="deelmind" target="_blank" href="https://all.deelmind.com.cn/">《随缘自然而然》</a></li><li>一对一辅导：<a href="/pay/one2one" target="_blank">《渗透测试》</a></li><li>一对一辅导：<a href="/pay/one2one" target="_blank">《二进制安全》</a></li><li>一对一辅导：<a href="/pay/one2one" target="_blank">《网络安全AI》</a></li><li>一对一辅导：<a href="/pay/web3" target="_blank">《WEB3区块链虚拟货币》</a></li><li><a href="/pay/one2one" target="_blank">付费辅导：《网络安全一对一辅导》</a></li><li><a href="/pay/zixun" target="_blank">付费咨询:《项目技术咨询》</a></li></ul>'
+              '<ul><li>思 维 教程：<a class="deelmind" target="_blank" href="https://all.deelmind.com.cn/">《随缘自然而然》</a></li><li>一对一辅导：<a href="/pay/one2one" target="_blank">《渗透测试》</a></li><li>一对一辅导：<a href="/pay/one2one" target="_blank">《二进制安全》</a></li><li>一对一辅导：<a href="/pay/one2one" target="_blank">《网络安全AI》</a></li><li>一对一辅导：<a href="/pay/web3" target="_blank">《WEB3区块链虚拟货币》</a></li><li><a href="/pay/one2one" target="_blank">付费辅导：《网络安全一对一辅导》</a></li><li><a href="/pay/zixun" target="_blank">付费咨询:《项目技术咨询》</a></li></ul>',
           },
         ],
       },

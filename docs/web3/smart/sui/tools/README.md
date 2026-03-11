@@ -4,7 +4,7 @@
 
 <DocsAD/>
 
-* 安装SUI
+- 安装 SUI
 
 ```sh
 cargo install --locked --git https://github.com/MystenLabs/sui.git --branch testnet sui

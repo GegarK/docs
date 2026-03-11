@@ -1,12 +1,12 @@
 # zk-Rollups
 
-## 什么是zk-Rollups
+## 什么是 zk-Rollups
 
 zk-Rollups 是一种 Layer 2 扩展技术，旨在提高区块链网络（如以太坊）的交易处理能力和效率，同时保持高安全性。zk-Rollups 使用零知识证明（zk-proofs）来汇总多个交易，并将这些汇总交易提交到主网进行验证和结算。
 
 <DocsAD/>
 
-## zk-Rollups原理
+## zk-Rollups 原理
 
 1. **交易聚合**：所有的交易不会直接写入区块链的 Layer 1，而是在 Layer 2 上进行聚合和处理。
 2. **状态更新**：每笔交易的状态更新和计算都在 Layer 2 进行，只有最终的状态根会提交到 Layer 1 的区块链上。

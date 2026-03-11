@@ -26,7 +26,6 @@ print(completion)
     }
   ]
 }
-
 ```
 
 <DocsAD/>

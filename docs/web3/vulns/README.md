@@ -1,36 +1,38 @@
-# WEB3漏洞
+# WEB3 漏洞
 
 ::: warning DeeLMind 提示
-WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行），其实到头来搞的多还是智能合约漏洞。具体区块链安全请到具体目录下查看，例如[Solana安全相关](../smart/solana/security/)
+WEB3.0 区块链漏洞不容易攻击（只是困难，但也不是完全不行），其实到头来搞的多还是智能合约漏洞。具体区块链安全请到具体目录下查看，例如[Solana 安全相关](../smart/solana/security/)
 :::
 
-[YouTube系列教程](https://www.youtube.com/watch?v=3aMp6GWsC_Q&list=PLgZqc0esdeS-i08Nx5MLdcAKr3XA4KxN8)
+[YouTube 系列教程](https://www.youtube.com/watch?v=3aMp6GWsC_Q&list=PLgZqc0esdeS-i08Nx5MLdcAKr3XA4KxN8)
+
 <iframe width="720px" height="480px" src="https://www.youtube.com/embed/3aMp6GWsC_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-[B站系列教程](https://www.bilibili.com/medialist/play/282616786?from=space&business=space_series&business_id=2795963&desc=1&spm_id_from=333.999.0.0)
+[B 站系列教程](https://www.bilibili.com/medialist/play/282616786?from=space&business=space_series&business_id=2795963&desc=1&spm_id_from=333.999.0.0)
+
 <iframe src="//player.bilibili.com/player.html?aid=390400020&bvid=BV1ud4y1t7ex&cid=899195528&page=1"  frameborder="no"  allowfullscreen="true" style="width:720px;height:480px"> 
 </iframe>
 
 ## [区块链常见漏洞列表](https://github.com/slowmist/Cryptocurrency-Security-Audit-Guide/blob/main/Blockchain-Common-Vulnerability-List_CN.md?plain=1)
 
 - [区块链常见漏洞列表](#区块链常见漏洞列表)
-  * [网络层](#网络层)
-    + [P2P](#p2p)
+  - [网络层](#网络层)
+    - [P2P](#p2p)
       - [女巫攻击](#女巫攻击)
       - [日蚀攻击](#日蚀攻击)
       - [窃听攻击](#窃听攻击)
       - [拒绝服务攻击](#拒绝服务攻击)
-      - [BGP劫持攻击](#bgp-劫持攻击)
+      - [BGP 劫持攻击](#bgp-劫持攻击)
       - [异形攻击](#异形攻击)
       - [时间劫持](#时间劫持)
-    + [RPC](#rpc)
+    - [RPC](#rpc)
       - [窃听攻击](#窃听攻击)
       - [拒绝服务攻击](#拒绝服务攻击)
       - [以太坊黑色情人节漏洞](#以太坊黑色情人节漏洞)
-      - [HTTP输入攻击](#http-输入攻击)
+      - [HTTP 输入攻击](#http-输入攻击)
       - [跨域钓鱼攻击](#跨域钓鱼攻击)
-  * [分类帐层](#分类帐层)
-    + [共识](#共识)
+  - [分类帐层](#分类帐层)
+    - [共识](#共识)
       - [长程攻击](#长程攻击)
       - [贿赂攻击](#贿赂攻击)
       - [种族攻击](#种族攻击)
@@ -44,32 +46,33 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
       - [币龄累积攻击](#币龄累积攻击)
       - [自私挖矿攻击](#自私挖矿攻击)
       - [区块双产](#区块双产)
-    + [加密](#加密)
+    - [加密](#加密)
       - [密码学攻击](#密码学攻击)
       - [私钥预测](#私钥预测)
       - [长度扩展攻击](#长度扩展攻击)
-    + [交易](#交易)
+    - [交易](#交易)
       - [重放攻击](#重放攻击)
       - [交易延展性攻击](#交易延展性攻击)
       - [交易时间锁攻击](#交易时间锁攻击)
       - [假充值攻击](#假充值攻击)
       - [Rug Pull](#rug-pull)
-- [智能合约漏洞](#智能合约漏洞)    
-  
+- [智能合约漏洞](#智能合约漏洞)
+
 ## 网络层
 
 <DocsAD/>
 
 ### P2P
+
 #### 女巫攻击
 
 - 严重性：高
 - 描述：
   攻击者可以通过将某个恶意节点伪装成多个虚拟节点，创建大量假身份来攻击区块链系统。可造成 DoS 或 DDoS 等攻击。
 - 建议：
-  增加节点的最大连接数，限制单个IP地址的主机数。
+  增加节点的最大连接数，限制单个 IP 地址的主机数。
 - 参考：
-[利用分布式矿工行为监测防止区块链女巫攻击](https://ieeexplore.ieee.org/document/8944507)  
+  [利用分布式矿工行为监测防止区块链女巫攻击](https://ieeexplore.ieee.org/document/8944507)
 
 #### 日蚀攻击
 
@@ -77,10 +80,8 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
 
 - 描述：
   攻击者切断了受害者与外界网络间的所有传入和传出的连接，将受害者与网络中的其他节点隔离开来。
-  
 - 建议：
-  增加节点的最大连接数，限制单个IP地址的主机数。
-  
+  增加节点的最大连接数，限制单个 IP 地址的主机数。
 - 参考：
   [对比特币点对点网络的日蚀攻击](https://eprint.iacr.org/2015/263.pdf)
   [对以太坊点对点网络的低资源日蚀攻击](https://eprint.iacr.org/2018/236.pdf)
@@ -94,11 +95,10 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
 
 - 建议：
   使用加密协议（例如 TLS）加密通信。
-  
 - 参考：
   [RLPx 传输协议](https://github.com/ethereum/devp2p/blob/master/rlpx.md)
 
-####  拒绝服务攻击
+#### 拒绝服务攻击
 
 - 严重性：中
 
@@ -108,7 +108,7 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
 - 建议：
   1. 增加不同区域的节点数量。
   2. 避免畸形数据导致软件崩溃。
-  3. 限制内存大小。  
+  3. 限制内存大小。
 
 #### BGP 劫持攻击
 
@@ -118,9 +118,9 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
 - 建议：
   增加不同区域的节点数量。
 - 参考：
-[BGP 劫持](https://en.wikipedia.org/wiki/BGP_hijacking)
-[劫持比特币：对加密货币的路由攻击](https://ieeexplore.ieee.org/document/7958588)
-[KlaySwap 加密用户在 BGP 劫持后损失资金]( https://medium.com/s2wblog/post-mortem-of-klayswap-incident-through-bgp-hijacking-898f26727d66)
+  [BGP 劫持](https://en.wikipedia.org/wiki/BGP_hijacking)
+  [劫持比特币：对加密货币的路由攻击](https://ieeexplore.ieee.org/document/7958588)
+  [KlaySwap 加密用户在 BGP 劫持后损失资金](https://medium.com/s2wblog/post-mortem-of-klayswap-incident-through-bgp-hijacking-898f26727d66)
 
 #### 异形攻击
 
@@ -128,9 +128,9 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
 - 描述：
   异形攻击漏洞最早由慢雾团队发现，又称地址池污染，是指诱使同类链的节点互相侵入和污染的一种攻击手法，漏洞的主要原因是同类链系统在通信协议上没有对不同链的节点做识别。
 - 建议：
-  为P2P连接协议添加网络标识，如以太坊中的 chain ID，比特币中的 Magic。
+  为 P2P 连接协议添加网络标识，如以太坊中的 chain ID，比特币中的 Magic。
 - 参考：
-[来自P2P协议的异攻击形漏洞的公链](https://mp.weixin.qq.com/s/UmricgYGUakAlZTb0ihqdw)
+  [来自 P2P 协议的异攻击形漏洞的公链](https://mp.weixin.qq.com/s/UmricgYGUakAlZTb0ihqdw)
 
 #### 时间劫持
 
@@ -157,7 +157,7 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
   节点因接收到畸形格式参数请求而崩溃。
 - 建议：
   1. 防止格式错误的参数导致软件崩溃。
-  2. 限制内存大小。  
+  2. 限制内存大小。
 
 #### 以太坊黑色情人节漏洞
 
@@ -166,27 +166,27 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
   以太坊黑色情人节漏洞最早由慢雾团队发现。当节点解锁其钱包时，黑客可以通过远程 RPC 请求窃取加密货币。
 - 建议：
   1. 禁用 RPC 接口的外部请求。
-  2. 禁用公共节点的钱包功能。  
+  2. 禁用公共节点的钱包功能。
 - 参考：
-[以太坊生态发现的一起级代币盗窃大案](https://mp.weixin.qq.com/s/Kk2lsoQ1679Gda56Ec-zJg)  
+  [以太坊生态发现的一起级代币盗窃大案](https://mp.weixin.qq.com/s/Kk2lsoQ1679Gda56Ec-zJg)
 
 #### HTTP 输入攻击
 
 - 严重性：低
 - 描述：
-  包括XSS/模板注入/第三方组件漏洞/HTTP参数污染/SQL注入/XXE注入/反序列化漏洞/SSRF/代码注入/本地文件包含/远程文件包含/命令注入/缓冲区溢出/ 格式化字符串等
+  包括 XSS/模板注入/第三方组件漏洞/HTTP 参数污染/SQL 注入/XXE 注入/反序列化漏洞/SSRF/代码注入/本地文件包含/远程文件包含/命令注入/缓冲区溢出/ 格式化字符串等
 - 建议：
   进行渗透测试。
 - 参考：
-[SlowMist Exchange 安全审核计划](https://www.slowmist.com/en/service-exchange-security-audit.html)
+  [SlowMist Exchange 安全审核计划](https://www.slowmist.com/en/service-exchange-security-audit.html)
 
 #### 跨域钓鱼攻击
 
 - 严重性：低
 - 描述：
-  黑客诱骗受害者打开恶意网页，通过跨域请求连接到加密钱包的RPC端口，然后窃取加密资产。
+  黑客诱骗受害者打开恶意网页，通过跨域请求连接到加密钱包的 RPC 端口，然后窃取加密资产。
 - 建议：
-  禁止RPC允许跨域访问。
+  禁止 RPC 允许跨域访问。
 
 ## 分类帐层
 
@@ -196,13 +196,15 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
 
 - 严重性：高
 - 描述：
-长程攻击是攻击者从创世区块分叉链，新链与主链部分或完全不同。当攻击者制造的分叉变得比主链更长时，则攻击成功。长程攻击分为三种：简单攻击、变节攻击和权益流损。
-在某种意义上，PoS 中的长程攻击与 PoW 协议的自私挖矿攻击类似，因为两种情况下的攻击者都在试图添加保密区块。不过由于 PoW 对计算量的要求，自私挖矿攻击无法从创世区块开始，所以造成的影响是有限的。这两种攻击都分叉了主链，并尝试在伪造的区块中包含不同的交易。
+  长程攻击是攻击者从创世区块分叉链，新链与主链部分或完全不同。当攻击者制造的分叉变得比主链更长时，则攻击成功。长程攻击分为三种：简单攻击、变节攻击和权益流损。
+  在某种意义上，PoS 中的长程攻击与 PoW 协议的自私挖矿攻击类似，因为两种情况下的攻击者都在试图添加保密区块。不过由于 PoW 对计算量的要求，自私挖矿攻击无法从创世区块开始，所以造成的影响是有限的。这两种攻击都分叉了主链，并尝试在伪造的区块中包含不同的交易。
 - 建议：
   等到交易被足够的区块确认后，交易所或接收方再支付。
 - 参考：
-[长程攻击调查权益证明协议](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8653269)  
+  [长程攻击调查权益证明协议](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8653269)
+
 #### 贿赂攻击
+
 - 严重性：高
 - 描述：
   贿赂攻击也被称为 **短程攻击** 。攻击者通过向验证者或矿工支付大于等于区块奖励的金额，贿赂验证者或矿工来产生特定的区块或分叉。这样一来，攻击者可以将任意交易放入区块，并让不诚实的节点通过区块验证。
@@ -211,17 +213,17 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
 - 建议：
   在这两种情况下，PoS 通过强制惩罚或释放攻击者者来解决这个问题。
 - 参考：
-[长程攻击调查权益证明协议](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8653269)
+  [长程攻击调查权益证明协议](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8653269)
 
 #### 种族攻击
 
 - 严重性：高
 - 描述：
-种族攻击指攻击者创建两个冲突的交易。如果第一笔交易被发送给受害者，受害者没有等待交易确认就接受了付款并执行承诺（例如发送产品等）。同时，另一笔冲突的交易被广播到网络，最终使第一笔交易无效。
+  种族攻击指攻击者创建两个冲突的交易。如果第一笔交易被发送给受害者，受害者没有等待交易确认就接受了付款并执行承诺（例如发送产品等）。同时，另一笔冲突的交易被广播到网络，最终使第一笔交易无效。
 - 建议：
   交易被足够的区块确认后，交易所或接收方再支付。
 - 参考：
-[区块链攻击向量](https://www.apriorit.com/dev-blog/578-blockchain-attack-vectors)
+  [区块链攻击向量](https://www.apriorit.com/dev-blog/578-blockchain-attack-vectors)
 
 #### 活性冻结攻击
 
@@ -231,7 +233,7 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
 - 建议：
   在无法评估活跃度的情况下，社区将能够决定（链下治理）并移除不活跃的验证者。在这种情况下，即使存在漏洞利用条件，试图进行攻击的验证者也会考虑攻击是否划算。
 - 参考：
-[长程攻击调查权益证明协议](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8653269)  
+  [长程攻击调查权益证明协议](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8653269)
 
 #### 审查攻击
 
@@ -241,7 +243,7 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
 - 建议：
   对验证者的活跃度要求可以确保交易的最终过程并消除对区块链的审查。除此之外，还可以惩罚未按照协议预定的顺序创建区块的节点。另一个更有效的解决方案是利用零知识简洁非交互式知识论证(zk-SNARKs)，它可以可用于隐藏交易发送者的身份。
 - 参考：
-[长程攻击调查权益证明协议](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8653269)
+  [长程攻击调查权益证明协议](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8653269)
 
 #### 芬尼攻击
 
@@ -251,7 +253,7 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
 - 建议：
   等到交易被足够的区块确认后，交易所或接收方再支付。
 - 参考：
-[区块链攻击向量](https://www.apriorit.com/dev-blog/578-blockchain-attack-vectors)  
+  [区块链攻击向量](https://www.apriorit.com/dev-blog/578-blockchain-attack-vectors)
 
 #### Vector76 攻击
 
@@ -263,7 +265,7 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
 - 建议：
   等到交易被足够的区块确认后，交易所或接收方再支付。
 - 参考：
-[区块链攻击向量](https://www.apriorit.com/dev-blog/578-blockchain-attack-vectors)
+  [区块链攻击向量](https://www.apriorit.com/dev-blog/578-blockchain-attack-vectors)
 
 #### 替代历史攻击
 
@@ -274,20 +276,20 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
 - 建议：
   等到交易被足够的区块确认后，交易所或接收方再支付。
 - 参考：
-[区块链攻击向量](https://www.apriorit.com/dev-blog/578-blockchain-attack-vectors)  
+  [区块链攻击向量](https://www.apriorit.com/dev-blog/578-blockchain-attack-vectors)
+
 #### 51% 攻击
+
 - 严重性：高
 
 - 描述：
   也称为**多数攻击**。
   在 PoW 系统中，在特定时间范围内控制大部分算力的攻击者可以完全控制区块链。例如，拥有超过 51% 算力的攻击者可以分叉主链并在他的分叉上开始挖矿。该分叉可以逐渐超越主链并取代它。
   在 PoS 协议中，这种攻击仍然可行，但影响略有不同。当一个验证者或一群合伙的验证者拥有超过 34%的权益，这种攻击就可能发生。
-  
 - 建议：
   等到交易被足够的区块确认后，交易所或接收方再支付。
-  
 - 参考：
-[长程攻击调查权益证明协议](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8653269)
+  [长程攻击调查权益证明协议](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8653269)
 
 #### 权力压迫攻击
 
@@ -296,23 +298,20 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
 - 描述：
   也称为**预计算攻击**。
   攻击者在获得记账权的时候，利用自己手中的权利实施一些计算或者一些操作让系统的随机数产生偏斜，来增加自己下一次获得记账权的可能。
-  
 - 建议：
   等到交易被足够的区块确认后，交易所或接收方再支付。
-  
 - 参考：
-  [长程攻击调查权益证明协议](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8653269) 
-  
-  
+  [长程攻击调查权益证明协议](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8653269)
+
 #### 币龄累积攻击
 
 - 严重性：高
 - 描述：
   在早期版本的 Peercoin 协议中，用户质押的时间越长，其权重就会越多，没有任何时间限制。如果有足够的时间，攻击者将积累大量权重，这使他们能够接管网络。
 - 建议：
-  在去中心化系统较稳定后，取消币龄系统。 
+  在去中心化系统较稳定后，取消币龄系统。
 - 参考：
-  [长程攻击调查权益证明协议](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8653269) 
+  [长程攻击调查权益证明协议](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8653269)
 
 #### 自私挖矿攻击
 
@@ -320,10 +319,8 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
 
 - 描述：
   在自私挖矿攻击（也称为区块扣留）中，攻击者在自己的区块链分叉中挖掘区块，并且不将它们发布到网络。当攻击者计算出一定数量的区块，再将它们发布到网络中，并尝试替代主链。这种攻击可以做到：通过浪费诚实节点的计算资源来破坏网络；增加恶意节点挖矿的奖励。
-  
 - 建议：
   削减恶意攻击者的奖励及权益。
-  
 - 参考：
   [长程攻击调查权益证明协议](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8653269)
 
@@ -333,10 +330,11 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
 
 - 描述：
   攻击者在某个区块高度上生产多个区块，这可能是长程攻击或短程攻击的前兆。
-  
 - 建议：
   惩罚恶意攻击者。
+
 ### 加密
+
 #### 密码学攻击
 
 - 严重性：高
@@ -344,14 +342,16 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
   常见攻击方法：分析攻击/实施攻击/统计攻击/暴力破解/频率分析/已知明文攻击/选择密文攻击/选择明文攻击/中途相遇攻击/中间人攻击/生日攻击/重放攻击/碰撞攻击
 - 建议：
   不要使用未知的加密库。
+
 #### 私钥预测
+
 - 严重性：高
 - 描述：
   如果密钥的生成依赖于随机数生成，而该随机数生成器可预测，则密钥可能被窃取。
 - 建议：
   使用密码学安全伪随机数生成器 (CSPRNG) 或密码学伪随机数生成器 (CPRNG)。
 - 参考：
-[密码安全的伪随机数生成器](https://en.wikipedia.org/wiki/Cryptographically-secure_pseudorandom_number_generator)  
+  [密码安全的伪随机数生成器](https://en.wikipedia.org/wiki/Cryptographically-secure_pseudorandom_number_generator)
 
 #### 长度扩展攻击
 
@@ -361,7 +361,7 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
 - 建议：
   像 MD5、SHA-1 和大多数基于 Merkle-Damgård 结构的 SHA-2 算法很容易受到这种攻击，使用时需要注意。
 - 参考：
-[长度扩展攻击](https://en.wikipedia.org/wiki/Length_extension_attack)  
+  [长度扩展攻击](https://en.wikipedia.org/wiki/Length_extension_attack)
 
 ### 交易
 
@@ -375,22 +375,24 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
   而在区块链中，可以通过在不同的分叉中利用冲突的交易来实现。攻击者尝试执行交易，等待商家批准，然后将其还原并在另一个分叉的交易中花费相同的货币。
 - 建议：
   1. 检查 UTXO 是否已经被花费过
-  2. 使用 nonce 来防止事务重放。  
+  2. 使用 nonce 来防止事务重放。
+
 #### 交易延展性攻击
+
 - 严重性：高
 - 描述：
-  交易延展性攻击允许攻击者做到，在任意交易被比特币网络确认之前，篡改该交易的TXID。此更改使该攻击者可以假装交易没有发生，以实施对交易所的攻击，例如双重存款或双重提款。
+  交易延展性攻击允许攻击者做到，在任意交易被比特币网络确认之前，篡改该交易的 TXID。此更改使该攻击者可以假装交易没有发生，以实施对交易所的攻击，例如双重存款或双重提款。
   **签名延展性**
   延展性的第一种形式是在签名本身。每个签名都可以表示为一个八字节的 DER 编码 ASN.1 ，但 OpenSSL 不强制执行该操作，只要签名没有严重格式错误，该签名就会被接受。
   另一种方法为，由于使用椭圆曲线签名算法，根据其特点，对于某个消息的 ECDSA 签名 `(r,s)`，签名 `(r, -s (mod N))` 也是该消息的有效签名。
   **ScriptSig 延展性**
-  比特币中使用的签名算法在创建签名时，不签署任何 scriptSig 。虽然对整个 scriptSig 进行签名是不可能的，但可以添加额外的数据，将指令放到堆栈中，并且在所需的签名和公钥之前。所以攻击者可以添加 `OP_DROP` 指令，从而做到在scriptPubKey被执行前离开堆栈。
+  比特币中使用的签名算法在创建签名时，不签署任何 scriptSig 。虽然对整个 scriptSig 进行签名是不可能的，但可以添加额外的数据，将指令放到堆栈中，并且在所需的签名和公钥之前。所以攻击者可以添加 `OP_DROP` 指令，从而做到在 scriptPubKey 被执行前离开堆栈。
 - 建议：
   检查签名库是否具有延展性。
 - 参考：
   [Transaction_Malleability](https://en.bitcoinwiki.org/wiki/Transaction_Malleability)
   [bip-0066-严格 DER 签名](https://github.com/bitcoin/bips/blob/master/bip-0066.mediawiki)
-  [eip-2-Homestead 硬分叉变更](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2.md)  
+  [eip-2-Homestead 硬分叉变更](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2.md)
 
 #### 交易时间锁攻击
 
@@ -400,7 +402,7 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
 - 建议：
   接收代币时检查交易是否有时间锁定。
 - 参考：
-  [XMR转账锁](https://mp.weixin.qq.com/s/Kt-G_bYbuUMIbSGSnyYXLA)
+  [XMR 转账锁](https://mp.weixin.qq.com/s/Kt-G_bYbuUMIbSGSnyYXLA)
 
 #### 假充值攻击
 
@@ -411,18 +413,18 @@ WEB3.0区块链漏洞不容易攻击（只是困难，但也不是完全不行�
   1. 检查事务事件日志中的所有字段。
   2. 等到交易被足够的区块确认后，交易所或接收方再确认支付。
 - 参考：
-  [USDT假充值](https://mp.weixin.qq.com/s/CtAKLNe0MOKDyUFaod4_hw)
-  [EOS假充值](https://mp.weixin.qq.com/s/fKINfZLW65LYaD4qO-21nA)
+  [USDT 假充值](https://mp.weixin.qq.com/s/CtAKLNe0MOKDyUFaod4_hw)
+  [EOS 假充值](https://mp.weixin.qq.com/s/fKINfZLW65LYaD4qO-21nA)
   [XRP 虚假充值](https://developers.ripple.com/partial-payments.html)
-  [ETH假充值](https://mp.weixin.qq.com/s/3cMbE6p_4qCdVLa4FNA5-A)
-  [BTC RBF虚假充值](https://mp.weixin.qq.com/s/OYi2JDbAoLEdg8VDouqbIg)
+  [ETH 假充值](https://mp.weixin.qq.com/s/3cMbE6p_4qCdVLa4FNA5-A)
+  [BTC RBF 虚假充值](https://mp.weixin.qq.com/s/OYi2JDbAoLEdg8VDouqbIg)
   UTXO 多重签名假充值
 
 #### Rug Pull
 
 - 严重性：高
 - 描述：
-  Rug Pull在加密货币行业中，专指项目开发人员放弃项目并拿走投资者的资金。Rug Pull通常发生在去中心化金融 (DeFi) 项目中，尤其是在去中心化交易所 (DEX) 上。例如攻击者创建一种代币并将其上架到 DEX 上，然后将其与以太坊等具有高价值的加密货币组建交易对，受害者用以太坊换取恶意代币后，攻击者撤出流动性，拿走用户的以太坊。
+  Rug Pull 在加密货币行业中，专指项目开发人员放弃项目并拿走投资者的资金。Rug Pull 通常发生在去中心化金融 (DeFi) 项目中，尤其是在去中心化交易所 (DEX) 上。例如攻击者创建一种代币并将其上架到 DEX 上，然后将其与以太坊等具有高价值的加密货币组建交易对，受害者用以太坊换取恶意代币后，攻击者撤出流动性，拿走用户的以太坊。
 - 推荐：
   检查开发团队是否放弃了项目的所有权，即不再具有撤出全部流动性，无限增发代币等较高权限。
 

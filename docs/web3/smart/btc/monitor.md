@@ -1,9 +1,9 @@
-# BTC监控
+# BTC 监控
 
-## BTC浏览器
+## BTC 浏览器
 
-* [btcscan](https://btcscan.org/)
-* [btcmempool](https://btcmempool.org/)
+- [btcscan](https://btcscan.org/)
+- [btcmempool](https://btcmempool.org/)
 
 <DocsAD/>
 

@@ -1,6 +1,6 @@
 # Shellcode
 
-* [wasm-pack下载](https://rustwasm.github.io/wasm-pack/installer/)
+- [wasm-pack 下载](https://rustwasm.github.io/wasm-pack/installer/)
 
 <DocsAD/>
 

@@ -1,3 +1,3 @@
 # TACT
 
-## [TACT文档](https://docs.tact-lang.org/)
+## [TACT 文档](https://docs.tact-lang.org/)

@@ -13,7 +13,7 @@
 返回时间 = 已知
 ```
 
-## Ardunio代码
+## Ardunio 代码
 
 ```JS
 
@@ -30,14 +30,14 @@ void setup(){
   Serial.begin(9600);          // Serial Output
 }
 
-void loop(){ 
-  digitalWrite(TriggerPin, LOW);                   
+void loop(){
+  digitalWrite(TriggerPin, LOW);
   delayMicroseconds(2);
-  
+
   digitalWrite(TriggerPin, HIGH);          // Trigger pin to HIGH
-  delayMicroseconds(10);                   // 10us high 
+  delayMicroseconds(10);                   // 10us high
   digitalWrite(TriggerPin, LOW);           // Trigger pin to HIGH
- 
+
   Duration = pulseIn(EchoPin,HIGH);        // Waits for the echo pin to get high
                                            // returns the Duration in microseconds
   long Distance_cm = Distance(Duration);   // Use function to calculate the distance
@@ -47,11 +47,11 @@ void loop(){
   }else{
     digitalWrite(LED,LOW);
   }
-  
+
   Serial.print("Distance = ");             // Output to serial
   Serial.print(Distance_cm);
   Serial.println(" cm");
- 
+
   delay(1000);                             // Wait to do next measurement
 }
 

@@ -1,11 +1,11 @@
-# DAPP开发
+# DAPP 开发
 
-## [TON DAPP文档](https://docs.ton.org/mandarin/develop/dapps/)
+## [TON DAPP 文档](https://docs.ton.org/mandarin/develop/dapps/)
 
 <DocsAD/>
 
-* [安装库](https://docs.ton.org/mandarin/develop/dapps/apis/sdk)
-* [API Toncenter](https://toncenter.com/)
+- [安装库](https://docs.ton.org/mandarin/develop/dapps/apis/sdk)
+- [API Toncenter](https://toncenter.com/)
 
 ```sh
 npm install tonweb
@@ -15,43 +15,49 @@ npm install tonweb
 
 ```js
 // 导入连接TON网络库
-const TonWeb = require('tonweb');
+const TonWeb = require("tonweb");
 // 实例化
 const tonweb = new TonWeb();
 
 // 获取账户余额
-function getBalance(addr="EQChB2eMoFG4ThuEsZ6ehlBPKJXOjNxlR5B7qKZNGIv256Da"){
-    tonweb.getBalance(addr).then(balance=>{
-        console.log("余额：",balance,"TON");
+function getBalance(addr = "EQChB2eMoFG4ThuEsZ6ehlBPKJXOjNxlR5B7qKZNGIv256Da") {
+  tonweb
+    .getBalance(addr)
+    .then((balance) => {
+      console.log("余额：", balance, "TON");
     })
-    .catch(error => {
-        console.log(error);
-    })
+    .catch((error) => {
+      console.log(error);
+    });
 }
-getBalance()
+getBalance();
 
 // 获取交易
-function getTransactions(addr="EQChB2eMoFG4ThuEsZ6ehlBPKJXOjNxlR5B7qKZNGIv256Da"){
-    tonweb.getTransactions(addr).then(tran=>{
-        console.log(tran);
+function getTransactions(
+  addr = "EQChB2eMoFG4ThuEsZ6ehlBPKJXOjNxlR5B7qKZNGIv256Da"
+) {
+  tonweb
+    .getTransactions(addr)
+    .then((tran) => {
+      console.log(tran);
     })
-    .catch(error => {
-        console.log(error);
-    })
+    .catch((error) => {
+      console.log(error);
+    });
 }
-getTransactions()
+getTransactions();
 ```
 
 ## 获取交易
 
 ```js
 async function getLatestTransactions(address) {
-    try {
-        const transactions = await tonweb.provider.getTransactions(address, 1); // 获取最近的1笔交易
-        console.log(transactions);
-    } catch (error) {
-        console.error('Error fetching transactions:', error);
-    }
+  try {
+    const transactions = await tonweb.provider.getTransactions(address, 1); // 获取最近的1笔交易
+    console.log(transactions);
+  } catch (error) {
+    console.error("Error fetching transactions:", error);
+  }
 }
 ```
 
@@ -59,12 +65,10 @@ async function getLatestTransactions(address) {
 
 ```js
 
-
 ```
 
-## 获取Block信息
+## 获取 Block 信息
 
 ```js
-
 
 ```

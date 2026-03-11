@@ -1,7 +1,6 @@
 # ARDUINO
 
-## 什么是Arduino
-
+## 什么是 Arduino
 
 ## 环境搭建
 

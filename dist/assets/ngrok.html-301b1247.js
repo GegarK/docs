@@ -1,1 +1,0 @@
-import{_ as r,K as o,L as t,M as e,N as a}from"./framework-edebdfe1.js";const n={},c=e("h1",{id:"ngork文档",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#ngork文档","aria-hidden":"true"},"#"),a(" Ngork文档")],-1),s=[c];function _(d,i){return o(),t("div",null,s)}const l=r(n,[["render",_],["__file","ngrok.html.vue"]]);export{l as default};

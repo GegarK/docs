@@ -1,9 +1,8 @@
-# SMALI动态调试
+# SMALI 动态调试
 
+## 安卓调试 APK(Smali)
 
-## 安卓调试APK(Smali)
-
-* 修改androikdmanifest
+- 修改 androikdmanifest
 
 ```
  <application
@@ -11,13 +10,13 @@
         android:debuggable="true"
 ```
 
-* 开启调试APP
+- 开启调试 APP
 
 ```
 adb shell am start -D -n com.deelmind.main.ctf/.MainActivity
 ```
 
-* 端口转发
+- 端口转发
 
 ```
 adb shell ps | findstr com.deelmind.main.ctf

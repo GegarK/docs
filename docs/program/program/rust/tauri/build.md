@@ -2,7 +2,7 @@
 
 ## 编译优化
 
-* tauri build --release
+- tauri build --release
 
 <DocsAD/>
 

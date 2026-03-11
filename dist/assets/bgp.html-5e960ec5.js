@@ -1,1 +1,0 @@
-import{_ as o,K as t,L as c,a5 as s,M as e,N as n,F as r}from"./framework-edebdfe1.js";const _={},d=e("h1",{id:"bgp协议",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#bgp协议","aria-hidden":"true"},"#"),n(" BGP协议")],-1);function l(i,p){const a=r("DocsAD");return t(),c("div",null,[d,s(a)])}const f=o(_,[["render",l],["__file","bgp.html.vue"]]);export{f as default};

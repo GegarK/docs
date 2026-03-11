@@ -13,6 +13,6 @@ Faucet Token 的用途包括测试智能合约的功能、模拟代币交易流�
 
 ## Sepolia
 
-* [Sepolia](https://www.alchemy.com/faucets/ethereum-sepolia)
-* [Sepolia Explorer](https://sepolia.etherscan.io/)
-* [Sepolia Dev Net](https://sepolia.dev/)
+- [Sepolia](https://www.alchemy.com/faucets/ethereum-sepolia)
+- [Sepolia Explorer](https://sepolia.etherscan.io/)
+- [Sepolia Dev Net](https://sepolia.dev/)

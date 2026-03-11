@@ -1,1 +1,0 @@
-import{_ as c,K as t,L as o,M as e,N as a}from"./framework-edebdfe1.js";const r={},s=e("h1",{id:"com操作",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#com操作","aria-hidden":"true"},"#"),a(" COM操作")],-1),n=[s];function _(d,i){return t(),o("div",null,n)}const l=c(r,[["render",_],["__file","com.html.vue"]]);export{l as default};

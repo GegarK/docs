@@ -32,18 +32,18 @@ $bg-color: (
   margin-left: 4px;
 }
 
-html[data-theme=dark] .reveal[data-theme=auto] .controls {
+html[data-theme="dark"] .reveal[data-theme="auto"] .controls {
   color: rgb(62 175 124);
 }
 
-html[data-theme=dark] .reveal[data-theme=auto] a {
+html[data-theme="dark"] .reveal[data-theme="auto"] a {
   color: rgb(62 175 124);
 }
 
-html[data-theme=dark] .reveal[data-theme=auto] .progress {
+html[data-theme="dark"] .reveal[data-theme="auto"] .progress {
   color: rgb(62 175 124);
 }
 
-html[data-theme=dark] .reveal[data-theme=auto] a:hover {
+html[data-theme="dark"] .reveal[data-theme="auto"] a:hover {
   color: #43ffaa;
 }

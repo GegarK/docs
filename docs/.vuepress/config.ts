@@ -1,11 +1,11 @@
 import { defineUserConfig } from "vuepress";
-import { searchPlugin } from '@vuepress/plugin-search'
+import { searchPlugin } from "@vuepress/plugin-search";
 // import { copyrightPlugin } from "vuepress-plugin-copyright2";
 import { searchProPlugin } from "vuepress-plugin-search-pro";
-import { resolve } from 'path';
+import { resolve } from "path";
 import theme from "./theme";
 
-import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
+import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
 
 export default defineUserConfig({
   base: "/",
@@ -19,23 +19,23 @@ export default defineUserConfig({
         rel: "stylesheet",
         href: "//at.alicdn.com/t/font_2410206_mfj6e1vbwo.css",
       },
-      
     ],
     [
       "script",
       {
         "data-ad-client": "ca-pub-8498045280190096",
-        crossorigin:"anonymous",
+        crossorigin: "anonymous",
         src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       },
-    ]
+    ],
   ],
 
   locales: {
     "/": {
       lang: "zh-CN",
       title: "極客方舟",
-      description: "極客方舟,DeeLMind,网络安全,逆向工程,WEB渗透,免杀,Bypass,机器学习,深度学习,人工智能",
+      description:
+        "極客方舟,DeeLMind,网络安全,逆向工程,WEB渗透,免杀,Bypass,机器学习,深度学习,人工智能",
     },
   },
 
@@ -55,8 +55,8 @@ export default defineUserConfig({
   plugins: [
     searchPlugin({
       locales: {
-        '/': {
-          placeholder: '搜索',
+        "/": {
+          placeholder: "搜索",
         },
       },
     }),
@@ -66,13 +66,12 @@ export default defineUserConfig({
     //   global: true,
     // }),
     searchProPlugin({
-      indexContent:true
+      indexContent: true,
     }),
     registerComponentsPlugin({
       components: {
-        DocsAD: resolve(__dirname, './components/DocsAD.vue'),
+        DocsAD: resolve(__dirname, "./components/DocsAD.vue"),
       },
     }),
   ],
 });
-

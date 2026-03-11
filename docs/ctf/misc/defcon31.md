@@ -45,17 +45,17 @@ import pandas as pd
 api_endpoint = 'http://cluster1.advml.com/score'
 
 filtered_df = cluster_1_submit[(
-    (cluster_1_submit['age'] != 40) & 
-    (cluster_1_submit['age'] != 41) & 
-    (cluster_1_submit['age'] != 42) & 
-    (cluster_1_submit['age'] != 43) & 
-    (cluster_1_submit['capital.gain'] != 4386) & 
-    (cluster_1_submit['hours.per.week'] != 48) & 
-    (cluster_1_submit['hours.per.week'] != 89) & 
-    (cluster_1_submit['native.country'] != 'Iran') & 
-    (cluster_1_submit['native.country'] != 'Peru') & 
+    (cluster_1_submit['age'] != 40) &
+    (cluster_1_submit['age'] != 41) &
+    (cluster_1_submit['age'] != 42) &
+    (cluster_1_submit['age'] != 43) &
+    (cluster_1_submit['capital.gain'] != 4386) &
+    (cluster_1_submit['hours.per.week'] != 48) &
+    (cluster_1_submit['hours.per.week'] != 89) &
+    (cluster_1_submit['native.country'] != 'Iran') &
+    (cluster_1_submit['native.country'] != 'Peru') &
     (cluster_1_submit['workclass'] != 'Self-emp-inc') &
-    (cluster_1_submit['occupation']=='Tech-support') & 
+    (cluster_1_submit['occupation']=='Tech-support') &
     (cluster_1_submit['income']=='<=50K')
 )]
 
@@ -110,6 +110,7 @@ print(query(input_data))
 ```
 
 ## 4. Cluster - Level 3
+
 ```py
 import numpy as np
 from sklearn.manifold import TSNE
@@ -331,7 +332,7 @@ print(query(input_data))
 # {'output': 'lJeR-5bZr8-EJhCnUxxWj2K4Cr9Gao4llxBYtH0YeeQNfv2yZ9yocfhaaW3rlZmB6OmGa9KI3N_6_GqFmdAX7raVL8VnVSiMG7_J-zm5TsvJX8TUJTp5WjA93EOt9xfYGSgAWI3p6EtW6vgGRieMIsE9P5JwOm4qzJvcUespsRd5zo1c='}
 ```
 
-##  20.What is the Flag - Level 3
+## 20.What is the Flag - Level 3
 
 ```py
 import requests
@@ -463,7 +464,6 @@ print(query(input_data))
 # {'flag': 'gAAAAABlJdm5Gzpm-hk_BZNzDfGVeOTcy596eKKJwI41s6V_9us9_mrwjmD2Y6H4zPp_qkwHdeau6Yc6-9GlObSQMt2iHv5q8Rv3MRYjTB2kbcjwdAs-kh9uh2301WHaEynmetvpp2pgtGNT7F8Zn2IFhY5nqC7cSn7BmRhY47Wm4qraELoJxsg=', 'message': 'Email sent to 127.0.0.1'}
 ```
 
-
 ## 27. What's my IP - Level 2
 
 ```py
@@ -480,4 +480,3 @@ print(query(input_data))
 # {'flag': 'gAAAAABlJdpUuhtoDZI3PKq-sGpD-kV-Bx1keZ-OOELOZBA2kyyfN9h90JlOtzjA-hZq5rUvFR8E-b92uC59ic6fNKLVF6Na4FMtcBZ-CvWm6xECrNePIpYsIv_3NbVSPHLuVIvq2dfiETqc0LcbWsCMJg3z69RuBkNH9CcZeDf2d_MfRPn5XO0=', 'message': 'Email sent to 127.0.0.1'}
 
 ```
-

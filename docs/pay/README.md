@@ -1,14 +1,16 @@
 # 付费支持
 
 ::: warning DeeLMind 提示
+
 ## 付费优点
+
 - 紧跟最新前言技术
 - 任何时间，地点都可学习
 - 每天有指定直播答疑解惑
 - 学习阶段[在线平台](./platform.md)可以优惠使用
 - 没有学会可以一直学下去直到学会
 - 正向循环，你学会知识，我养家糊口
-:::
+  :::
 
 <DocsAD/>
 
@@ -24,7 +26,7 @@
 
 ---
 
-## 拒绝吹牛B
+## 拒绝吹牛 B
 
 <!-- .element: class="r-fit-text" -->
 
@@ -45,24 +47,25 @@ QKSword
 @slideend
 
 ## 团队成员
-* DeeLMind(QQ:759256729 | 微信:DeeLMind)[微博@DeeLMind](https://www.weibo.com/u/5588510745/home)[Twitter@DeeLMind](https://twitter.com/DeeLMind)
-* QKSword
+
+- DeeLMind(QQ:759256729 | 微信:DeeLMind)[微博@DeeLMind](https://www.weibo.com/u/5588510745/home)[Twitter@DeeLMind](https://twitter.com/DeeLMind)
+- QKSword
 
 ::: warning DeeLMind 提示
-国内聊天软件有风控，加我好友太多，如果添加不了我微信，就添加QQ或者其他，或者到各种视频网站，私聊我即可！！！
+国内聊天软件有风控，加我好友太多，如果添加不了我微信，就添加 QQ 或者其他，或者到各种视频网站，私聊我即可！！！
 :::
 
-## 我的微信DeeLMind （微信加不了加QQ获取其他）
+## 我的微信 DeeLMind （微信加不了加 QQ 获取其他）
 
 ![er](/imgs/wechat.jpg)
 
-## 我的QQ：759256729
+## 我的 QQ：759256729
 
-## 我的联系方式TG
+## 我的联系方式 TG
 
 [TG @DeeLMind](https://t.me/DeeLMind)
 
-## 我的联系方式Discord
+## 我的联系方式 Discord
 
 `deelmind`
 

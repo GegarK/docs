@@ -2,9 +2,9 @@
 
 ## [完整节点部署](https://bitcoin.org/en/full-node)
 
-* [下载程序](https://bitcoin.org/en/download)
+- [下载程序](https://bitcoin.org/en/download)
 
-## RPC接口
+## RPC 接口
 
 `bitcoin.conf`中添加用户名密码：
 
@@ -38,17 +38,20 @@ bitcoin-cli.exe -rpcuser=user -rpcpassword=pass getblockchaininfo
 
 ## 轻节点钱包
 
-* [electrum](https://electrum.org/)
+- [electrum](https://electrum.org/)
 
-## BTC命令行
+## BTC 命令行
 
 ### 1. 节点信息
+
 - **获取节点版本**
+
   ```bash
   bitcoin-cli getversion
   ```
 
 - **获取区块链信息**
+
   ```bash
   bitcoin-cli getblockchaininfo
   ```
@@ -59,17 +62,21 @@ bitcoin-cli.exe -rpcuser=user -rpcpassword=pass getblockchaininfo
   ```
 
 ### 2. 钱包操作
+
 - **创建新钱包**
+
   ```bash
   bitcoin-cli createwallet "wallet_name"
   ```
 
 - **获取钱包余额**
+
   ```bash
   bitcoin-cli getbalance
   ```
 
 - **发送比特币**
+
   ```bash
   bitcoin-cli sendtoaddress "address" amount
   ```
@@ -80,12 +87,15 @@ bitcoin-cli.exe -rpcuser=user -rpcpassword=pass getblockchaininfo
   ```
 
 ### 3. 交易操作
+
 - **创建原始交易**
+
   ```bash
   bitcoin-cli createrawtransaction '[{"txid": "some_txid", "vout": 0}]' '{"address": amount}'
   ```
 
 - **签名原始交易**
+
   ```bash
   bitcoin-cli signrawtransactionwithwallet "raw_transaction"
   ```
@@ -96,23 +106,28 @@ bitcoin-cli.exe -rpcuser=user -rpcpassword=pass getblockchaininfo
   ```
 
 ### 4. 内存池操作
+
 - **获取内存池信息**
+
   ```bash
   bitcoin-cli getmempoolinfo
   ```
 
-- **获取内存池中的所有交易ID**
+- **获取内存池中的所有交易 ID**
   ```bash
   bitcoin-cli getrawmempool
   ```
 
 ### 5. 区块操作
+
 - **获取区块高度**
+
   ```bash
   bitcoin-cli getblockcount
   ```
 
 - **获取区块信息**
+
   ```bash
   bitcoin-cli getblock "blockhash"
   ```

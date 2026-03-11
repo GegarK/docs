@@ -17,20 +17,20 @@ int strcmp_m(const char* p1, const char* p2)
 }
 ```
 
-* 函数参数
+- 函数参数
 
-* 函数返回
+- 函数返回
 
-* 局部变量
+- 局部变量
 
 ![er](/imgs/rev/function.png)
 
 ## [函数类型](https://learn.microsoft.com/en-us/cpp/cpp/stdcall?view=msvc-170)
 
-* [__stdcall](https://learn.microsoft.com/zh-cn/cpp/build/reference/gd-gr-gv-gz-calling-convention?view=msvc-170)
+- [\_\_stdcall](https://learn.microsoft.com/zh-cn/cpp/build/reference/gd-gr-gv-gz-calling-convention?view=msvc-170)
 
-* __cdecl
+- \_\_cdecl
 
-* __fastcall
+- \_\_fastcall
 
-* __thiscall
+- \_\_thiscall

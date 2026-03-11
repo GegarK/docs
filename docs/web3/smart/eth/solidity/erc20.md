@@ -2,7 +2,7 @@
 
 <DocsAD/>
 
-```solidity
+````solidity
 // SPDX-License-Identifier: GPL-3.0
 
 pragma solidity ^0.8.24;
@@ -249,7 +249,7 @@ abstract contract Context {
         return 0;
     }
 }
- 
+
 interface IERC20Metadata is IERC20 {
     /**
      * @dev Returns the name of the token.
@@ -558,4 +558,4 @@ contract GKBToken is ERC20 {
         _mint(msg.sender, initialSupply);
     }
 }
-```
+````

@@ -2,43 +2,43 @@
 
 ## 基础指令
 
-* `PUSH`
+- `PUSH`
 
 ```JS
 PUSH X (将操作数X推入栈顶)
 ```
 
-* `POP`
+- `POP`
 
 ```JS
 POP X (将栈顶的操作数弹出到X)
 ```
 
-* `MOV`
+- `MOV`
 
 ```JS
 MOV A,B (将操作数B推入操作数A)
 ```
 
-* `LEA`
+- `LEA`
 
 ```JS
 LEA A,B (地址操作，将操作数B推入操作数A Load Effective Address)
 ```
 
-* `MOVQ`
+- `MOVQ`
 
 ```JS
 MOVQ A,B (将操作数B推入操作数A,QuaDword)
 ```
 
-* `SUB`
+- `SUB`
 
 ```JS
 SUB DESTINATION,SOURCE (两个操作数相减操作，并将结果存放在目的操作数中)
 ```
 
-* `ADD`
+- `ADD`
 
 ```JS
 ADD DESTINATION,SOURCE (两个操作数相加操作，并将结果存放在目的操作数中)
@@ -48,13 +48,13 @@ ADD DESTINATION,SOURCE (两个操作数相加操作，并将结果存放在目�
 
 ## 函数调用
 
-* `CALL`
+- `CALL`
 
 ```JS
 CALL FUNCTION (调用函数)
 ```
 
-* `RET`
+- `RET`
 
 ```JS
 RET(N) X (函数返回，返回值放入EAX)
@@ -62,35 +62,34 @@ RET(N) X (函数返回，返回值放入EAX)
 
 ## 位与操作
 
-* `AND`
+- `AND`
 
 ```JS
 AND DESTINATION,SOURCE (两个操作数的对应位之间进行（按位）逻辑与（AND）操作，并将结果存放在目的操作数中，会操作标志位)
 ```
 
-* `XOR`
+- `XOR`
 
 ```JS
 XOR DESTINATION,SOURCE (两个操作数的对应位之间进行（按位）逻辑与（XOR）操作，并将结果存放在目的操作数中，当按位操作或算术操作的目标操作数最低字节为偶时，奇偶标志PF位置 1，反之，如果操作数为奇校验，则奇偶标志位清 0)
 ```
 
-
 ## 比较指令
 
-* `CMP`
+- `CMP`
 
 ```JS
 Compare WITH
 CMP DESTINATION,SOURCE (比较，目的操作数中减去源操作数，赋值给目的操作数)
 ```
 
-| CMP结果        | ZF | CF  |
-|--------------|----|-----|
-| 目的操作数 < 源操作数 | 0  | 1   |
-| 目的操作数 > 源操作数 | 0  | 0   |
-| 目的操作数 = 源操作数 | 1  | 0   |
+| CMP 结果              | ZF  | CF  |
+| --------------------- | --- | --- |
+| 目的操作数 < 源操作数 | 0   | 1   |
+| 目的操作数 > 源操作数 | 0   | 0   |
+| 目的操作数 = 源操作数 | 1   | 0   |
 
-* `TEST`
+- `TEST`
 
 ```JS
 TEST DESTINATION,SOURCE (两个操作数的对应位之间进行 AND 操作，并根据运算结果设置符号标志位、零标志位和奇偶标志位)
@@ -106,21 +105,21 @@ TEST DESTINATION,SOURCE (两个操作数的对应位之间进行 AND 操作，�
 
 ## 跳转指令
 
-* `JMP`
+- `JMP`
 
 ```JS
 Always jump
 JMP DESTINATION (JUMP 无条件跳转)
 ```
 
-* `JE`
+- `JE`
 
 ```JS
 Jump if cmp is equal
 JE DESTINATION (判断ZF标志位，如果ZF=1则跳转，如果ZF=0，不跳转)
 ```
 
-* `JNE`
+- `JNE`
 
 ```JS
 Jump if cmp is equal

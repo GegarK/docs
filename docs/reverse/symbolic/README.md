@@ -6,15 +6,15 @@
 
 ## 符号执行工具
 
-* ANGR
-* KLEE
+- ANGR
+- KLEE
 
 <DocsAD/>
 
 ## 符号执行原理
 
 ```c
-int m=M, n=N, q=Q; 
+int m=M, n=N, q=Q;
 int x1=0,x2=0,x3=0;
 if(m!=0)
 {

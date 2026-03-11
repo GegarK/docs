@@ -29,7 +29,7 @@ impl VirtualMachine {
     pub fn execute(&self, contract: &Contract, sender: &String, receiver: &String, amount: u64) -> Result<String, String> {
         // 简单的指令集解析
         let instructions: Vec<&str> = contract.code.split_whitespace().collect();
-        
+
         for instruction in instructions {
             match instruction {
                 "transfer" => {
@@ -82,7 +82,7 @@ impl Block {
         }
         println!("Block mined: {}", self.hash);
         let vm = VirtualMachine; // 创建虚拟机实例
-        
+
         // 在挖矿成功后，执行合约
         for transaction in &self.transactions {
             if let Some(contract) = &transaction.contract {

@@ -1,1 +1,0 @@
-import{_ as r,K as t,L as a,M as e,N as c}from"./framework-edebdfe1.js";const s={},o=e("h1",{id:"frp文档",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#frp文档","aria-hidden":"true"},"#"),c(" FRP文档")],-1),n=[o];function _(d,f){return t(),a("div",null,n)}const h=r(s,[["render",_],["__file","frp.html.vue"]]);export{h as default};

@@ -5,11 +5,13 @@
 > **用户、设备、第三方系统进入云的第一道门**
 
 ### 核心目标
+
 - 流量入口统一
 - 安全防护
 - 协议与身份标准化
 
 ### GCP 产品
+
 - API Gateway
 - Endpoints
 - Apigee（API Management）
@@ -25,11 +27,13 @@
 > **“谁能干什么、花多少钱、资源归谁”**
 
 ### 核心目标
+
 - 资源治理
 - 权限控制
 - 成本可视化
 
 ### GCP 产品
+
 - IAM & Admin
 - Organizations
 - Google Auth Platform（OAuth / 身份）
@@ -47,11 +51,13 @@
 > **一切业务逻辑的承载体**
 
 ### 核心目标
+
 - 弹性
 - 可调度
 - 性能可控
 
 ### GCP 产品
+
 - Compute Engine（VM / GPU / TPU）
 - Kubernetes Engine（GKE）
 - VMware Engine
@@ -67,11 +73,13 @@
 > **“不关心机器”的现代应用形态**
 
 ### 核心目标
+
 - 开发效率
 - 极致弹性
 - 运维最小化
 
 ### GCP 产品
+
 - Cloud Run
 - Cloud Run Functions
 - App Engine
@@ -88,11 +96,13 @@
 > **系统的血管系统**
 
 ### 核心目标
+
 - 高可用
 - 隔离
 - 低延迟
 
 ### GCP 产品
+
 - VPC Network
 - Network Services
 - Network Connectivity
@@ -111,11 +121,13 @@
 > **数据的物理载体**
 
 ### 核心目标
+
 - 持久化
 - 成本可控
 - 生命周期管理
 
 ### GCP 产品
+
 - Cloud Storage（Object）
 - Filestore（NFS）
 - Backup and DR
@@ -131,11 +143,13 @@
 > **业务系统的“心脏”**
 
 ### 核心目标
+
 - 一致性
 - 可扩展
 - 高可用
 
 ### GCP 产品
+
 - Cloud SQL（MySQL / PostgreSQL / SQL Server）
 - AlloyDB for PostgreSQL
 - Spanner（全球一致）
@@ -157,11 +171,13 @@
 > **数据驱动业务决策的核心**
 
 ### 核心目标
+
 - 解耦业务
 - 实时 + 离线分析
 - 数据资产化
 
 ### GCP 产品
+
 - BigQuery
 - BigLake（Iceberg）
 - Pub/Sub
@@ -190,11 +206,13 @@
 > **未来竞争力的核心放大器**
 
 ### 核心目标
+
 - 模型训练
 - 推理服务化
 - AI 工程化
 
 ### GCP 产品
+
 - Vertex AI
 - Gemini Enterprise
 - Gemini Code Assist
@@ -217,11 +235,13 @@
 > **系统“是否健康”的答案**
 
 ### 核心目标
+
 - 可观测
 - 可告警
 - 可恢复
 
 ### GCP 产品
+
 - Logging
 - Monitoring
 - Error Reporting
@@ -242,11 +262,13 @@
 > **企业能否长期存活的底线**
 
 ### 核心目标
+
 - 风险控制
 - 合规证明
 - 可追责
 
 ### GCP 产品
+
 - Security
 - Compliance
 - Identity Platform
@@ -260,6 +282,7 @@
 > **研发交付能力 = 企业速度**
 
 ### GCP 产品
+
 - Cloud Build
 - Cloud Deploy
 - Artifact Registry
@@ -277,6 +300,7 @@
 > **系统之间的“粘合剂”**
 
 ### GCP 产品
+
 - Application Integration
 - Integration Connectors
 - Apigee
@@ -287,6 +311,7 @@
 ## 十四、工具 & 治理 & 迁移层
 
 ### GCP 产品
+
 - Deployment Manager
 - Infrastructure Manager（IaC）
 - Service Catalog
@@ -300,5 +325,6 @@
 ## 十五、Web3 / 新兴技术层
 
 ### GCP 产品
+
 - Blockchain Node Engine
 - Blockchain RPC

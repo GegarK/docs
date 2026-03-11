@@ -2,4 +2,4 @@
 
 <DocsAD/>
 
-* [GitHub](https://github.com/DeeLMind/tauri-rust.git)
+- [GitHub](https://github.com/DeeLMind/tauri-rust.git)

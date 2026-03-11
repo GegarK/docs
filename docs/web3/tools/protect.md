@@ -8,21 +8,21 @@
 
 ### 代码方向（静态）
 
-* 代码审计
-* 模糊测试
-* 形式化检验 (Formal Verification) TAL+ & Coq
+- 代码审计
+- 模糊测试
+- 形式化检验 (Formal Verification) TAL+ & Coq
 
 <DocsAD/>
 
 ### 行为方向（动态）
 
-* 调用流程监控
+- 调用流程监控
 
 ## 虚拟化保护
 
-* OLLVM
-* 混淆加密
-* 虚拟化保护
+- OLLVM
+- 混淆加密
+- 虚拟化保护
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -182,7 +182,7 @@ contract SimpleCompiler {
 
         return opcodes;
     }
-    
+
     // 编译并执行
     function compileAndExecute(string memory expression) public returns (uint256) {
         uint8[] memory opcodes = compile(expression);

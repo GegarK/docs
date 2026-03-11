@@ -1,3 +1,3 @@
-# JSFUCK编码
+# JSFUCK 编码
 
 <DocsAD/>

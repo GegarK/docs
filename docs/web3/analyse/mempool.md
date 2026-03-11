@@ -36,51 +36,64 @@ Mempool（Memory Pool）是指在区块链网络中，尚未被打包进区块�
 ## 监控脚本
 
 ```js
-const { ethers } = require('ethers');
+const { ethers } = require("ethers");
 
-const provider = new ethers.WebSocketProvider('wss://eth-mainnet.g.alchemy.com/v2/ged06NfoHIbeQK9sMoJpm_RatVPnguAp');
+const provider = new ethers.WebSocketProvider(
+  "wss://eth-mainnet.g.alchemy.com/v2/ged06NfoHIbeQK9sMoJpm_RatVPnguAp"
+);
 
-let network = provider.getNetwork()
-network.then(res => console.log(`[${(new Date).toLocaleTimeString()}] 连接到 chain ID ${res.chainId}`));
+let network = provider.getNetwork();
+network.then((res) =>
+  console.log(
+    `[${new Date().toLocaleTimeString()}] 连接到 chain ID ${res.chainId}`
+  )
+);
 
 function throttle(fn, delay) {
-    let timer;
-    return function(){
-        if(!timer) {
-            fn.apply(this, arguments)
-            timer = setTimeout(()=>{
-                clearTimeout(timer)
-                timer = null
-            },delay)
-        }
+  let timer;
+  return function () {
+    if (!timer) {
+      fn.apply(this, arguments);
+      timer = setTimeout(() => {
+        clearTimeout(timer);
+        timer = null;
+      }, delay);
     }
+  };
 }
 
 const main = async () => {
-    let i = 0;
-    // 3. 监听pending交易，获取txHash
-    console.log("\n3. 监听pending交易，打印txHash。")
-    provider.on("pending", async (txHash) => {
-        if (txHash && i < 100) {
-            // 打印txHash
-            console.log(`[${(new Date).toLocaleTimeString()}] 监听Pending交易 ${i}: ${txHash} \r`);
-            i++
-            }
-    });
+  let i = 0;
+  // 3. 监听pending交易，获取txHash
+  console.log("\n3. 监听pending交易，打印txHash。");
+  provider.on("pending", async (txHash) => {
+    if (txHash && i < 100) {
+      // 打印txHash
+      console.log(
+        `[${new Date().toLocaleTimeString()}] 监听Pending交易 ${i}: ${txHash} \r`
+      );
+      i++;
+    }
+  });
 
-    // 4. 监听pending交易，并获取交易详情
-    console.log("\n4. 监听pending交易，获取txHash，并输出交易详情。")
-    let j = 0
-    provider.on("pending", throttle(async (txHash) => {
-        if (txHash && j <= 100) {
-            // 获取tx详情
-            let tx = await provider.getTransaction(txHash);
-            console.log(`\n[${(new Date).toLocaleTimeString()}] 监听Pending交易 ${j}: ${txHash} \r`);
-            console.log(tx);
-            j++
-            }
-    }, 1000));
+  // 4. 监听pending交易，并获取交易详情
+  console.log("\n4. 监听pending交易，获取txHash，并输出交易详情。");
+  let j = 0;
+  provider.on(
+    "pending",
+    throttle(async (txHash) => {
+      if (txHash && j <= 100) {
+        // 获取tx详情
+        let tx = await provider.getTransaction(txHash);
+        console.log(
+          `\n[${new Date().toLocaleTimeString()}] 监听Pending交易 ${j}: ${txHash} \r`
+        );
+        console.log(tx);
+        j++;
+      }
+    }, 1000)
+  );
 };
 
-main()
+main();
 ```

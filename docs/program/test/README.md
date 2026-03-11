@@ -6,10 +6,10 @@
 
 <DocsAD/>
 
-* [YouTube系列教程](https://www.youtube.com/watch?v=2ufyykMZdtQ&list=PLgZqc0esdeS951bkLzVnuX-YQxE_RbC1v)
+- [YouTube 系列教程](https://www.youtube.com/watch?v=2ufyykMZdtQ&list=PLgZqc0esdeS951bkLzVnuX-YQxE_RbC1v)
 <iframe width="720px" height="480px" src="https://www.youtube.com/embed/2ufyykMZdtQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-* [B站系列教程](https://www.bilibili.com/medialist/play/282616786?from=space&business=space_series&business_id=2795900&desc=1&spm_id_from=333.999.0.0)
+- [B 站系列教程](https://www.bilibili.com/medialist/play/282616786?from=space&business=space_series&business_id=2795900&desc=1&spm_id_from=333.999.0.0)
 <iframe src="//player.bilibili.com/player.html?aid=986679161&bvid=BV1Yt4y1F7VY&cid=865422334&page=1"  frameborder="no"  allowfullscreen="true" style="width:720px;height:480px"> 
 </iframe>
 
@@ -46,7 +46,6 @@
 - **安全性测试**：验证软件是否能够抵御安全威胁，如漏洞攻击、未授权访问等。
 - **兼容性测试**：检查软件在不同平台、操作系统、设备或浏览器上的表现。
 
-
 ## 软件测试的步骤
 
 1. **测试计划**：根据需求文档和设计文档，定义测试策略、测试目标和测试范围，制定测试计划。
@@ -55,14 +54,12 @@
 4. **缺陷管理**：将测试中发现的缺陷记录并提交给开发团队，跟踪缺陷修复情况。
 5. **测试报告**：生成测试报告，分析测试结果，并评估软件质量。
 
-
 ## 软件测试的常用工具
 
 1. **自动化测试工具**：如 Selenium、Appium、JMeter、Postman 等。
 2. **缺陷跟踪工具**：如 JIRA、Bugzilla、Mantis 等。
 3. **性能测试工具**：如 LoadRunner、Apache JMeter 等。
 4. **安全测试工具**：如 OWASP ZAP、Burp Suite 等。
-
 
 ## 软件测试的重要性
 

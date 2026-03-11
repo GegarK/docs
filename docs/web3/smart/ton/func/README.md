@@ -1,6 +1,6 @@
-# FUNC开发
+# FUNC 开发
 
-## [FUNC文档](https://docs.ton.org/develop/func/cookbook)
+## [FUNC 文档](https://docs.ton.org/develop/func/cookbook)
 
 ## [开发环境搭建](https://github.com/ton-blockchain/ton/releases)
 

@@ -1,7 +1,8 @@
 # GCC
 
-## 什么是GCC
-GCC是GNU编译器套件的缩写。它是一个功能强大、高效的跨平台编译器，可以编译多种编程语言。最初，GCC是作为C语言编译器（GNU C Compiler）而开发的，但现在它还支持其他语言，如C++、Java、Pascal等。
+## 什么是 GCC
+
+GCC 是 GNU 编译器套件的缩写。它是一个功能强大、高效的跨平台编译器，可以编译多种编程语言。最初，GCC 是作为 C 语言编译器（GNU C Compiler）而开发的，但现在它还支持其他语言，如 C++、Java、Pascal 等。
 
 <DocsAD/>
 
@@ -13,7 +14,7 @@ sudo apt install build-essential
 
 ## 命令行
 
-- 编译C语言程序：
+- 编译 C 语言程序：
 
 ```
 gcc -o output_file input_file.c
@@ -21,7 +22,7 @@ gcc -o output_file input_file.c
 
 其中，`output_file`是编译后的可执行文件名，`input_file.c`是源代码文件名。
 
-- 编译debug版本：
+- 编译 debug 版本：
 
 ```
 gcc -g -o output_file input_file.c
@@ -29,7 +30,7 @@ gcc -g -o output_file input_file.c
 
 其中，`output_file`是编译后的可执行文件名，`input_file.c`是源代码文件名。
 
-- 编译release版本：
+- 编译 release 版本：
 
 ```
 gcc -o output_file input_file.c

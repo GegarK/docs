@@ -5,9 +5,9 @@
 ```c
 /*
   Blink
-  
+
   Switching a LED on and off
-  
+
   This example is part of the Fritzing Creator Kit: www.fritzing.org/creator-kit.
 */
 
@@ -18,11 +18,11 @@ void setup() {                  // the setup() method is executed only once
 }
 
 void loop() {                   // the loop() method is repeated
-  digitalWrite(led, HIGH);      // switching on the led 
+  digitalWrite(led, HIGH);      // switching on the led
   delay(1000);                  // stopping the program for 1000 milliseconds
-  digitalWrite(led, LOW);       // switching off the led 
+  digitalWrite(led, LOW);       // switching off the led
   delay(1000);                  // stopping the program for 1000 milliseconds
 }
 ```
 
-## 
+##

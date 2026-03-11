@@ -1,6 +1,7 @@
 # RAM
 
 ## 1. **Corsair**
+
 - **官网**: [https://www.corsair.com](https://www.corsair.com)
 - **主要系列**:
   - **Vengeance 系列**（高性能内存，适合游戏和超频）
@@ -14,6 +15,7 @@
 <DocsAD/>
 
 ## 2. **G.SKILL**
+
 - **官网**: [https://www.gskill.com](https://www.gskill.com)
 - **主要系列**:
   - **Ripjaws 系列**（高性能内存，适合游戏和超频）
@@ -25,6 +27,7 @@
       - Trident Z RGB 32GB DDR4
 
 ## 3. **Kingston**
+
 - **官网**: [https://www.kingston.com](https://www.kingston.com)
 - **主要系列**:
   - **HyperX 系列**（游戏和超频内存）
@@ -36,6 +39,7 @@
       - ValueRAM 8GB DDR4
 
 ## 4. **Crucial**
+
 - **官网**: [https://www.crucial.com](https://www.crucial.com)
 - **主要系列**:
   - **Ballistix 系列**（专为游戏和高性能应用设计）
@@ -47,6 +51,7 @@
       - Crucial 8GB DDR4
 
 ## 5. **Samsung**
+
 - **官网**: [https://www.samsung.com](https://www.samsung.com)
 - **主要系列**:
   - **Samsung DDR4 RAM**（广泛应用于各种设备）
@@ -55,6 +60,7 @@
       - Samsung 16GB DDR4
 
 ## 6. **Micron**
+
 - **官网**: [https://www.micron.com](https://www.micron.com)
 - **主要系列**:
   - **Micron DDR4 RAM**（用于各种设备的内存解决方案）
@@ -63,6 +69,7 @@
       - Micron 32GB DDR4
 
 ## 7. **Patriot**
+
 - **官网**: [https://www.patriotmemory.com](https://www.patriotmemory.com)
 - **主要系列**:
   - **Viper 系列**（高性能内存，适合游戏）

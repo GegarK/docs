@@ -4,7 +4,7 @@ Hyper-V 是微软的本地虚拟化平台，允许用户在 Windows 系统上创
 
 <DocsAD/>
 
-## Hyper-V开关
+## Hyper-V 开关
 
-* bcdedit /set hypervisorlaunchtype off
-* bcdedit /set hypervisorlaunchtype on
+- bcdedit /set hypervisorlaunchtype off
+- bcdedit /set hypervisorlaunchtype on

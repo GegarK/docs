@@ -11,6 +11,7 @@
 软件架构（Software Architecture）是指软件系统的高层设计。它描述了系统的结构、组件及其相互关系，定义了系统的组织方式和关键设计决策。软件架构决定了系统的整体组织和设计，旨在满足系统的功能需求和非功能性需求（如性能、可扩展性、可靠性和安全性）。
 
 ## 创建型模式（Creational Patterns）
+
 - 单例模式（Singleton Pattern）
 - 工厂方法模式（Factory Method Pattern）
 - 抽象工厂模式（Abstract Factory Pattern）
@@ -18,6 +19,7 @@
 - 原型模式（Prototype Pattern）
 
 ## 结构型模式（Structural Patterns）
+
 - 适配器模式（Adapter Pattern）
 - 桥接模式（Bridge Pattern）
 - 组合模式（Composite Pattern）
@@ -27,6 +29,7 @@
 - 代理模式（Proxy Pattern）
 
 ## 行为型模式（Behavioral Patterns）
+
 - 职责链模式（Chain of Responsibility Pattern）
 - 命令模式（Command Pattern）
 - 解释器模式（Interpreter Pattern）

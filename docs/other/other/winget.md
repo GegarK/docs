@@ -64,13 +64,13 @@ winget source reset winget
 
 ## 常用命令
 
-* 下载不安装指定目录
+- 下载不安装指定目录
 
 ```bat
 winget download XXXXID -d F://
 ```
 
-* 指定目录安装
+- 指定目录安装
 
 ```bat
 winget settings
@@ -80,25 +80,25 @@ https://github.com/microsoft/winget-cli/blob/master/doc/Settings.md
 },
 ```
 
-* 交互安装
+- 交互安装
 
 ```bat
 winget install -i XXXXID
 ```
 
-* 安装后会自动清理
+- 安装后会自动清理
 
 ```bat
 winget install XXXXID
 ```
 
-* 更新软件
+- 更新软件
 
 ```bat
 winget upgrade XXXXID
 ```
 
-* 卸载软件
+- 卸载软件
 
 ```bat
 winget uninstall XXXXID

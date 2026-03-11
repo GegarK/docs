@@ -1,8 +1,8 @@
 # SDL
 
-## 什么是SDL
+## 什么是 SDL
 
-SDL全称Security Development Lifecycle 是一种软件开发过程，旨在在软件开发的各个阶段综合考虑安全性。它强调在设计、开发、测试和发布过程中积极考虑安全性，并采取相应的措施来减少软件中的漏洞和安全风险。
+SDL 全称 Security Development Lifecycle 是一种软件开发过程，旨在在软件开发的各个阶段综合考虑安全性。它强调在设计、开发、测试和发布过程中积极考虑安全性，并采取相应的措施来减少软件中的漏洞和安全风险。
 
 关键特点包括：
 
@@ -13,7 +13,7 @@ SDL全称Security Development Lifecycle 是一种软件开发过程，旨在在�
 
 <DocsAD/>
 
-## SDL环节
+## SDL 环节
 
 1. 安全培训
 

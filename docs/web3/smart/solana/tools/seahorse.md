@@ -2,15 +2,14 @@
 
 ## HelloWorld
 
-
-* 安装Seahorse
+- 安装 Seahorse
 
 ```sh
 cargo install seahorse-dev
 ```
 
-* seahorse init demo
-* seahorse build
+- seahorse init demo
+- seahorse build
 
 ```py
 # fizzbuzz

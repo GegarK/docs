@@ -13,7 +13,7 @@ cargo build-sbf
 solana program deploy hellworld.so
 ```
 
-* Cargo.toml
+- Cargo.toml
 
 ```toml
 [package]
@@ -28,7 +28,7 @@ solana-program = "1.18.26"
 crate-type = ["cdylib", "lib"]
 ```
 
-* lib.rs
+- lib.rs
 
 ```rust
 use solana_program::{
@@ -66,13 +66,13 @@ import {
   SystemProgram,
   Keypair,
   sendAndConfirmTransaction,
-} from '@solana/web3.js';
+} from "@solana/web3.js";
 
 // 设置连接到 Devnet（也可以替换为 mainnet 或 testnet）
-const connection = new Connection('https://api.devnet.solana.com', 'confirmed');
+const connection = new Connection("https://api.devnet.solana.com", "confirmed");
 
 // 你的程序的 PublicKey（Rust 程序的 ID）
-const programId = new PublicKey('5Jo7Zp3yA4v3VLVN9WFDSUDWTb61R9Hpjr5GGEdqVzJP');
+const programId = new PublicKey("5Jo7Zp3yA4v3VLVN9WFDSUDWTb61R9Hpjr5GGEdqVzJP");
 
 // 创建一个新的 Keypair 作为交易的签署者（payer）
 const payer = Keypair.fromSecretKey(new Uint8Array([私钥]));
@@ -84,20 +84,22 @@ const instructionData = Buffer.from([]);
 const instruction = new Transaction().add({
   keys: [
     {
-      pubkey: payer.publicKey,  // 使用 payer 账户的公钥
-      isSigner: true,           // 该账户需要签署交易
-      isWritable: false,        // 如果交易不涉及修改账户数据，设置为 false
+      pubkey: payer.publicKey, // 使用 payer 账户的公钥
+      isSigner: true, // 该账户需要签署交易
+      isWritable: false, // 如果交易不涉及修改账户数据，设置为 false
     },
   ],
-  programId: programId,        // 目标程序的 Program ID
-  data: instructionData,       // 附带的数据
+  programId: programId, // 目标程序的 Program ID
+  data: instructionData, // 附带的数据
 });
 
 // 创建并发送交易
 async function callSolanaProgram() {
   try {
     // 将交易发送到网络并等待确认
-    const txId = await sendAndConfirmTransaction(connection, instruction, [payer]);
+    const txId = await sendAndConfirmTransaction(connection, instruction, [
+      payer,
+    ]);
     console.log("Transaction successful with ID:", txId);
   } catch (err) {
     console.error("Transaction failed:", err);

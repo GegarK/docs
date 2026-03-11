@@ -37,7 +37,7 @@ if response.status_code == 200:
     # 转换时间格式
     df['Open Time'] = pd.to_datetime(df['Open Time'], unit='ms')
     df['Close Time'] = pd.to_datetime(df['Close Time'], unit='ms')
-    
+
     # 输出到CSV文件
     df.to_csv('ETHUSDT_data.csv', index=False)
     print("Data saved to ETHUSDT_data.csv")

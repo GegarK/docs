@@ -1,4 +1,4 @@
-# 简单Opcode分析
+# 简单 Opcode 分析
 
 ::: warning DeeLMind 非常喜欢的招聘要求|大道至简
 We don't have formal experience requirements. We're looking for people who are able to learn fast and tackle interesting problems. If you enjoy solving difficult problems, please shoot us your application and we'll followup with next steps.
@@ -20,9 +20,9 @@ Please provide the calldata of a transaction that will not revert. Submit your a
 
 ## 分析思路
 
-* [ETH Opcode](https://www.evm.codes/)
+- [ETH Opcode](https://www.evm.codes/)
 
-* 什么是[EIP-3855](https://eips.ethereum.org/EIPS/eip-3855)
+- 什么是[EIP-3855](https://eips.ethereum.org/EIPS/eip-3855)
 
 引入新的操作码：PUSH0
 
@@ -36,7 +36,7 @@ Please provide the calldata of a transaction that will not revert. Submit your a
 
 通过引入 PUSH0 操作码，只需一个字节即可完成相同的操作，从而节省空间和降低 gas 成本。这对大量使用零值的智能合约特别有利，可以显著提升它们的执行效率。
 
-* 反编译 Opcode 静态分析
+- 反编译 Opcode 静态分析
 
 6181935f351415600b57005b5f80fd
 
@@ -69,7 +69,7 @@ DUP1：复制堆栈顶值。
 REVERT：回滚事务
 ```
 
-* 伪代码还原
+- 伪代码还原
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -98,17 +98,17 @@ contract EIP3855Example {
 }
 ```
 
-* 分析结论
+- 分析结论
 
-用户输入的内容与0x8193进行对比，错误则Revert，我们只需构造输入参数使之匹配正确即可
+用户输入的内容与 0x8193 进行对比，错误则 Revert，我们只需构造输入参数使之匹配正确即可
 
 相比于我们以前逆向分析二进制程序要简单很多
 
-* [动态调试](https://www.evm.codes/playground)
+- [动态调试](https://www.evm.codes/playground)
 
 ![er](/imgs/web3/analyse/1.png)
 
-* 答案
+- 答案
 
 ```hex
 0x0000000000000000000000000000000000000000000000000000000000008193

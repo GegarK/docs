@@ -10,23 +10,23 @@ WEBRTC(Web Real-Time Communication)支持在`点对点`之间发送视频、语�
 
 ## NAT(Network Address Translation)
 
-## WEBRTC协议
-* STUN
+## WEBRTC 协议
 
-STUN（Simple Traversal of UDP Through NATs）允许通过UDP穿透NAT。
+- STUN
 
+STUN（Simple Traversal of UDP Through NATs）允许通过 UDP 穿透 NAT。
 
-* TURN
+- TURN
 
-TURN（Traversal Using Relay NAT），允许通过TCP或UDP方式穿透NAT。
+TURN（Traversal Using Relay NAT），允许通过 TCP 或 UDP 方式穿透 NAT。
 
 ## ICE
 
-ICE（Interactive Connectivity Establishment），ICE定义了穿越方案，类似接口框架。
+ICE（Interactive Connectivity Establishment），ICE 定义了穿越方案，类似接口框架。
 
 ## 服务器搭建
 
-## 获取IP地址
+## 获取 IP 地址
 
 ```
 function findIP(onNewIP) {
@@ -41,9 +41,9 @@ function findIP(onNewIP) {
     if (!localIPs[ip]) onNewIP(ip);
     localIPs[ip] = true;
   }
-  
+
   pc.createDataChannel("");
-  
+
   pc.createOffer(function(sdp) {
     sdp.sdp.split('\n').forEach(function(line) {
       if (line.indexOf('candidate') < 0) return;
@@ -51,7 +51,7 @@ function findIP(onNewIP) {
     });
     pc.setLocalDescription(sdp, noop, noop);
   }, noop);
-  
+
   pc.onicecandidate = function(ice) {
     if (!ice || !ice.candidate || !ice.candidate.candidate || !ice.candidate.candidate.match(ipRegex)) return;
     ice.candidate.candidate.match(ipRegex).forEach(ipIterate);

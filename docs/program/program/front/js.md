@@ -14,32 +14,32 @@ console.log("Hello, World!");
 
 // 示例：定义一个函数并调用它
 function greet(name) {
-    return "Hello, " + name + "!";
+  return "Hello, " + name + "!";
 }
 
 console.log(greet("Alice"));
-
 ```
 
-## Javascript发展历史
+## Javascript 发展历史
 
-* 1995 年: JavaScript 由网景公司（Netscape）的程序员 Brendan Eich 在仅仅 10 天内设计并开发完成。最初的名字是 Mocha，随后改名为 LiveScript，最终定名为 JavaScript。
+- 1995 年: JavaScript 由网景公司（Netscape）的程序员 Brendan Eich 在仅仅 10 天内设计并开发完成。最初的名字是 Mocha，随后改名为 LiveScript，最终定名为 JavaScript。
 
-* 1996 年: 为了推广 JavaScript，网景将其提交给 ECMA（欧洲计算机制造商协会）进行标准化。这导致了 ECMAScript 标准的出现，JavaScript 是 ECMAScript 标准的实现之一。
+- 1996 年: 为了推广 JavaScript，网景将其提交给 ECMA（欧洲计算机制造商协会）进行标准化。这导致了 ECMAScript 标准的出现，JavaScript 是 ECMAScript 标准的实现之一。
 
-* 1997 年: ECMAScript 1.0 发布，确立了 JavaScript 的核心语法和功能。
+- 1997 年: ECMAScript 1.0 发布，确立了 JavaScript 的核心语法和功能。
 
-* 1999 年: ECMAScript 3 发布，这是一个重要版本，定义了大部分现代 JavaScript 的核心功能，包括正则表达式、try/catch 异常处理机制等。
+- 1999 年: ECMAScript 3 发布，这是一个重要版本，定义了大部分现代 JavaScript 的核心功能，包括正则表达式、try/catch 异常处理机制等。
 
-* 2009 年: ECMAScript 5 发布，加入了严格模式（strict mode）和其他语言增强特性。
+- 2009 年: ECMAScript 5 发布，加入了严格模式（strict mode）和其他语言增强特性。
 
-* 2015 年: ECMAScript 6（也称为 ES6 或 ECMAScript 2015）发布，这是 JavaScript 语言史上最大的一次升级。ES6 引入了类（class）、模块（modules）、箭头函数（arrow functions）、let 和 const 声明、模板字符串（template literals）、默认参数等诸多新特性。
+- 2015 年: ECMAScript 6（也称为 ES6 或 ECMAScript 2015）发布，这是 JavaScript 语言史上最大的一次升级。ES6 引入了类（class）、模块（modules）、箭头函数（arrow functions）、let 和 const 声明、模板字符串（template literals）、默认参数等诸多新特性。
 
-* 2016 年起: ECMAScript 开始采用年度发布计划，每年都会推出新的 ECMAScript 版本（如 ES2016、ES2017 等），持续改进语言的特性和性能。
+- 2016 年起: ECMAScript 开始采用年度发布计划，每年都会推出新的 ECMAScript 版本（如 ES2016、ES2017 等），持续改进语言的特性和性能。
 
 # [JavaScript 版本区别](https://ecma-international.org/)
 
 ## ECMAScript 5 (ES5) - 2009
+
 - **日期**: 2009 年发布。
 - **新特性**:
   - **严格模式** (`"use strict"`)：通过启用严格模式，可以捕捉更容易被忽视的错误，并避免一些不安全的特性。
@@ -49,6 +49,7 @@ console.log(greet("Alice"));
   - **Getter 和 Setter**：在对象中定义 `getter` 和 `setter`。
 
 ## ECMAScript 6 (ES6/ES2015) - 2015
+
 - **日期**: 2015 年发布。
 - **新特性**:
   - **箭头函数** (`=>`)：更简洁的函数定义方式，并且不绑定 `this`。

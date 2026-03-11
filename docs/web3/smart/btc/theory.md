@@ -1,5 +1,4 @@
-# BTC原理
-
+# BTC 原理
 
 ## 比特币单位
 
@@ -19,6 +18,7 @@ PSBT (Partially Signed Bitcoin Transaction) 是一种比特币交易的标准格
 UTXO 模型是一种区块链系统中的交易模型，用于跟踪比特币等加密货币的所有权。每笔交易都会产生一个或多个 UTXO，表示尚未花费的比特币输出。
 
 ### 1. UTXO 模型的特点
+
 - **去中心化**：通过全网节点追踪每个交易的状态，确保系统的去中心化特性。
 - **不可变性**：每个 UTXO 一旦被创建，它的状态在被花费前不会发生变化。
 - **隐私性**：UTXO 模型中每次交易的输入和输出地址可以不重复使用，提升交易隐私。
@@ -26,31 +26,33 @@ UTXO 模型是一种区块链系统中的交易模型，用于跟踪比特币等
 
 ### 2. UTXO 交易流程
 
-假设小明第一次收到30 BTC，然后又接收了10 BTC，现在需要支付5 BTC。
+假设小明第一次收到 30 BTC，然后又接收了 10 BTC，现在需要支付 5 BTC。
 
-* UTXO1：30 BTC（来自第一次接收）
-* UTXO2：10 BTC（来自第二次接收）
+- UTXO1：30 BTC（来自第一次接收）
+- UTXO2：10 BTC（来自第二次接收）
 
-小明现在需要支付5 BTC，他的钱包将自动选择足够的UTXO来满足支付金额。通常，钱包会选择较小的UTXO来减少找零或更高效率。在这个例子中，钱包可能选择UTXO2（10 BTC）来支付5 BTC。
+小明现在需要支付 5 BTC，他的钱包将自动选择足够的 UTXO 来满足支付金额。通常，钱包会选择较小的 UTXO 来减少找零或更高效率。在这个例子中，钱包可能选择 UTXO2（10 BTC）来支付 5 BTC。
 
-* 输入：UTXO2：10 BTC
-* 输出：支付给接收者：5 BTC ，找零给小明：5 BTC（新的UTXO）
+- 输入：UTXO2：10 BTC
+- 输出：支付给接收者：5 BTC ，找零给小明：5 BTC（新的 UTXO）
 
-UTXO2被完全使用，支付完5 BTC后，剩下的5 BTC会作为找零，生成一个新的UTXO，返还给小明。
+UTXO2 被完全使用，支付完 5 BTC 后，剩下的 5 BTC 会作为找零，生成一个新的 UTXO，返还给小明。
 
- 交易确认后的UTXO状态：
+交易确认后的 UTXO 状态：
 
- * UTXO1：30 BTC（未动）
- * UTXO3：5 BTC（新的找零UTXO）
+- UTXO1：30 BTC（未动）
+- UTXO3：5 BTC（新的找零 UTXO）
 
-## 比特币中的UTXO脚本
+## 比特币中的 UTXO 脚本
 
-在比特币中，UTXO（未花费交易输出）脚本是实现交易验证和条件支付的一种机制。每个UTXO不仅包含发送者和接收者的地址，还包含一段脚本，这段脚本定义了如何使用该输出。
+在比特币中，UTXO（未花费交易输出）脚本是实现交易验证和条件支付的一种机制。每个 UTXO 不仅包含发送者和接收者的地址，还包含一段脚本，这段脚本定义了如何使用该输出。
 
 ### 1. 脚本类型
+
 比特币使用一种称为脚本语言的简单编程语言来定义交易输出的花费条件。常见的脚本类型包括：
 
 - **P2PKH（Pay to Public Key Hash）**：
+
   - 最常用的脚本类型，输出是支付给一个公钥哈希（地址）。
   - 脚本示例：
     ```plaintext
@@ -59,6 +61,7 @@ UTXO2被完全使用，支付完5 BTC后，剩下的5 BTC会作为找零，生�
   - 要花费此输出，用户必须提供相应的公钥和签名。
 
 - **P2SH（Pay to Script Hash）**：
+
   - 支持复杂的脚本，如多重签名。
   - 输出是支付给一个脚本哈希。
   - 脚本示例：
@@ -76,67 +79,72 @@ UTXO2被完全使用，支付完5 BTC后，剩下的5 BTC会作为找零，生�
   - 提供更低的交易费用和更好的隐私。
 
 ### 2. 脚本结构
-每个UTXO包含两个脚本：
+
+每个 UTXO 包含两个脚本：
+
 - **锁定脚本（Locking Script）**：定义如何花费该输出（即花费条件）。
 - **解锁脚本（Unlocking Script）**：在创建交易时提供，满足锁定脚本的条件。
 
 ### 3. 脚本执行
-当用户尝试花费一个UTXO时，比特币节点会执行脚本以验证交易的有效性。执行过程如下：
+
+当用户尝试花费一个 UTXO 时，比特币节点会执行脚本以验证交易的有效性。执行过程如下：
+
 - 将解锁脚本和锁定脚本合并。
 - 按照比特币脚本语言的规则执行，使用栈来存储中间结果。
-- 如果最终栈中的结果是布尔值`true`，则交易有效，UTXO可以被消费。
+- 如果最终栈中的结果是布尔值`true`，则交易有效，UTXO 可以被消费。
 
 ### 4. 安全性与复杂性
-- **安全性**：通过脚本机制，比特币确保只有满足条件的用户才能花费特定的UTXO，增强了安全性。
+
+- **安全性**：通过脚本机制，比特币确保只有满足条件的用户才能花费特定的 UTXO，增强了安全性。
 - **复杂性**：虽然脚本提供了灵活性，但复杂的脚本可能导致更高的交易费用和验证成本。
 
 ## 比特币地址类型
 
 ### 1. P2PKH（Pay to Public Key Hash）
-- **格式**：以1开头。
+
+- **格式**：以 1 开头。
 - **示例**：`1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa`
-- **描述**：最常用的地址类型，支付到公钥哈希，使用标准的ECDSA签名。
+- **描述**：最常用的地址类型，支付到公钥哈希，使用标准的 ECDSA 签名。
 
 ### 2. P2SH（Pay to Script Hash）
-- **格式**：以3开头。
+
+- **格式**：以 3 开头。
 - **示例**：`3J98t1WpEZ73CNmQviecrnyiWrnqRhWNLy`
 - **描述**：支持复杂的脚本，比如多重签名，允许将支付发送到哈希化的脚本。
 
 ### 3. P2WPKH（Pay to Witness Public Key Hash）
-- **格式**：以bc1开头。
+
+- **格式**：以 bc1 开头。
 - **示例**：`bc1qw4q0a7p4j25r34f0h3v5fdqzg6a3lpe4q5ahkg`
 - **描述**：用于隔离见证（SegWit）交易，提供更低的交易费用和更好的隐私。
 
 ### 4. P2WSH（Pay to Witness Script Hash）
-- **格式**：以bc1开头。
+
+- **格式**：以 bc1 开头。
 - **示例**：`bc1qrk6prfuh7zkw0lj8dkz4xlqy6jq0p0f3zrgz6f`
 - **描述**：用于多重签名或复杂脚本的隔离见证支付。
-址类型在比特币网络中都有其特定的应用场景，选择合适的地址类型可以提升交易效率和安全性。
-
+  址类型在比特币网络中都有其特定的应用场景，选择合适的地址类型可以提升交易效率和安全性。
 
 # 比特币：一种点对点的电子现金系统
 
-​								作者：中本聪
-​								satoshin@gmx.com
-​								www.bitcoin.org 
-​								2008.10.31
+​ 作者：中本聪
+​ satoshin@gmx.com
+​ www.bitcoin.org
+​ 2008.10.31
 
-​								中文翻译：李笑来
-​								lixiaolai@gmail.com
-​								2018.10.31
+​ 中文翻译：李笑来
+​ lixiaolai@gmail.com
+​ 2018.10.31
 
-​								[Checkout Github Repo for this translation](https://github.com/xiaolai/bitcoin-whitepaper-chinese-translation)
+​ [Checkout Github Repo for this translation](https://github.com/xiaolai/bitcoin-whitepaper-chinese-translation)
 
-
-
-> **Abstract.** A purely peer-to-peer version of electronic cash would allow online payments to be sent directly from one party to another without going through a financial institution. Digital signatures provide part of the solution, but the main benefits are lost if a trusted third party is still required to prevent double-spending. We propose a solution to the double-spending problem using a peer-to-peer network. The network timestamps transactions by hashing them into an ongoing chain of hash-based proof-of-work, forming a record that cannot be changed without redoing the proof-of-work. The longest chain not only serves as proof of the sequence of events witnessed, but proof that it came from the largest pool of CPU power. As long as a majority of CPU power is controlled by nodes that are not cooperating to attack the network, they'll generate the longest chain and outpace attackers. The network itself requires minimal structure. Messages are broadcast on a best effort basis, and nodes can leave and rejoin the network at will, accepting the longest proof-of-work chain as proof of what happened while they were gone. 
+> **Abstract.** A purely peer-to-peer version of electronic cash would allow online payments to be sent directly from one party to another without going through a financial institution. Digital signatures provide part of the solution, but the main benefits are lost if a trusted third party is still required to prevent double-spending. We propose a solution to the double-spending problem using a peer-to-peer network. The network timestamps transactions by hashing them into an ongoing chain of hash-based proof-of-work, forming a record that cannot be changed without redoing the proof-of-work. The longest chain not only serves as proof of the sequence of events witnessed, but proof that it came from the largest pool of CPU power. As long as a majority of CPU power is controlled by nodes that are not cooperating to attack the network, they'll generate the longest chain and outpace attackers. The network itself requires minimal structure. Messages are broadcast on a best effort basis, and nodes can leave and rejoin the network at will, accepting the longest proof-of-work chain as proof of what happened while they were gone.
 >
 > **概要**：一个纯粹的点对点版本的电子现金系统，将允许在线支付直接从一方发送到另一方，而无需通过金融机构。数字签名虽然提供了部分解决方案，但，若是仍然需要被信任的第三方来防止双重支出的话，那么电子支付的主要优势就被抵消了。我们提出一个方案，使用点对点网络去解决双重支出问题。点对点网络将为每笔交易标记时间戳，方法是：把交易的散列数据录入一个不断延展的、以散列为基础的工作证明链上，形成一个如非完全重做就不可能改变的记录。最长链，一方面用来证明已被见证的事件及其顺序，与此同时，也用来证明它来自于最大的 CPU 算力池。只要绝大多数 CPU 算力被良性节点控制 —— 即，它们不与那些尝试攻击网络的节点合作 —— 那么，良性节点将会生成最长链，并且在速度上超过攻击者。这个网络本身需要最小化的结构。信息将以最大努力为基本去传播，节点来去自由；但，加入之时总是需要接受最长的工作证明链作为它们未参与期间所发生之一切的证明。
 
------
+---
 
 ## 1. 简介 (Introduction)
-
 
 Commerce on the Internet has come to rely almost exclusively on financial institutions serving as trusted third parties to process electronic payments. While the system works well enough for most transactions, it still suffers from the inherent weaknesses of the trust based model. Completely non-reversible transactions are not really possible, since financial institutions cannot avoid mediating disputes. The cost of mediation increases transaction costs, limiting the minimum practical transaction size and cutting off the possibility for small casual transactions, and there is a broader cost in the loss of ability to make non-reversible payments for non-reversible services. With the possibility of reversal, the need for trust spreads. Merchants must be wary of their customers, hassling them for more information than they would otherwise need. A certain percentage of fraud is accepted as unavoidable. These costs and payment uncertainties can be avoided in person by using physical currency, but no mechanism exists to make payments over a communications channel without a trusted party.
 
@@ -184,7 +192,7 @@ For our timestamp network, we implement the proof-of-work by incrementing a nonc
 
 The proof-of-work also solves the problem of determining representation in majority decision making. If the majority were based on one-IP-address-one-vote, it could be subverted by anyone able to allocate many IPs. Proof-of-work is essentially one-CPU-one-vote. The majority decision is represented by the longest chain, which has the greatest proof-of-work effort invested in it. If a majority of CPU power is controlled by honest nodes, the honest chain will grow the fastest and outpace any competing chains. To modify a past block, an attacker would have to redo the proof-of-work of the block and all blocks after it and then catch up with and surpass the work of the honest nodes. We will show later that the probability of a slower attacker catching up diminishes exponentially as subsequent blocks are added.
 
-工作证明同时解决了如何决定谁能代表大多数做决定的问题。如果所谓的“大多数”是基于“一个IP地址一票”的方式决定的话，那么任何一个可以搞定很多 IP 地址的人就可以被认为是“大多数”。工作证明本质上来看，是“一个CPU一票”。所谓的“大多数决定”是由最长链所代表的，因为被投入最多工作的链就是它。如果大多数 CPU 算力被诚实的节点所控制，那么诚实链成长最为迅速，其速度会远超其他竞争链。为了更改一个已经产生的区块，攻击者将不得不重新完成那个区块以及所有其后区块的的工作证明，而后还要追上并超过诚实节点的工作。后文展示为什么一个被拖延了的攻击者能够追上的可能性将随着区块的不断增加而指数级降低。
+工作证明同时解决了如何决定谁能代表大多数做决定的问题。如果所谓的“大多数”是基于“一个 IP 地址一票”的方式决定的话，那么任何一个可以搞定很多 IP 地址的人就可以被认为是“大多数”。工作证明本质上来看，是“一个 CPU 一票”。所谓的“大多数决定”是由最长链所代表的，因为被投入最多工作的链就是它。如果大多数 CPU 算力被诚实的节点所控制，那么诚实链成长最为迅速，其速度会远超其他竞争链。为了更改一个已经产生的区块，攻击者将不得不重新完成那个区块以及所有其后区块的的工作证明，而后还要追上并超过诚实节点的工作。后文展示为什么一个被拖延了的攻击者能够追上的可能性将随着区块的不断增加而指数级降低。
 
 To compensate for increasing hardware speed and varying interest in running nodes over time, the proof-of-work difficulty is determined by a moving average targeting an average number of blocks per hour. If they're generated too fast, the difficulty increases.
 
@@ -240,7 +248,7 @@ Once the latest transaction in a coin is buried under enough blocks, the spent t
 
 ![](/imgs/web3/btc/reclaiming-disk-space.svg)
 
-A block header with no transactions would be about 80 bytes. If we suppose blocks are generated every 10 minutes, 80 bytes * 6 * 24 * 365 = 4.2MB per year. With computer systems typically selling with 2GB of RAM as of 2008, and Moore's Law predicting current growth of 1.2GB per year, storage should not be a problem even if the block headers must be kept in memory.
+A block header with no transactions would be about 80 bytes. If we suppose blocks are generated every 10 minutes, 80 bytes _ 6 _ 24 \* 365 = 4.2MB per year. With computer systems typically selling with 2GB of RAM as of 2008, and Moore's Law predicting current growth of 1.2GB per year, storage should not be a problem even if the block headers must be kept in memory.
 
 一个没有任何交易记录的区块头大约是 80 个字节。假设每十分钟产生一个区块，80 字节乘以 6 乘以 24 乘以 365，等于每年 4.2M。截止 2008 年，大多数在售的计算机配有 2GB 内存，而按照摩尔定律的预测，每年会增加 1.2 GB，即便是区块头必须存储在内存之中也不会是什么问题。
 
@@ -390,7 +398,7 @@ Running some results, we can see the probability drop off exponentially with $z$
    z=8    P=0.0000173
    z=9    P=0.0000046
    z=10   P=0.0000012
-   
+
    q=0.3
    z=0    P=1.0000000
    z=5    P=0.1773523
@@ -421,24 +429,21 @@ Solving for P less than 0.1%...
    q=0.45   z=340
 ```
 
-
 ## 12. 结论 (Conclusion)
 
 We have proposed a system for electronic transactions without relying on trust. We started with the usual framework of coins made from digital signatures, which provides strong control of ownership, but is incomplete without a way to prevent double-spending. To solve this, we proposed a peer-to-peer network using proof-of-work to record a public history of transactions that quickly becomes computationally impractical for an attacker to change if honest nodes control a majority of CPU power. The network is robust in its unstructured simplicity. Nodes work all at once with little coordination. They do not need to be identified, since messages are not routed to any particular place and only need to be delivered on a best effort basis. Nodes can leave and rejoin the network at will, accepting the proof-of-work chain as proof of what happened while they were gone. They vote with their CPU power, expressing their acceptance of valid blocks by working on extending them and rejecting invalid blocks by refusing to work on them. Any needed rules and incentives can be enforced with this consensus mechanism.
 
 我们提出了一个不必依赖信任的电子交易系统；起点是一个普通的使用数字签名的硬币框架开始，虽然它提供了健壮的所有权控制，却无法避免双重支付。为了解决这个问题，我们提出一个使用工作证明机制的点对点网络去记录一个公开的交易记录历史，只要诚实节点能够控制大多数 CPU 算力，那么攻击者就仅从算力方面就不可能成功篡改系统。这个网络的健壮在于它的无结构的简单。节点们可以在很少协同的情况下瞬间同时工作。它们甚至不需要被辨认，因为消息的路径并非取决于特定的终点；消息只需要被以最大努力为基本去传播即可。节点来去自由，重新加入时，只需要接受工作证明链，作为它们离线之时所发生之一切的证明。它们通过它们的 CPU 算力投票，通过不断为链添加新的有效区块、拒绝无效区块，去表示它们对有效交易的接受与否。任何必要的规则和奖励都可以通过这个共识机制来强制实施。
 
------
+---
 
 ## 参考文献 (References)
 
-
 [^1]: **b-money** Dai Wei (1998-11-01) <http://www.weidai.com/bmoney.txt>
-[^2]: **Design of a secure timestamping service with minimal trust requirements** Henri Massias, Xavier Serret-Avila, Jean-Jacques Quisquater *20th Symposium on Information Theory in the Benelux* (1999-05) <http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.13.6228>
-[^3]: **How to time-stamp a digital document** Stuart Haber, W.Scott Stornetta *Journal of Cryptology* (1991) <https://doi.org/cwwxd4> DOI: [10.1007/bf00196791](https://doi.org/10.1007/bf00196791)
-[^4]: **Improving the Efficiency and Reliability of Digital Time-Stamping** Dave Bayer, Stuart Haber, W. Scott Stornetta *Sequences II* (1993) <https://doi.org/bn4rpx> DOI: [10.1007/978-1-4613-9323-8_24](https://doi.org/10.1007/978-1-4613-9323-8_24)
-[^5]: **Secure names for bit-strings** Stuart Haber, W. Scott Stornetta *Proceedings of the 4th ACM conference on Computer and communications security - CCS ’97*(1997) <https://doi.org/dtnrf6> DOI: [10.1145/266420.266430](https://doi.org/10.1145/266420.266430)
+[^2]: **Design of a secure timestamping service with minimal trust requirements** Henri Massias, Xavier Serret-Avila, Jean-Jacques Quisquater _20th Symposium on Information Theory in the Benelux_ (1999-05) <http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.13.6228>
+[^3]: **How to time-stamp a digital document** Stuart Haber, W.Scott Stornetta _Journal of Cryptology_ (1991) <https://doi.org/cwwxd4> DOI: [10.1007/bf00196791](https://doi.org/10.1007/bf00196791)
+[^4]: **Improving the Efficiency and Reliability of Digital Time-Stamping** Dave Bayer, Stuart Haber, W. Scott Stornetta _Sequences II_ (1993) <https://doi.org/bn4rpx> DOI: [10.1007/978-1-4613-9323-8_24](https://doi.org/10.1007/978-1-4613-9323-8_24)
+[^5]: **Secure names for bit-strings** Stuart Haber, W. Scott Stornetta _Proceedings of the 4th ACM conference on Computer and communications security - CCS ’97_(1997) <https://doi.org/dtnrf6> DOI: [10.1145/266420.266430](https://doi.org/10.1145/266420.266430)
 [^6]: **Hashcash - A Denial of Service Counter-Measure** Adam Back (2002-08-01) <http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.15.8>
-[^7]: **Protocols for Public Key Cryptosystems** Ralph C. Merkle *1980 IEEE Symposium on Security and Privacy* (1980-04) <https://doi.org/bmvbd6> DOI: [10.1109/sp.1980.10006](https://doi.org/10.1109/sp.1980.10006)
-[^8]: **An Introduction to Probability Theory and its Applications** William Feller *John Wiley & Sons* (1957) <https://archive.org/details/AnIntroductionToProbabilityTheoryAndItsApplicationsVolume1>
-
+[^7]: **Protocols for Public Key Cryptosystems** Ralph C. Merkle _1980 IEEE Symposium on Security and Privacy_ (1980-04) <https://doi.org/bmvbd6> DOI: [10.1109/sp.1980.10006](https://doi.org/10.1109/sp.1980.10006)
+[^8]: **An Introduction to Probability Theory and its Applications** William Feller _John Wiley & Sons_ (1957) <https://archive.org/details/AnIntroductionToProbabilityTheoryAndItsApplicationsVolume1>

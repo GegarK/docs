@@ -6,11 +6,10 @@
 
 ## 合约开发
 
-* Plutus
-* Marlowe
-
+- Plutus
+- Marlowe
 
 ## 浏览器
 
-* [https://bloks.io/](https://bloks.io/)
-* [https://explorer.evm.eosnetwork.com/](https://explorer.evm.eosnetwork.com/)
+- [https://bloks.io/](https://bloks.io/)
+- [https://explorer.evm.eosnetwork.com/](https://explorer.evm.eosnetwork.com/)

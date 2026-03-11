@@ -1,8 +1,7 @@
-#  课程PPT
+# 课程 PPT
 
 @slidestart
 
-## 课程PPT
-
+## 课程 PPT
 
 @slideend

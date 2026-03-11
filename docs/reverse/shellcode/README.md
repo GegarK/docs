@@ -1,32 +1,32 @@
 # SHELLCODE
 
 ::: warning DeeLMind 提示
-SHELLCODE难度比较大，需要很强的二进制基础，本质就是逆向分析。
+SHELLCODE 难度比较大，需要很强的二进制基础，本质就是逆向分析。
 :::
 
-## 什么是shellcode
+## 什么是 shellcode
 
-shellcode是一段用于利用软件漏洞而执行的代码，shellcode为机械码，以其经常让攻击者获得shell而得名。
+shellcode 是一段用于利用软件漏洞而执行的代码，shellcode 为机械码，以其经常让攻击者获得 shell 而得名。
 
-## 如何开发shellcode
+## 如何开发 shellcode
 
-* 自己编写
-* 生成器生成
+- 自己编写
+- 生成器生成
 
-## 如何分析shellcode
+## 如何分析 shellcode
 
-* 静态分析
-* 动态调试
-* 符号执行
-* 虚拟化执行
+- 静态分析
+- 动态调试
+- 符号执行
+- 虚拟化执行
 
-## shellcode分析工具
+## shellcode 分析工具
 
-* IDA Pro
-* Capstone
-* Qemu
-* Unicorn
-* Angr
+- IDA Pro
+- Capstone
+- Qemu
+- Unicorn
+- Angr
 
 ## shellcode
 

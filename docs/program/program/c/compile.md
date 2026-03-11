@@ -6,7 +6,7 @@
 
 预处理指令文本替换。
 
-## 2 编译(Compilation) 
+## 2 编译(Compilation)
 
 源码编译成对应汇编代码。
 

@@ -1,14 +1,14 @@
 # 数学基础
 
 ::: warning DeeLMind 数学基础课程
-微积分，概率论，统计学，线性代数 [学习网站MathPH](https://mathph.org/)
+微积分，概率论，统计学，线性代数 [学习网站 MathPH](https://mathph.org/)
 :::
 
 ## 导数(Derivative)
 
 <DocsAD/>
 
-* 常见导数
+- 常见导数
 
 $$
 \frac{\mathrm{d} C }{\mathrm{d} x} = 0
@@ -34,7 +34,7 @@ $$
 \frac{\mathrm{d} e^{x} }{\mathrm{d} x} = e^{x}
 $$
 
-* 梯度下降（求min max）
+- 梯度下降（求 min max）
 
 $$
 f(x) = (x+4)^2 + 1
@@ -60,7 +60,6 @@ $$
 x = -3 - 0.2
 $$
 
-
 $$
 x = -3.2 - 0.1 * (-3.2 * 2 + 8) = -3.36
 $$
@@ -81,10 +80,7 @@ $$
 
 ## 梯度(Dradient)
 
-
 ![Dradient](/imgs/ai/math/dradient.png)
-
-
 
 ## 线性代数
 

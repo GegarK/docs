@@ -15,6 +15,15 @@ import { onMounted } from 'vue';
 export default {
   setup() {
     onMounted(() => {
+      const ua = navigator.userAgent.toLowerCase();
+      const platform = navigator.platform.toLowerCase();
+
+      const isMac = platform.includes("mac");
+      const isChrome = ua.includes("chrome") && !ua.includes("edg") && !ua.includes("opr");
+
+      if (isMac && isChrome) {
+        alert("您正在使用 macOS 上的 Chrome 浏览器，建议使用系统自带的 Safari 浏览器获得最佳体验。");
+      }
       // 高亮 notice 列表
       const intervalId = setInterval(() => {
         const notice = document.querySelector('.notice-wrapper');

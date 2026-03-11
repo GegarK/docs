@@ -6,9 +6,9 @@
 <script setup>
 import { ref } from "vue";
 
-const display = ref("0");  // 显示屏幕内容
-const currentOperation = ref(null);  // 当前操作符
-const previousValue = ref(null);  // 前一个值
+const display = ref("0"); // 显示屏幕内容
+const currentOperation = ref(null); // 当前操作符
+const previousValue = ref(null); // 前一个值
 
 // 清除所有输入
 function clear() {
@@ -49,7 +49,10 @@ function calculate() {
         display.value = (previousValue.value * currentValue).toString();
         break;
       case "/":
-        display.value = currentValue !== 0 ? (previousValue.value / currentValue).toString() : "Error";
+        display.value =
+          currentValue !== 0
+            ? (previousValue.value / currentValue).toString()
+            : "Error";
         break;
     }
     currentOperation.value = null;

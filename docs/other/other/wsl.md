@@ -4,19 +4,20 @@ WSL（Windows Subsystem for Linux）是微软推出的一种在 Windows 上运�
 
 <DocsAD/>
 
-* WSL 1：通过系统调用兼容层实现，它使得 Windows 与 Linux 内核直接互操作，但性能相对较低，尤其是在文件系统操作上。
+- WSL 1：通过系统调用兼容层实现，它使得 Windows 与 Linux 内核直接互操作，但性能相对较低，尤其是在文件系统操作上。
 
-* WSL 2：引入了真正的 Linux 内核，在 Windows 上运行一个轻量级的虚拟机，使得 Linux 的性能大大提升，尤其是在 I/O 密集型操作方面。WSL 2 也支持 Docker 和其他容器技术，因为它提供了与原生 Linux 内核相同的功能。
+- WSL 2：引入了真正的 Linux 内核，在 Windows 上运行一个轻量级的虚拟机，使得 Linux 的性能大大提升，尤其是在 I/O 密集型操作方面。WSL 2 也支持 Docker 和其他容器技术，因为它提供了与原生 Linux 内核相同的功能。
 
-## WSL使用
+## WSL 使用
 
 ## 1. 启用 [WSL](https://learn.microsoft.com/zh-cn/windows/wsl/basic-commands)
 
 ### Windows 10（版本 1903 或更高版本）或 Windows 11：
 
 1. **启用 Windows Subsystem for Linux 功能**
+
    - 打开 PowerShell 以管理员身份运行，并输入以下命令：
-   
+
      ```powershell
      dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
      dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all
@@ -27,8 +28,9 @@ WSL（Windows Subsystem for Linux）是微软推出的一种在 Windows 上运�
      这个命令会自动启用 WSL 和 Hyper-V 功能，安装 WSL 2 和 Linux 内核更新。如果你只需要安装 WSL 1，可以使用 `wsl --set-default-version 1` 命令。
 
 2. **安装 Linux 发行版**
+
    - 运行以下命令，选择并安装你喜欢的 Linux 发行版（如 Ubuntu）：
-   
+
      ```powershell
      wsl --install -d Ubuntu
      ```
@@ -41,14 +43,15 @@ WSL（Windows Subsystem for Linux）是微软推出的一种在 Windows 上运�
 ## 2. 启动和配置 WSL
 
 1. **启动 WSL**
+
    - 安装并配置好后，你可以通过命令行启动 Linux 环境。打开 PowerShell 或命令提示符，输入：
-   
+
      ```powershell
      wsl
      ```
 
      或者，输入你安装的 Linux 发行版的名称，例如：
-   
+
      ```powershell
      ubuntu
      ```
@@ -61,54 +64,56 @@ WSL（Windows Subsystem for Linux）是微软推出的一种在 Windows 上运�
 ## 3. 选择 WSL 版本（WSL 1 或 WSL 2）
 
 1. **检查当前 WSL 版本**
+
    - 你可以查看当前已安装的 Linux 发行版版本：
-   
+
      ```powershell
      wsl -l -v
      ```
 
 2. **切换版本**
+
    - 如果你希望切换到 WSL 2，可以运行以下命令（假设发行版为 `Ubuntu`）：
-   
+
      ```powershell
      wsl --set-version Ubuntu 2
      ```
 
    - 要切换回 WSL 1，使用：
-   
+
      ```powershell
      wsl --set-version Ubuntu 1
      ```
 
 3. **设置默认版本**
+
    - 设置 WSL 2 为默认版本（适用于所有新安装的 Linux 发行版）：
-   
+
      ```powershell
      wsl --set-default-version 2
      ```
 
 ## 安装目录
 
-* [下载指定Linux](https://learn.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions)
-* 导入Linux
+- [下载指定 Linux](https://learn.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions)
+- 导入 Linux
 
 `wsl --export ubuntu D://wsl_linux/ubuntu`
 
-* 导入Linux
+- 导入 Linux
 
 ` wsl --import ubuntu D:\WSL_Linux\ubuntu\ubuntu D:\WSL_Linux\ubuntu\ubuntu.tar`
 
-* Kali
+- Kali
 
 `sudo apt install -y kali-win-kex`
 
 `kex stop`
 
+## 虚拟机冲突 W
 
-## 虚拟机冲突W
+- WSL 2 和 Hyper-V 是兼容的，因为 WSL 2 依赖 Hyper-V 来虚拟化 Linux 内核。
 
-* WSL 2 和 Hyper-V 是兼容的，因为 WSL 2 依赖 Hyper-V 来虚拟化 Linux 内核。
+- VMware 和 Hyper-V 以及 VirtualBox 和 Hyper-V 存在冲突，因为它们都依赖硬件虚拟化资源。如果启用 Hyper-V，VMware 和 VirtualBox 无法正常工作。
 
-* VMware 和 Hyper-V 以及 VirtualBox 和 Hyper-V 存在冲突，因为它们都依赖硬件虚拟化资源。如果启用 Hyper-V，VMware 和 VirtualBox 无法正常工作。
-
-* WSL 1 不依赖硬件虚拟化，与你的虚拟机软件（如 VMware 和 VirtualBox）兼容。
+- WSL 1 不依赖硬件虚拟化，与你的虚拟机软件（如 VMware 和 VirtualBox）兼容。

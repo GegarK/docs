@@ -1,8 +1,8 @@
-# RUST开发
+# RUST 开发
 
-## [Rust语言](../../../../program/program/rust/README.md)
+## [Rust 语言](../../../../program/program/rust/README.md)
 
-* [https://solana.com/developers/guides/getstarted/local-rust-hello-world](https://solana.com/developers/guides/getstarted/local-rust-hello-world)
+- [https://solana.com/developers/guides/getstarted/local-rust-hello-world](https://solana.com/developers/guides/getstarted/local-rust-hello-world)
 
 ## HelloWorld Anchor
 
@@ -24,8 +24,6 @@ pub mod test1 {
 #[derive(Accounts)]
 pub struct Initialize {}
 ```
-
-
 
 ## HelloWorld Native
 
@@ -54,6 +52,7 @@ fn process_instruction(
     Ok(())
 }
 ```
+
 ```js
 import {
   Connection,
@@ -63,52 +62,53 @@ import {
 } from "@solana/web3.js";
 import { Keypair } from "@solana/web3.js";
 import { getKeypairFromFile } from "@solana-developers/helpers";
-   
-  const programId = new PublicKey("CEiJvr96AdH39VVLFC6CCg6mWtng9YBzgHh1Kuv3678w");
-   
-  // Connect to a solana cluster. Either to your local test validator or to devnet
-  const connection = new Connection("https://api.devnet.solana.com", "confirmed");
-  //const connection = new Connection("https://api.devnet.solana.com", "confirmed");
-   
-  // We load the keypair that we created in a previous step
-  const parsedFileContents = Uint8Array.from(JSON.parse("[] "));
-  const keyPair =  Keypair.fromSecretKey(parsedFileContents);
-  // const keyPair =  getKeypairFromFile("id.json");
-   
-  // Every transaction requires a blockhash
-  const blockhashInfo = await connection.getLatestBlockhash();
-   
-  // Create a new transaction
-  const tx = new Transaction({
-    ...blockhashInfo,
-  });
-   
-  // Add our Hello World instruction
-  tx.add(
-    new TransactionInstruction({
-      programId: programId,
-      keys: [],
-      data: Buffer.from([]),
-    }),
-  );
-   
-  // Sign the transaction with your previously created keypair
-  tx.sign(keyPair);
-   
-  // Send the transaction to the Solana network
-  const txHash = await connection.sendRawTransaction(tx.serialize());
-   
-  console.log("Transaction sent with hash:", txHash);
-   
-  await connection.confirmTransaction({
-    blockhash: blockhashInfo.blockhash,
-    lastValidBlockHeight: blockhashInfo.lastValidBlockHeight,
-    signature: txHash,
-  });
-   
-  console.log(
-    `Congratulations! Look at your ‘Hello World' transaction in the Solana Explorer:
-    https://explorer.solana.com/tx/${txHash}?cluster=custom`,
-  );
+
+const programId = new PublicKey("CEiJvr96AdH39VVLFC6CCg6mWtng9YBzgHh1Kuv3678w");
+
+// Connect to a solana cluster. Either to your local test validator or to devnet
+const connection = new Connection("https://api.devnet.solana.com", "confirmed");
+//const connection = new Connection("https://api.devnet.solana.com", "confirmed");
+
+// We load the keypair that we created in a previous step
+const parsedFileContents = Uint8Array.from(JSON.parse("[] "));
+const keyPair = Keypair.fromSecretKey(parsedFileContents);
+// const keyPair =  getKeypairFromFile("id.json");
+
+// Every transaction requires a blockhash
+const blockhashInfo = await connection.getLatestBlockhash();
+
+// Create a new transaction
+const tx = new Transaction({
+  ...blockhashInfo,
+});
+
+// Add our Hello World instruction
+tx.add(
+  new TransactionInstruction({
+    programId: programId,
+    keys: [],
+    data: Buffer.from([]),
+  })
+);
+
+// Sign the transaction with your previously created keypair
+tx.sign(keyPair);
+
+// Send the transaction to the Solana network
+const txHash = await connection.sendRawTransaction(tx.serialize());
+
+console.log("Transaction sent with hash:", txHash);
+
+await connection.confirmTransaction({
+  blockhash: blockhashInfo.blockhash,
+  lastValidBlockHeight: blockhashInfo.lastValidBlockHeight,
+  signature: txHash,
+});
+
+console.log(
+  `Congratulations! Look at your ‘Hello World' transaction in the Solana Explorer:
+    https://explorer.solana.com/tx/${txHash}?cluster=custom`
+);
 ```
+
 <DocsAD/>

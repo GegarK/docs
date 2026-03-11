@@ -6,10 +6,9 @@
 
 ## 合约开发
 
-* rust
-
+- rust
 
 ## 浏览器
 
-* [https://xrpscan.com/](https://xrpscan.com/)
-* [https://livenet.xrpl.org/](https://livenet.xrpl.org/)
+- [https://xrpscan.com/](https://xrpscan.com/)
+- [https://livenet.xrpl.org/](https://livenet.xrpl.org/)

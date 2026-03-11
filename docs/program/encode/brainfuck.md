@@ -1,3 +1,3 @@
-# BrainFuck编码
+# BrainFuck 编码
 
 <DocsAD/>

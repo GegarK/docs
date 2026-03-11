@@ -5,11 +5,11 @@
 <DocsAD/>
 
 ```js
-import { SessionKit } from "@wharfkit/session"
-import { WebRenderer } from "@wharfkit/web-renderer"
-import { WalletPluginAnchor } from "@wharfkit/wallet-plugin-anchor"
+import { SessionKit } from "@wharfkit/session";
+import { WebRenderer } from "@wharfkit/web-renderer";
+import { WalletPluginAnchor } from "@wharfkit/wallet-plugin-anchor";
 
-const webRenderer = new WebRenderer()
+const webRenderer = new WebRenderer();
 
 const sessionKit = new SessionKit({
   appName: "appname",
@@ -21,5 +21,5 @@ const sessionKit = new SessionKit({
   ],
   ui: webRenderer,
   walletPlugins: [new WalletPluginAnchor()],
-})
+});
 ```

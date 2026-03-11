@@ -16,7 +16,7 @@ ETH_RPC_URL=https://polygon-rpc.com ityfuzz evm\
     --onchain-block-number 35718198\
     --onchain-etherscan-api-key XX
 
-😊😊 Found vulnerabilities! 
+😊😊 Found vulnerabilities!
 
 
 ================ Description ================

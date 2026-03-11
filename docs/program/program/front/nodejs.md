@@ -2,7 +2,6 @@
 
 [Node.js](https://nodejs.org/) 是一个基于 [Chrome V8](https://v8.dev/) 引擎的 JavaScript 运行时环境，允许开发者在服务器端运行 JavaScript 代码。它的异步、非阻塞 I/O 模型使得 Node.js 非常适合处理高并发的应用程序，如 Web 服务器、实时聊天应用、RESTful API 等。
 
-
 ## 发展历程
 
 - **2009 年**：Ryan Dahl 发布了 Node.js。最初版本的 Node.js 支持基本的文件系统 I/O 和网络功能，基于 Google 的 V8 引擎，支持异步编程模式。
@@ -26,18 +25,18 @@
 
 ## Node.js 工具
 
-* npm/pnpm/yarn/cnpm 包管理工具
-* nvm nodejs版本管理
+- npm/pnpm/yarn/cnpm 包管理工具
+- nvm nodejs 版本管理
 
 ## Node.js 库导入
 
-* 直接导入
+- 直接导入
 
 ```js
 <script src="https://deelmind.com/demo.js"></script>
 ```
 
-* ES6模块导入
+- ES6 模块导入
 
 ES6 模块导入使用 import 语法，通常用于现代前端框架如 React、Vue 或者 Node.js 环境下
 
@@ -50,19 +49,19 @@ export function add(a, b) {
 import axios from 'axios';
 ```
 
-* CommonJS模块导入
+- CommonJS 模块导入
 
 CommonJS 是 Node.js 的模块系统，使用 require 语法
 
 ```js
 function add(a, b) {
-    return a + b;
+  return a + b;
 }
-  
+
 module.exports = add;
 
-const axios = require('axios');
+const axios = require("axios");
 ```
 
-* AMD模块导入
-* UMD模块导入
+- AMD 模块导入
+- UMD 模块导入

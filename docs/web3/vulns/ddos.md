@@ -10,7 +10,7 @@ pragma solidity ^0.8.17;
 contract Dos {
     mapping(address => uint256) private  balanceOf;
     address[] private users;
-    
+
     function deposit() external payable {
         balanceOf[msg.sender] = msg.value;
         users.push(msg.sender);
