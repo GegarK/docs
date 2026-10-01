@@ -11,8 +11,6 @@
     "docs:clean-dev": "vuepress dev docs --no-cache"
   },
   "dependencies": {
-    "@vuepress/plugin-docsearch": "2.0.0-rc.137",
-    "artplayer": "^5.4.0",
     "vue": "^3.5.43",
     "vuepress": "2.0.0-rc.31",
     "vuepress-theme-hope": "2.0.0-rc.110"
@@ -20,17 +18,16 @@
   "devDependencies": {
     "@rolldown/binding-darwin-arm64": "^1.2.12",
     "@vuepress/bundler-vite": "2.0.0-rc.31",
+    "@vuepress/plugin-docsearch": "2.0.0-rc.137",
     "@vuepress/plugin-register-components": "2.0.0-rc.135",
     "@vuepress/plugin-revealjs": "2.0.0-rc.137",
     "@vuepress/plugin-search": "2.0.0-rc.137",
     "katex": "^0.18.10",
     "prettier": "2.8.4",
     "sass-embedded": "^1.105.1",
-    "vuepress-plugin-components": "2.0.0-rc.110",
-    "vuepress-plugin-copyright2": "2.0.0-rc.18",
-    "vuepress-plugin-seo2": "2.0.0-rc.16"
+    "vuepress-plugin-components": "2.0.0-rc.110"
   },
-  "packageManager": "pnpm@7.29.1",
+  "packageManager": "pnpm@12.6.0",
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [

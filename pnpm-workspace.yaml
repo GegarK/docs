@@ -1,0 +1,5 @@
+allowBuilds:
+  '@parcel/watcher': true
+minimumReleaseAgeExclude:
+  - '@rolldown/binding-darwin-arm64@1.2.12'
+  - katex@0.18.10
