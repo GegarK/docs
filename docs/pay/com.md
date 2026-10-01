@@ -7,4 +7,4 @@
 
 有任何需求可以[咨询我](/pay/me)
 
-# [商品购买](https://deelmind.org)
+# [商品购买](https://shop.deelmind.com)
