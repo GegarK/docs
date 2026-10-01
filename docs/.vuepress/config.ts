@@ -43,6 +43,18 @@ export default defineUserConfig({
 
   theme,
 
+  alias: {
+    "@theme-hope/modules/navbar/components/RepoLink": resolve(
+      __dirname,
+      "./components/NavRight.vue",
+    ),
+
+    "@theme-hope/components/PageFooter": resolve(
+      __dirname,
+      "./components/Footer.vue",
+    ),
+  },
+
   plugins: [
     registerComponentsPlugin({
       components: {

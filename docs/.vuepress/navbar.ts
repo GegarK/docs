@@ -133,6 +133,7 @@ export default navbar([
       { text: "手机越狱", link: "/other/jailbreaking/", icon: "arrow" },
       { text: "系统装机", link: "/other/setup/", icon: "arrow" },
       { text: "其它知识", link: "/other/other/", icon: "arrow" },
+      { text: "白板黑板", link: "https://board.deelmind.com.cn/", icon: "arrow" },
     ],
   },
   // {

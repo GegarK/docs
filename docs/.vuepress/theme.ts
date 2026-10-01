@@ -16,6 +16,7 @@ export default hopeTheme({
     name: "DeeLMind",
     url: "https://deelmind.com",
   },
+  
 
   // =========================
   // Logo / 图标
@@ -31,6 +32,7 @@ export default hopeTheme({
   // 导航
   // =========================
   navbar,
+
 
   sidebar,
 
@@ -54,17 +56,6 @@ export default hopeTheme({
     },
   },
 
-  // alias: {
-  //   "@theme-hope/modules/navbar/components/RepoLink": resolve(
-  //     __dirname,
-  //     "./components/NavRight.vue",
-  //   ),
-
-  //   "@theme-hope/components/PageFooter": resolve(
-  //     __dirname,
-  //     "./components/Footer.vue",
-  //   ),
-  // },
   plugins: {
     // =========================
     // 图标
@@ -137,4 +128,6 @@ markdown: {
       mhchem: true,
     },
   },
-});
+},
+{ custom: true },
+);
