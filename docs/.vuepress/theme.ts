@@ -126,6 +126,7 @@ markdown: {
     include: true,
     tabs: true,
     tasklist: true,
+    revealjs: true,
 
     // =========================
     // 数学公式
