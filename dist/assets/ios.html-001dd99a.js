@@ -1,1 +1,0 @@
-import{_ as s,K as t,L as o,M as e,N as a}from"./framework-edebdfe1.js";const c={},r=e("h1",{id:"ios",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#ios","aria-hidden":"true"},"#"),a(" IOS")],-1),n=[r];function _(i,d){return t(),o("div",null,n)}const l=s(c,[["render",_],["__file","ios.html.vue"]]);export{l as default};

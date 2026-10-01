@@ -1,1 +1,0 @@
-import{_ as t,K as a,L as c,M as e,N as r}from"./framework-edebdfe1.js";const s={},o=e("h1",{id:"数据库操作",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#数据库操作","aria-hidden":"true"},"#"),r(" 数据库操作")],-1),n=[o];function _(d,i){return a(),c("div",null,n)}const l=t(s,[["render",_],["__file","db.html.vue"]]);export{l as default};

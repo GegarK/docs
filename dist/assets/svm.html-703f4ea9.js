@@ -1,1 +1,0 @@
-import{_ as s,K as t,L as a,M as e,N as c}from"./framework-edebdfe1.js";const r={},o=e("h1",{id:"svm",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#svm","aria-hidden":"true"},"#"),c(" SVM")],-1),n=[o];function _(d,i){return t(),a("div",null,n)}const l=s(r,[["render",_],["__file","svm.html.vue"]]);export{l as default};

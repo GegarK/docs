@@ -1,1 +1,0 @@
-import{_ as s,K as t,L as a,M as e,N as r}from"./framework-edebdfe1.js";const o={},c=e("h1",{id:"权限操作",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#权限操作","aria-hidden":"true"},"#"),r(" 权限操作")],-1),n=[c];function _(i,d){return t(),a("div",null,n)}const l=s(o,[["render",_],["__file","permission.html.vue"]]);export{l as default};

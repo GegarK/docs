@@ -1,23 +1,25 @@
+import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from "vuepress";
-import { searchPlugin } from "@vuepress/plugin-search";
-// import { copyrightPlugin } from "vuepress-plugin-copyright2";
-import { searchProPlugin } from "vuepress-plugin-search-pro";
-import { resolve } from "path";
+import { fileURLToPath } from "node:url";
+import { dirname, resolve } from "node:path";
+import { getDirname, path } from "vuepress/utils";
 import theme from "./theme";
-
 import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
+
+const __dirname = getDirname(import.meta.url);
 
 export default defineUserConfig({
   base: "/",
-
   dest: "./dist",
+
+  bundler: viteBundler(),
 
   head: [
     [
       "link",
       {
         rel: "stylesheet",
-        href: "//at.alicdn.com/t/font_2410206_mfj6e1vbwo.css",
+        href: "https://at.alicdn.com/t/font_2410206_mfj6e1vbwo.css",
       },
     ],
     [
@@ -40,34 +42,8 @@ export default defineUserConfig({
   },
 
   theme,
-  alias: {
-    // 你可以在这里将别名定向到自己的组件
-    // 比如这里我们将主题的主页组件改为用户 .vuepress/components 下的 HomePage.vue
-    "@theme-hope/modules/navbar/components/RepoLink": resolve(
-      __dirname,
-      "./components/NavRight.vue"
-    ),
-    "@theme-hope/components/PageFooter": resolve(
-      __dirname,
-      "./components/Footer.vue"
-    ),
-  },
+
   plugins: [
-    searchPlugin({
-      locales: {
-        "/": {
-          placeholder: "搜索",
-        },
-      },
-    }),
-    // copyrightPlugin({
-    //   author: "極客方舟(@DeeLMind)",
-    //   canonical: "https://deelmind.com/",
-    //   global: true,
-    // }),
-    searchProPlugin({
-      indexContent: true,
-    }),
     registerComponentsPlugin({
       components: {
         DocsAD: resolve(__dirname, "./components/DocsAD.vue"),

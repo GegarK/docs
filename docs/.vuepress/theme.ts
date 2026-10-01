@@ -1,96 +1,178 @@
 import { hopeTheme } from "vuepress-theme-hope";
+import { getDirname, path } from "vuepress/utils";
+import { dirname, resolve } from "node:path";
 import navbar from "./navbar";
 import sidebar from "./sidebar";
-import { resolve } from "path";
+
+const __dirname = getDirname(import.meta.url);
 
 export default hopeTheme({
+  // =========================
+  // 基础信息
+  // =========================
   hostname: "https://deelmind.com",
+
   author: {
     name: "DeeLMind",
     url: "https://deelmind.com",
   },
-  iconPrefix: "iconfont icon-",
-
-  // 关键词: "iconfont", "iconify", "fontawesome", "fontawesome-with-brands"
-  iconAssets: "fontawesome",
-
+  custom: true,
+  // =========================
+  // Logo / 图标
+  // =========================
   logo: "/geekfz.png",
+
+  // =========================
+  // 外观
+  // =========================
   darkmode: "enable",
 
-  navbar: navbar,
-  sidebar: sidebar,
-  footer: '<a href="https://deelmind.com" target="_blank">極客方舟</a>',
+  // =========================
+  // 导航
+  // =========================
+  navbar,
+
+  sidebar,
+
+  // =========================
+  // Footer
+  // =========================
+  footer:
+    '<a href="https://deelmind.com" target="_blank">極客方舟</a>',
+
   displayFooter: true,
 
+  // =========================
+  // 内容加密
+  // =========================
   encrypt: {
     config: {
-      "/ppt/": ["<a href=https://deelmind.com target=_blank>極客方舟</a>"], // 加密密码
+      "/ppt/": {
+        password: ["極客方舟"],
+        hint: "请输入访问密码",
+      },
     },
   },
 
+  // alias: {
+  //   "@theme-hope/modules/navbar/components/RepoLink": resolve(
+  //     __dirname,
+  //     "./components/NavRight.vue",
+  //   ),
+
+  //   "@theme-hope/components/PageFooter": resolve(
+  //     __dirname,
+  //     "./components/Footer.vue",
+  //   ),
+  // },
   plugins: {
-    // 全局复制100字数以上，开启版权复制
+    // =========================
+    // 图标
+    // =========================
+    icon: {
+      assets: "fontawesome",
+    },
+
+    // =========================
+    // 搜索
+    // =========================
+    search: true,
+
+    // =========================
+    // 版权
+    // =========================
     copyright: {
       global: true,
     },
+
+    // =========================
     // SEO
+    // =========================
     seo: true,
+
+    // =========================
+    // Sitemap
+    // =========================
+    sitemap: true,
+
+    // =========================
+    // VuePress Components
+    // =========================
     components: {
       components: [
-        "ArtPlayer",
-        "AudioPlayer",
         "Badge",
-        "BiliBili",
         "CodePen",
-        "FontIcon",
-        "PDF",
-        "Replit",
         "Share",
         "SiteInfo",
         "StackBlitz",
-        "VideoPlayer",
-        "XiGua",
-        "YouTube",
       ],
-      componentOptions: {
-        // fontIcon: {
-        //   assets: "fontawesome",
-        // },
-      },
-      rootComponents: {
-        // <li><a href="/pay/alive">B站答疑，YouTube答疑</a>直播课程移动至<a href="/pay/group">QQ群</a>，<a href="/pay/group">DISCORD</a>内部直播答疑</li><li>移动端打开视频链接B站APP跳转错误，可以直接搜索视频。</li><li><a href="/pay/services">黑产&灰产请不要找我，我不太会！！！</a></li>
-        // addThis: "ra-641d68e49b4ca49b",<li><a target="_blank" href="https://all.deelmind.com.cn/">【随缘】自然而然【思维教程】</a></li>
-        notice: [
-          {
-            path: "/",
-            title: "课程与服务",
-            content:
-              '<ul><li>思 维 教程：<a class="deelmind" target="_blank" href="https://all.deelmind.com.cn/">《随缘自然而然》</a></li><li>一对一辅导：<a href="/pay/one2one" target="_blank">《渗透测试》</a></li><li>一对一辅导：<a href="/pay/one2one" target="_blank">《二进制安全》</a></li><li>一对一辅导：<a href="/pay/one2one" target="_blank">《网络安全AI》</a></li><li>一对一辅导：<a href="/pay/web3" target="_blank">《WEB3区块链虚拟货币》</a></li><li><a href="/pay/one2one" target="_blank">付费辅导：《网络安全一对一辅导》</a></li><li><a href="/pay/zixun" target="_blank">付费咨询:《项目技术咨询》</a></li></ul>',
-          },
-        ],
-      },
+    }
+  },
+markdown: {
+    // =========================
+    // Markdown 行为
+    // =========================
+    gfm: true,
+    breaks: true,
+    linkify: true,
+
+    // =========================
+    // Markdown 基础语法增强
+    // =========================
+    component: true,
+    footnote: true,
+    imgMark: true,
+    imgSize: true,
+    include: true,
+    tabs: true,
+    tasklist: true,
+
+    // =========================
+    // 数学公式
+    // =========================
+    math: {
+      type: "katex",
+      copy: true,
+      mhchem: true,
     },
 
-    mdEnhance: {
-      // 开启幻灯片
-      presentation: true,
-      mermaid: true,
-      align: true,
-      chart: true,
-      // 使用 KaTeX 启用 TeX 支持
-      katex: true,
-      codetabs: true,
-      container: true,
-      flowchart: true,
-      imgLazyload: true,
-      include: {
-        resolvePath: (file) =>
-          file.startsWith("@src")
-            ? file.replace("@src", resolve(__dirname, ".."))
-            : file,
-      },
-      mark: true,
-      tasklist: true,
-    },
+    // =========================
+    // 样式增强
+    // =========================
+    hint: true,
+    alert: true,
+    mark: true,
+    attrs: true,
+    sub: true,
+    sup: true,
+    spoiler: true,
+    align: true,
+    revealjs: true,
+
+    // =========================
+    // 图表
+    // =========================
+    chart: true,
+    echarts: true,
+    flowchart: true,
+    markmap: true,
+    mermaid: true,
+    plantuml: true,
+
+    // =========================
+    // 代码
+    // =========================
+    codeTabs: true,
+    codeDemo: true,
+    preview: true,
+    playground: true,
+    sandpack: true,
+    kotlinPlayground: true,
+    vuePlayground: true,
+
+    // =========================
+    // 幻灯片
+    // =========================
+    presentation: true,
   },
 });

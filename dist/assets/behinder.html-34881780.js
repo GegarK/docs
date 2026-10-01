@@ -1,1 +1,0 @@
-import{_ as r,K as t,L as n,M as e,N as a}from"./framework-edebdfe1.js";const c={},d=e("h1",{id:"冰蝎-behinder",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#冰蝎-behinder","aria-hidden":"true"},"#"),a(" 冰蝎 Behinder")],-1),s=[d];function o(i,_){return t(),n("div",null,s)}const l=r(c,[["render",o],["__file","behinder.html.vue"]]);export{l as default};

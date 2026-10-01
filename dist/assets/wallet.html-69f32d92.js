@@ -1,2 +1,0 @@
-import{_ as e,K as a,L as s,W as t}from"./framework-edebdfe1.js";const c={},n=t(`<h1 id="钱包生成" tabindex="-1"><a class="header-anchor" href="#钱包生成" aria-hidden="true">#</a> 钱包生成</h1><div class="language-javascript line-numbers-mode" data-ext="js"><pre class="language-javascript"><code>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>`,2),r=[n];function i(d,l){return a(),s("div",null,r)}const _=e(c,[["render",i],["__file","wallet.html.vue"]]);export{_ as default};

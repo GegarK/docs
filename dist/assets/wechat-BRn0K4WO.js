@@ -1,0 +1,1 @@
+var e=`/imgs/wechat.jpg`;export{e as t};

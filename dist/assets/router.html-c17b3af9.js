@@ -1,1 +1,0 @@
-import{_ as t,K as a,L as r,a5 as c,M as e,N as s,F as n}from"./framework-edebdfe1.js";const _={},d=e("h1",{id:"路由交换命令",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#路由交换命令","aria-hidden":"true"},"#"),s(" 路由交换命令")],-1);function l(i,h){const o=n("DocsAD");return a(),r("div",null,[d,c(o)])}const m=t(_,[["render",l],["__file","router.html.vue"]]);export{m as default};

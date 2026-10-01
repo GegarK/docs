@@ -26,7 +26,7 @@ export default sidebar({
     "gcp",
   ],
   "/mind/": [
-    "attack",
+    "attack/",
     "awqj/basic",
     "system/",
     "drivers/",
@@ -87,12 +87,12 @@ export default sidebar({
   "/program/": ["program/"],
 
   "/program/program/": [
-    "front",
-    "sql",
+    "front/",
+    "sql/",
     "driver/",
     "full/",
     "spider/",
-    "gpu",
+    "gpu/",
     "rust/",
     "c/",
     "iosmac/",
@@ -107,7 +107,7 @@ export default sidebar({
     "toml",
     "file",
     "web",
-    "tauri",
+    "tauri/",
     "shellcode",
     "rev",
 
@@ -245,9 +245,9 @@ export default sidebar({
     "example/",
     "opcode/",
     "ffile/",
-    "debug",
-    "shellcode",
-    "function",
+    "debug/",
+    "shellcode/",
+    "function/",
   ],
 
   "/reverse/example/": ["", "wxchat", "safedogrule"],
@@ -262,7 +262,7 @@ export default sidebar({
 
   "/reverse/opcode/x86/": ["", "reg", "mem", "op"],
 
-  "/reverse/ffile/": ["", "pe", "elf", "dex", "macho"],
+  "/reverse/ffile/": ["", "pe/", "elf/", "dex/", "macho/"],
 
   "/reverse/ffile/pe/": ["", "tmp"],
 
@@ -276,7 +276,7 @@ export default sidebar({
 
   "/reverse/game/": ["", "crack", "def", "ce", "dma"],
 
-  "/reverse/protect/": ["", "unpack", "vt", "ollvm", "bpf"],
+  "/reverse/protect/": ["", "unpack", "vt", "ollvm/", "bpf"],
 
   "/reverse/symbolic/": [
     "",
@@ -311,18 +311,18 @@ export default sidebar({
   "/web3/": [
     "",
     "web3",
-    "bc",
-    "dapp",
-    "wallet",
-    "coin",
+    "bc/",
+    "dapp/",
+    "wallet/",
+    "coin/",
     "tokenrescue",
-    "smart",
-    "ai",
-    "poc",
-    "vulns",
-    "tools",
-    "other",
-    "analyse",
+    "smart/",
+    "ai/",
+    "poc/",
+    "vulns/",
+    "tools/",
+    "other/",
+    "analyse/",
     "finance",
     "interview",
   ],
@@ -383,19 +383,19 @@ export default sidebar({
     "slippage",
   ],
 
-  "/web3/bc/": [
+  "/web3/bc": [
     "",
     "vm",
     "p2p",
-    "alg",
-    "calg",
-    "zkp",
-    "substrate",
-    "cosmos",
-    "corda",
-    "fisco",
-    "hyperledger",
-    "zero",
+    "alg/",
+    "calg/",
+    "zkp/",
+    "substrate/",
+    "cosmos/",
+    "corda/",
+    "fisco/",
+    "hyperledger/",
+    "zero/",
   ],
 
   "/web3/bc/zkp/": ["", "theory", "starks", "snarks"],
@@ -443,33 +443,33 @@ export default sidebar({
   ],
 
   "/web3/smart/": [
-    "btc",
-    "eth",
-    "bnb",
-    "solana",
-    "polkadot",
-    "polygen",
-    "ton",
-    "sui",
-    "aptos",
-    "eos",
-    "xrp",
-    "cardano",
-    "kusama",
-    "uniswap",
-    "aave",
-    "avalanche",
-    "cosmos",
-    "mantle",
-    "imx",
-    "near",
-    "nervos",
-    "partisia",
-    "rootstock",
-    "oracle",
-    "meme",
-    "layer2",
-    "layer3",
+    "btc/",
+    "eth/",
+    "bnb/",
+    "solana/",
+    "polkadot/",
+    "polygen/",
+    "ton/",
+    "sui/",
+    "aptos/",
+    "eos/",
+    "xrp/",
+    "cardano/",
+    "kusama/",
+    "uniswap/",
+    "aave/",
+    "avalanche/",
+    "cosmos/",
+    "mantle/",
+    "imx/",
+    "near/",
+    "nervos/",
+    "partisia/",
+    "rootstock/",
+    "oracle/",
+    "meme/",
+    "layer2/",
+    "layer3/",
     "cross",
     "faucet",
     "trade",
@@ -477,7 +477,7 @@ export default sidebar({
 
   "/web3/smart/rootstock": [""],
 
-  "/web3/smart/meme": ["", "theory"],
+  "/web3/smart/meme": [""],
 
   "/web3/smart/btc": [
     "",
@@ -497,11 +497,11 @@ export default sidebar({
   "/web3/smart/eth": [
     "",
     "theory",
-    "tools",
-    "dapp",
-    "solidity",
-    "vyper",
-    "huff",
+    "tools/",
+    "dapp/",
+    "solidity/",
+    "vyper/",
+    "huff/",
     "flashbots",
   ],
 
@@ -533,11 +533,11 @@ export default sidebar({
   "/web3/smart/solana": [
     "",
     "theory",
-    "tools",
-    "dapp",
-    "rust",
-    "move",
-    "security",
+    "tools/",
+    "dapp/",
+    "rust/",
+    "move/",
+    "security/",
   ],
 
   "/web3/smart/solana/dapp": [
@@ -568,7 +568,7 @@ export default sidebar({
   "/web3/smart/solana/tools": ["", "anchor", "solana", "seahorse"],
   "/web3/smart/solana/security": ["", "audit", "phishing", "logic", "ddos"],
 
-  "/web3/smart/sui": ["", "theory", "tools", "dapp", "move"],
+  "/web3/smart/sui": ["", "theory", "tools/", "dapp", "move/"],
 
   "/web3/smart/sui/tools": [""],
 
@@ -579,7 +579,7 @@ export default sidebar({
     "theory",
     "dapp",
     "gamefi",
-    "func",
+    "func/",
     "tact",
     "tolk",
     "fift",
@@ -592,7 +592,7 @@ export default sidebar({
 
   "/web3/smart/eos": ["", "theory", "dapp", "server"],
 
-  "/web3/smart/oracle": ["", "theory"],
+  "/web3/smart/oracle": [""],
 
   "/web3/smart/cardano": ["", "theory"],
 
@@ -650,11 +650,11 @@ export default sidebar({
   "/web3/smart/layer2/": [
     "",
     "zk-Rollups",
-    "zksync",
-    "raiden",
-    "arbitrum",
-    "optimism",
-    "starknet",
+    "zksync/",
+    "raiden/",
+    "arbitrum/",
+    "optimism/",
+    "starknet/",
   ],
 
   "/web3/smart/layer2/starknet/": ["", "theory", "helloworld"],
@@ -809,9 +809,9 @@ export default sidebar({
   "/pentest/": [
     "",
     "info/",
-    "audit",
-    "scan",
-    "exploits",
+    "audit/",
+    "scan/",
+    "exploits/",
     "persistence/",
     "priv/",
     "bypass/",
@@ -820,7 +820,7 @@ export default sidebar({
     "domain/",
     "docker/",
     "cloud/",
-    "se",
+    "se/",
     "ddos/",
     "app/",
     "dnshajack/",
@@ -901,7 +901,7 @@ export default sidebar({
 
   "/hardware/": [
     "/hardware/basic",
-    "/hardware/communication/",
+    "/hardware/communication",
     "/hardware/plc/",
     "/hardware/fpga/",
     "/hardware/stm32/",
@@ -929,8 +929,8 @@ export default sidebar({
 
   "/hardware/robot/": [""],
 
-  "/ai/": ["", "examples/", "math", "python", "data", "feature", "vul"],
-  "/ai/examples/": ["", "killscriptviru"],
+  "/ai/": ["", "examples/", "math/", "python/", "data/", "feature/", "vul"],
+  "/ai/examples/": ["", "killscriptviru","hook"],
   "/ai/gan/": ["math", "wgan", "dcgan"],
   "/ai/ml/": [
     "svm",
@@ -976,6 +976,7 @@ export default sidebar({
     "me",
     // "group",
     "services",
+    "com",
     "alive",
     "platform",
     // "download",
@@ -1009,5 +1010,188 @@ export default sidebar({
     "flarum",
     "info",
   ],
+"/mathph/": [
+  "",
+  "sltx/",
+  "computer/",
+  "geometry/",
+  "nt/",
+  "alg/",
+  "ph/",
+  "ctf/",
+  "acm/"
+],
+
+"/mathph/sltx/": [
+  "",
+  "history",
+  "people",
+  "func",
+  "sym"
+],
+
+"/mathph/computer/": [
+  "",
+  "calg/",
+  "salg/",
+  "AI/",
+  "vision",
+  "program",
+  "sage",
+  "cert",
+  "openssl"
+],
+
+"/mathph/computer/calg/": [
+  ""
+],
+
+"/mathph/computer/salg/": [
+  "",
+  "safe",
+  "base/",
+  "aes/",
+  "des/",
+  "crc/",
+  "sha/",
+  "rsa/",
+  "ecc/",
+  "qkd",
+  "he",
+  "threshold",
+  "zkp/"
+],
+
+"/mathph/computer/salg/base/": [
+  ""
+],
+
+"/mathph/computer/salg/aes/": [
+  ""
+],
+
+"/mathph/computer/salg/des/": [
+  ""
+],
+
+"/mathph/computer/salg/crc/": [
+  ""
+],
+
+"/mathph/computer/salg/sha/": [
+  "",
+  "md5"
+],
+
+"/mathph/computer/salg/rsa/": [
+  "",
+  "Coppersmith"
+],
+
+"/mathph/computer/salg/ecc/": [
+  "",
+  "ecdh",
+  "ecdsa",
+  "PrefixCollisionAttack",
+  "kAttack",
+  "nsmall",
+  "Smooth",
+  "CVE-2022-0778"
+],
+
+"/mathph/computer/salg/zkp/": [
+  "",
+  "snarkjs",
+  "plonk",
+  "groth16",
+  "Schnorr",
+  "Bulletproofs",
+  "Marlin",
+  "FRI",
+  "Sigma",
+  "tec",
+  "Sonic",
+  "Fractal",
+  "Halo",
+  "SuperSonic",
+  "CVE-2023–33252"
+],
+
+"/mathph/computer/AI/": [
+  ""
+],
+
+"/mathph/geometry/": [
+  ""
+],
+
+"/mathph/nt/": [
+  "",
+  "ent/"
+],
+
+"/mathph/nt/ent/": [
+  "",
+  "mod",
+  "Congruence",
+  "eulerf",
+  "eea",
+  "dl"
+],
+
+"/mathph/alg/": [
+  "elementary/",
+  "abstract/",
+  "geometry/",
+  "topology/"
+],
+
+"/mathph/alg/elementary/": [
+  "",
+  "Polynomial",
+  "R1CS",
+  "qap"
+],
+
+"/mathph/alg/abstract/": [
+  "",
+  "group/",
+  "filed/",
+  "ring"
+],
+
+"/mathph/alg/abstract/group/": [
+  "",
+  "sub",
+  "Abelian",
+  "Cyclic",
+  "bmap"
+],
+
+"/mathph/alg/abstract/filed/": [
+  ""
+],
+
+"/mathph/alg/geometry/": [
+  "",
+  "ecc"
+],
+
+"/mathph/alg/topology/": [
+  ""
+],
+
+"/mathph/ph/": [
+  ""
+],
+
+"/mathph/ctf/": [
+  "",
+  "cryptohack"
+],
+
+"/mathph/acm/": [
+  ""
+],
   "/nullmind/": ["", "document", "roadmap", "license"],
 });

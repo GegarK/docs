@@ -1,1 +1,0 @@
-import{_ as t,K as a,L as r,M as e,N as o}from"./framework-edebdfe1.js";const c={},s=e("h1",{id:"合约原理",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#合约原理","aria-hidden":"true"},"#"),o(" 合约原理")],-1),n=[s];function _(d,h){return a(),r("div",null,n)}const l=t(c,[["render",_],["__file","theory.html.vue"]]);export{l as default};

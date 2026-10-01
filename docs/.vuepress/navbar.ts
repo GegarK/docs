@@ -17,11 +17,11 @@ export default navbar([
       { text: "人工智能", link: "/mind/ai/", icon: "arrow" },
       { text: "技能组合", link: "/mind/skill/", icon: "arrow" },
       { text: "抵制八股", link: "/mind/bagu", icon: "arrow" },
-      { text: "安全事件", link: "/mind/news", icon: "arrow" },
-      { text: "黑客组织", link: "/mind/group", icon: "arrow" },
+      { text: "安全事件", link: "/mind/news/", icon: "arrow" },
+      { text: "黑客组织", link: "/mind/group/", icon: "arrow" },
     ],
   },
-  { text: "ORG", link: "/org", icon: "arrow" },
+  { text: "ORG", link: "/org/", icon: "arrow" },
   {
     text: "编程",
     icon: "script",
@@ -49,7 +49,7 @@ export default navbar([
       { text: "漏洞挖掘", link: "/reverse/exploits/", icon: "arrow" },
       { text: "游戏安全", link: "/reverse/game/", icon: "arrow" },
       { text: "病毒分析", link: "/reverse/virus/", icon: "arrow" },
-      { text: "RUST安全", link: "/program/program/rust", icon: "arrow" },
+      { text: "RUST安全", link: "/program/program/rust/", icon: "arrow" },
     ],
   },
   {
@@ -106,7 +106,7 @@ export default navbar([
       { text: "LLM大模型", link: "/ai/llm/", icon: "arrow" },
     ],
   },
-  { text: "密码学", link: "https://mathph.org", icon: "arrow" },
+  { text: "密码学", link: "/mathph/", icon: "arrow" },
   {
     text: "CTF",
     icon: "creative",

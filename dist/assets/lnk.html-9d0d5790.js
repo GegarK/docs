@@ -1,1 +1,0 @@
-import{_ as t,K as a,L as c,M as e,N as n}from"./framework-edebdfe1.js";const r={},s=e("h1",{id:"快捷方式",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#快捷方式","aria-hidden":"true"},"#"),n(" 快捷方式")],-1),o=[s];function _(d,l){return a(),c("div",null,o)}const h=t(r,[["render",_],["__file","lnk.html.vue"]]);export{h as default};

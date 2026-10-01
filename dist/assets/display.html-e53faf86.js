@@ -1,1 +1,0 @@
-import{_ as a,K as t,L as s,M as e,N as c}from"./framework-edebdfe1.js";const r={},o=e("h1",{id:"显示器",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#显示器","aria-hidden":"true"},"#"),c(" 显示器")],-1),n=[o];function _(d,i){return t(),s("div",null,n)}const h=a(r,[["render",_],["__file","display.html.vue"]]);export{h as default};

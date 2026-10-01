@@ -1,1 +1,0 @@
-import{_ as a,K as s,L as t,M as e,N as c}from"./framework-edebdfe1.js";const n={},r=e("h1",{id:"naive-bayes",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#naive-bayes","aria-hidden":"true"},"#"),c(" Naive Bayes")],-1),o=[r];function _(i,d){return s(),t("div",null,o)}const l=a(n,[["render",_],["__file","bayes.html.vue"]]);export{l as default};

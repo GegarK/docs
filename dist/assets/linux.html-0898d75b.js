@@ -1,1 +1,0 @@
-import{_ as t,K as n,L as a,M as e,N as c}from"./framework-edebdfe1.js";const r={},s=e("h1",{id:"linux",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#linux","aria-hidden":"true"},"#"),c(" Linux")],-1),o=[s];function i(_,l){return n(),a("div",null,o)}const u=t(r,[["render",i],["__file","linux.html.vue"]]);export{u as default};

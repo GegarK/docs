@@ -1,0 +1,1 @@
+var e=`/imgs/web/inner/domain/domain-forest.png`;export{e as t};

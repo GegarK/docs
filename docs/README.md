@@ -11,8 +11,8 @@ actions:
     link: /pay/one2one
     type: primary
 
-  - text: 商品购买
-    link: https://deelmind.org
+  - text: 商品&合作
+    link: /pay/com
     type: primary
 
   # - text: 密码学
@@ -258,10 +258,10 @@ features:
     details: 其它小知识点会在这里
     link: /mind/awqj/basic
 
-  - title: 论坛内部课程
+  - title: 新老交流群
     icon: news
-    details: 群内直播
-    link: https://forum.deelmind.com/
+    details: 加我拉你呀
+    link: /pay/me
 
   - title: Rust编程开发
     icon: news

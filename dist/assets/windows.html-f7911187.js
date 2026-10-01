@@ -1,1 +1,0 @@
-import{_ as s,K as o,L as t,M as e,N as n}from"./framework-edebdfe1.js";const a={},c=e("h1",{id:"windows",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#windows","aria-hidden":"true"},"#"),n(" Windows")],-1),d=[c];function r(i,_){return o(),t("div",null,d)}const l=s(a,[["render",r],["__file","windows.html.vue"]]);export{l as default};

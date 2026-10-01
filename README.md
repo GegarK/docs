@@ -2,3 +2,8 @@
 
 * [https://www.deelmind.com/](https://www.deelmind.com/)
 * [https://www.deelmind.com.cn/](https://www.deelmind.com.cn/)
+
+
+## ENV
+
+node 22

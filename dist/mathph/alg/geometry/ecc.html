@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.31" />
+    <meta name="theme" content="VuePress Theme Hope 2.0.0-rc.110" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme="dark"] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"椭圆曲线","image":[""],"dateModified":null,"author":[{"@type":"Person","name":"DeeLMind","url":"https://deelmind.com"}]}</script><meta property="og:url" content="https://deelmind.com/mathph/alg/geometry/ecc.html"><meta property="og:site_name" content="極客方舟"><meta property="og:title" content="椭圆曲线"><meta property="og:description" content="椭圆曲线 历史背景 椭圆曲线的概念最早可以追溯到18世纪。它起源于代数几何中的一类特殊曲线，最初被数学家用于研究整数解的问题。椭圆曲线的几何性质与代数方程的结合为后来的密码学应用奠定了基础。 椭圆曲线密码学的诞生 椭圆曲线在密码学中的应用最早出现在20世纪80年代。1970年代末期到1980年代初，随着计算机科学和密码学的发展，数学家开始研究如何将椭圆..."><meta property="og:type" content="article"><meta property="og:locale" content="zh-CN"><link rel="stylesheet" href="https://at.alicdn.com/t/font_2410206_mfj6e1vbwo.css"><script data-ad-client="ca-pub-8498045280190096" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>椭圆曲线 | 極客方舟</title><meta name="description" content="椭圆曲线 历史背景 椭圆曲线的概念最早可以追溯到18世纪。它起源于代数几何中的一类特殊曲线，最初被数学家用于研究整数解的问题。椭圆曲线的几何性质与代数方程的结合为后来的密码学应用奠定了基础。 椭圆曲线密码学的诞生 椭圆曲线在密码学中的应用最早出现在20世纪80年代。1970年代末期到1980年代初，随着计算机科学和密码学的发展，数学家开始研究如何将椭圆...">
+    <link rel="preload" href="/assets/style-CPStU6ed.css" as="style"><link rel="stylesheet" href="/assets/style-CPStU6ed.css">
+    <link rel="modulepreload" href="/assets/app-C9M3NSvs.js"><link rel="modulepreload" href="/assets/ecc-CRPLHD5y.js"><link rel="modulepreload" href="/assets/plugin-vue_export-helper-BDNMzG2s.js">
+    
+  </head>
+  <body>
+    <div id="app"><!----></div>
+    <script type="module" src="/assets/app-C9M3NSvs.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.31" />
+    <meta name="theme" content="VuePress Theme Hope 2.0.0-rc.110" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme="dark"] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"生成器阶数太小","image":[""],"dateModified":null,"author":[{"@type":"Person","name":"DeeLMind","url":"https://deelmind.com"}]}</script><meta property="og:url" content="https://deelmind.com/mathph/computer/salg/ecc/nsmall.html"><meta property="og:site_name" content="極客方舟"><meta property="og:title" content="生成器阶数太小"><meta property="og:description" content="生成器阶数太小 在椭圆曲线Diffie-Hellman（ECDH）中，选择一个生成元的阶数过小是容易遭受攻击的方式之一。如果生成元的阶数过小（比如32位），就容易通过求解离散对数问题（ECDLP）来攻击。因为当阶数n很小时，求解ECDLP的复杂度为O(n)，比如使用Baby-Step Giant-Step、Pollard's Rho、Pollard's..."><meta property="og:type" content="article"><meta property="og:locale" content="zh-CN"><link rel="stylesheet" href="https://at.alicdn.com/t/font_2410206_mfj6e1vbwo.css"><script data-ad-client="ca-pub-8498045280190096" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>生成器阶数太小 | 極客方舟</title><meta name="description" content="生成器阶数太小 在椭圆曲线Diffie-Hellman（ECDH）中，选择一个生成元的阶数过小是容易遭受攻击的方式之一。如果生成元的阶数过小（比如32位），就容易通过求解离散对数问题（ECDLP）来攻击。因为当阶数n很小时，求解ECDLP的复杂度为O(n)，比如使用Baby-Step Giant-Step、Pollard's Rho、Pollard's...">
+    <link rel="preload" href="/assets/style-CPStU6ed.css" as="style"><link rel="stylesheet" href="/assets/style-CPStU6ed.css">
+    <link rel="modulepreload" href="/assets/app-C9M3NSvs.js"><link rel="modulepreload" href="/assets/nsmall-DVo0eycV.js"><link rel="modulepreload" href="/assets/plugin-vue_export-helper-BDNMzG2s.js">
+    
+  </head>
+  <body>
+    <div id="app"><!----></div>
+    <script type="module" src="/assets/app-C9M3NSvs.js" defer></script>
+  </body>
+</html>

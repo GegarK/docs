@@ -1,1 +1,0 @@
-import{_ as r,K as s,L as t,M as e,N as a}from"./framework-edebdfe1.js";const n={},o=e("h1",{id:"nearest-neighbors",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#nearest-neighbors","aria-hidden":"true"},"#"),a(" Nearest Neighbors")],-1),c=[o];function i(_,h){return s(),t("div",null,c)}const l=r(n,[["render",i],["__file","nearestneighbors.html.vue"]]);export{l as default};

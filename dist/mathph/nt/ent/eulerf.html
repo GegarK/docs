@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.31" />
+    <meta name="theme" content="VuePress Theme Hope 2.0.0-rc.110" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme="dark"] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"欧拉函数","image":[""],"dateModified":null,"author":[{"@type":"Person","name":"DeeLMind","url":"https://deelmind.com"}]}</script><meta property="og:url" content="https://deelmind.com/mathph/nt/ent/eulerf.html"><meta property="og:site_name" content="極客方舟"><meta property="og:title" content="欧拉函数"><meta property="og:description" content="欧拉函数 欧拉函数（Euler's Totient Function）ϕ(n)，表示小于等于 ( n ) 且与 ( n ) 互素的正整数的个数。 数学定义为： ϕ(n)=∣{x∈Z+∣1≤x≤n,gcd(x,n)=1}∣ gcd(x,n)表示x和n的最大公约数。 欧拉函数的性质 1. 质数 p 的欧拉函数 如果 n = p 是质数，则： ϕ(p)=p−..."><meta property="og:type" content="article"><meta property="og:locale" content="zh-CN"><link rel="stylesheet" href="https://at.alicdn.com/t/font_2410206_mfj6e1vbwo.css"><script data-ad-client="ca-pub-8498045280190096" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><title>欧拉函数 | 極客方舟</title><meta name="description" content="欧拉函数 欧拉函数（Euler's Totient Function）ϕ(n)，表示小于等于 ( n ) 且与 ( n ) 互素的正整数的个数。 数学定义为： ϕ(n)=∣{x∈Z+∣1≤x≤n,gcd(x,n)=1}∣ gcd(x,n)表示x和n的最大公约数。 欧拉函数的性质 1. 质数 p 的欧拉函数 如果 n = p 是质数，则： ϕ(p)=p−...">
+    <link rel="preload" href="/assets/style-CPStU6ed.css" as="style"><link rel="stylesheet" href="/assets/style-CPStU6ed.css">
+    <link rel="modulepreload" href="/assets/app-C9M3NSvs.js"><link rel="modulepreload" href="/assets/eulerf-BadB56Xe.js"><link rel="modulepreload" href="/assets/plugin-vue_export-helper-BDNMzG2s.js">
+    
+  </head>
+  <body>
+    <div id="app"><!----></div>
+    <script type="module" src="/assets/app-C9M3NSvs.js" defer></script>
+  </body>
+</html>
