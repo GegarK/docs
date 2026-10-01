@@ -16,7 +16,7 @@ export default hopeTheme({
     name: "DeeLMind",
     url: "https://deelmind.com",
   },
-  custom: true,
+
   // =========================
   // Logo / 图标
   // =========================
@@ -135,44 +135,5 @@ markdown: {
       copy: true,
       mhchem: true,
     },
-
-    // =========================
-    // 样式增强
-    // =========================
-    hint: true,
-    alert: true,
-    mark: true,
-    attrs: true,
-    sub: true,
-    sup: true,
-    spoiler: true,
-    align: true,
-    revealjs: true,
-
-    // =========================
-    // 图表
-    // =========================
-    chart: true,
-    echarts: true,
-    flowchart: true,
-    markmap: true,
-    mermaid: true,
-    plantuml: true,
-
-    // =========================
-    // 代码
-    // =========================
-    codeTabs: true,
-    codeDemo: true,
-    preview: true,
-    playground: true,
-    sandpack: true,
-    kotlinPlayground: true,
-    vuePlayground: true,
-
-    // =========================
-    // 幻灯片
-    // =========================
-    presentation: true,
   },
 });

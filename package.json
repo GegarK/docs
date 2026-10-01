@@ -18,7 +18,7 @@
     "vuepress-theme-hope": "2.0.0-rc.110"
   },
   "devDependencies": {
-    "@rolldown/binding-darwin-arm64": "^1.2.11",
+    "@rolldown/binding-darwin-arm64": "^1.2.12",
     "@vuepress/bundler-vite": "2.0.0-rc.31",
     "@vuepress/plugin-register-components": "2.0.0-rc.135",
     "@vuepress/plugin-revealjs": "2.0.0-rc.137",
