@@ -1,7 +1,7 @@
 # 算法讲解
 
 ::: warning DeeLMind 提示
-[学习网站 MathPH](https://mathph.org/)
+[学习网站 MathPH](https://deelmind.com/mathph/)
 :::
 
 [YouTube 系列教程](https://www.youtube.com/watch?v=DUcAMiICvf0&list=PLgZqc0esdeS8OX7etO9tUp8wIqHx-6uGj)

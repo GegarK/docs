@@ -1,7 +1,7 @@
 # 漏洞复现
 
 ::: warning DeeLMind 提示
-所有 CVE 漏洞复现视频教程都在此集合中，就不一一列举了，请到视频网站自行搜索。[密码学漏洞复现](https://mathph.org/computer/salg)
+所有 CVE 漏洞复现视频教程都在此集合中，就不一一列举了，请到视频网站自行搜索。[密码学漏洞复现](https://deelmind.com/mathph/computer/salg)
 :::
 
 <DocsAD/>

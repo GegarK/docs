@@ -1,7 +1,7 @@
 # 对抗神经网络 GAN
 
 ::: warning DeeLMind 提示
-[算法学习网站 MathPH](https://mathph.org/)
+[算法学习网站 MathPH](https://deelmind.com/mathph/)
 :::
 
 ## 什么是对抗生成网络（Adversarial Generative Adversarial Networks）

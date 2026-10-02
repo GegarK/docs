@@ -1,7 +1,7 @@
 # 机器学习
 
 ::: warning DeeLMind 提示
-[算法学习网站 MathPH](https://mathph.org/)
+[算法学习网站 MathPH](https://deelmind.com/mathph/)
 :::
 
 ## 什么是机器学习

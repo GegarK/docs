@@ -1,7 +1,7 @@
 # 数学基础
 
 ::: warning DeeLMind 数学基础课程
-微积分，概率论，统计学，线性代数 [学习网站 MathPH](https://mathph.org/)
+微积分，概率论，统计学，线性代数 [学习网站 MathPH](https://deelmind.com/mathph/)
 :::
 
 ## 导数(Derivative)

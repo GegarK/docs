@@ -6,4 +6,4 @@
 
 ## ENV
 
-node 22
+node 26
