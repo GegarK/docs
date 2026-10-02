@@ -1,37 +1,35 @@
 <template>
   <div class="deelmind-hub">
 
-    <!-- =====================================================
-         DEELMIND HUB BUTTON
-    ===================================================== -->
-
+    <!-- =========================
+         DeeLMind Hub Trigger
+    ========================== -->
     <button
       class="hub-trigger"
-      :class="{ active: isOpen }"
-      @mouseenter="openPanel"
-      @click="togglePanel"
       aria-label="Open DeeLMind Hub"
+      @click="togglePanel"
+      @mouseenter="openPanel"
     >
-      <div class="reactor">
-        <div class="reactor-ring ring-1"></div>
-        <div class="reactor-ring ring-2"></div>
-        <div class="reactor-ring ring-3"></div>
+      <div class="reactor-ring ring-1"></div>
+      <div class="reactor-ring ring-2"></div>
+      <div class="reactor-ring ring-3"></div>
 
-        <div class="reactor-core">
-          <span>D</span>
-        </div>
-
-        <div class="reactor-pulse"></div>
+      <div class="reactor-core">
+        <img
+          src="/ME.png"
+          alt="DeeLMind"
+        />
       </div>
+
+      <!-- <div class="reactor-pulse"></div> -->
     </button>
 
 
-    <!-- =====================================================
-         DEELMIND HUB PANEL
-    ===================================================== -->
-
-    <transition name="panel">
-      <aside
+    <!-- =========================
+         Hub Panel
+    ========================== -->
+    <transition name="hub-fade">
+      <div
         v-if="isOpen"
         class="hub-panel"
         @mouseenter="cancelClose"
@@ -39,462 +37,361 @@
       >
 
         <!-- Header -->
-        <div class="panel-header">
-
-          <div class="brand">
-
-            <span class="brand-mark">
-              D
-            </span>
-
-            <div class="brand-text">
-              <strong>DEELMIND</strong>
-              <small>CYBER NODE</small>
+        <div class="hub-header">
+          <div>
+            <div class="hub-title">
+              DEELMIND
             </div>
 
+            <div class="hub-subtitle">
+              DIGITAL KNOWLEDGE HUB
+            </div>
           </div>
 
-          <button
-            class="close-btn"
-            @click="closePanel"
-            aria-label="Close"
-          >
-            ×
-          </button>
-
+          <div class="status">
+            <span class="status-dot"></span>
+            ONLINE
+          </div>
         </div>
 
 
-        <!-- Status -->
-        <div class="system-line">
-
-          <span>ACCESS NODE</span>
-
-          <i></i>
-
-          <em>ONLINE</em>
-
-        </div>
-
-
-        <!-- =================================================
-             NULLMIND
-        ================================================= -->
-
+        <!-- =========================
+             Main / NullMind
+        ========================== -->
         <a
           href="https://nullmind.org"
           target="_blank"
           rel="noopener noreferrer"
           class="nullmind-card"
         >
+          <div class="nullmind-glow"></div>
 
           <div class="nullmind-icon">
-            N
+            ∅
           </div>
 
-          <div class="nullmind-content">
-
+          <div class="nullmind-info">
             <div class="nullmind-title">
-              NULLMIND
-              <span>AI</span>
+              NullMind
             </div>
 
-            <p>
+            <div class="nullmind-desc">
               AI-Driven Penetration Engine
-            </p>
-
+            </div>
           </div>
 
           <div class="arrow">
             ↗
           </div>
-
         </a>
 
 
-        <!-- =================================================
-             PLATFORMS
-        ================================================= -->
-
-        <div class="section-title">
-          <span>PLATFORMS</span>
-          <b></b>
+        <!-- =========================
+             Platforms
+        ========================== -->
+        <div class="section-label">
+          PLATFORMS
         </div>
-
 
         <div class="platform-grid">
 
-          <!-- Security -->
           <a
             href="https://safe.deelmind.com"
             target="_blank"
             rel="noopener noreferrer"
-            class="platform-item"
+            class="platform-card"
           >
+            <div class="platform-icon security">
+              ⛨
+            </div>
 
-            <span class="platform-icon">
-              ⌁
-            </span>
-
-            <span class="platform-info">
-
-              <strong>
+            <div>
+              <div class="platform-name">
                 安全平台
-              </strong>
+              </div>
 
-              <small>
-                SECURITY
-              </small>
-
-            </span>
-
+              <div class="platform-desc">
+                Security
+              </div>
+            </div>
           </a>
 
 
-          <!-- Lab -->
           <a
             href="https://lab.deelmind.com"
             target="_blank"
             rel="noopener noreferrer"
-            class="platform-item"
+            class="platform-card"
           >
+            <div class="platform-icon lab">
+              ⌬
+            </div>
 
-            <span class="platform-icon">
-              ⌘
-            </span>
-
-            <span class="platform-info">
-
-              <strong>
+            <div>
+              <div class="platform-name">
                 实验平台
-              </strong>
+              </div>
 
-              <small>
-                LAB
-              </small>
-
-            </span>
-
+              <div class="platform-desc">
+                Lab
+              </div>
+            </div>
           </a>
 
 
-          <!-- Tools -->
           <a
             href="https://tool.deelmind.com"
             target="_blank"
             rel="noopener noreferrer"
-            class="platform-item"
+            class="platform-card"
           >
+            <div class="platform-icon tools">
+              ⌘
+            </div>
 
-            <span class="platform-icon">
-              ◈
-            </span>
-
-            <span class="platform-info">
-
-              <strong>
+            <div>
+              <div class="platform-name">
                 工具平台
-              </strong>
+              </div>
 
-              <small>
-                TOOLS
-              </small>
-
-            </span>
-
+              <div class="platform-desc">
+                Tools
+              </div>
+            </div>
           </a>
 
 
-          <!-- Board -->
           <a
             href="https://board.deelmind.com.cn/"
             target="_blank"
             rel="noopener noreferrer"
-            class="platform-item"
+            class="platform-card"
           >
+            <div class="platform-icon board">
+              ▦
+            </div>
 
-            <span class="platform-icon">
-              □
-            </span>
-
-            <span class="platform-info">
-
-              <strong>
+            <div>
+              <div class="platform-name">
                 白板
-              </strong>
+              </div>
 
-              <small>
-                BOARD
-              </small>
-
-            </span>
-
+              <div class="platform-desc">
+                Whiteboard
+              </div>
+            </div>
           </a>
 
 
-          <!-- Social DB -->
           <a
             href="https://socialdb.deelmind.com/"
             target="_blank"
             rel="noopener noreferrer"
-            class="platform-item platform-wide"
+            class="platform-card platform-wide"
           >
-
-            <span class="platform-icon">
+            <div class="platform-icon socialdb">
               ◎
-            </span>
+            </div>
 
-            <span class="platform-info">
-
-              <strong>
+            <div>
+              <div class="platform-name">
                 社工查询
-              </strong>
+              </div>
 
-              <small>
-                SOCIAL DB
-              </small>
-
-            </span>
-
+              <div class="platform-desc">
+                OSINT / Social Database
+              </div>
+            </div>
           </a>
 
         </div>
 
 
-        <!-- =================================================
-             SOCIAL NETWORK
-        ================================================= -->
-
-        <div class="section-title social-heading">
-
-          <span>
-            SOCIAL NETWORK
-          </span>
-
-          <b></b>
-
+        <!-- =========================
+             Social
+        ========================== -->
+        <div class="section-label">
+          SOCIAL NETWORK
         </div>
-
 
         <div class="social-grid">
 
-
-          <!-- =================================================
-               BILIBILI
-          ================================================= -->
-
+          <!-- Bilibili -->
           <a
             href="https://space.bilibili.com/282616786"
             target="_blank"
             rel="noopener noreferrer"
             class="social-card bilibili"
           >
-
             <div class="social-logo">
               B
             </div>
 
-            <div class="social-info">
-
-              <strong>
-                Bilibili
-              </strong>
-
-              <span>
-                @DeeLMind
-              </span>
-
+            <div class="social-text">
+              <span>Bilibili</span>
+              <small>视频</small>
             </div>
 
             <div class="social-arrow">
               ↗
             </div>
-
           </a>
 
 
-          <!-- =================================================
-               YOUTUBE
-          ================================================= -->
-
+          <!-- YouTube -->
           <a
             href="https://youtube.com/DeeLMind"
             target="_blank"
             rel="noopener noreferrer"
             class="social-card youtube"
           >
-
             <div class="social-logo">
               ▶
             </div>
 
-            <div class="social-info">
-
-              <strong>
-                YouTube
-              </strong>
-
-              <span>
-                DeeLMind
-              </span>
-
+            <div class="social-text">
+              <span>YouTube</span>
+              <small>Video</small>
             </div>
 
             <div class="social-arrow">
               ↗
             </div>
-
           </a>
 
 
-          <!-- =================================================
-               X
-          ================================================= -->
-
+          <!-- X -->
           <a
             href="https://twitter.com/DeeLMind"
             target="_blank"
             rel="noopener noreferrer"
             class="social-card x"
           >
-
             <div class="social-logo">
               𝕏
             </div>
 
-            <div class="social-info">
-
-              <strong>
-                X
-              </strong>
-
-              <span>
-                @DeeLMind
-              </span>
-
+            <div class="social-text">
+              <span>X</span>
+              <small>Twitter</small>
             </div>
 
             <div class="social-arrow">
               ↗
             </div>
-
           </a>
 
 
-          <!-- =================================================
-               TELEGRAM
-          ================================================= -->
-
+          <!-- Telegram -->
           <a
             href="https://t.me/deelmindgeekark"
             target="_blank"
             rel="noopener noreferrer"
             class="social-card telegram"
           >
-
             <div class="social-logo">
               ➤
             </div>
 
-            <div class="social-info">
-
-              <strong>
-                Telegram
-              </strong>
-
-              <span>
-                Geek Ark
-              </span>
-
+            <div class="social-text">
+              <span>Telegram</span>
+              <small>Community</small>
             </div>
 
             <div class="social-arrow">
               ↗
             </div>
-
           </a>
 
         </div>
 
-      </aside>
+
+        <!-- =========================
+             Website / About
+        ========================== -->
+        <div class="hub-links">
+
+          <a
+            href="https://deelmind.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hub-link"
+          >
+            <span>DEELMIND.COM</span>
+            <span>↗</span>
+          </a>
+
+          <a
+            href="/pay/"
+            class="hub-link"
+          >
+            <span>ABOUT / SUPPORT</span>
+            <span>→</span>
+          </a>
+
+        </div>
+
+      </div>
     </transition>
 
 
-    <!-- =====================================================
-         MOBILE OVERLAY - DEELMIND HUB
-    ===================================================== -->
-
-    <transition name="overlay">
-
+    <!-- =========================
+         Mobile Hub Overlay
+         IMPORTANT:
+         Must be BELOW panel
+    ========================== -->
+    <transition name="overlay-fade">
       <div
         v-if="isOpen && isMobile"
         class="mobile-overlay"
         @click="closePanel"
       ></div>
-
     </transition>
 
 
-
-    <!-- =====================================================
-         KO-FI BUTTON
-    ===================================================== -->
-
+    <!-- =========================
+         Ko-fi Trigger
+    ========================== -->
     <button
       class="kofi-trigger"
-      :class="{ active: isKofiOpen }"
+      aria-label="Support DeeLMind"
       @click="toggleKofi"
-      aria-label="Buy Me a Coffee"
     >
-
-      <span class="kofi-cup">
-        ☕
-      </span>
-
+      ☕
     </button>
 
 
-
-    <!-- =====================================================
-         KO-FI MODAL
-    ===================================================== -->
-
-    <transition name="kofi">
-
+    <!-- =========================
+         Ko-fi Modal
+    ========================== -->
+    <transition name="kofi-fade">
       <div
         v-if="isKofiOpen"
         class="kofi-modal"
       >
 
-        <!-- Header -->
-
-        <div class="kofi-modal-header">
+        <div class="kofi-header">
 
           <div>
-
-            <strong>
-              BUY ME A COFFEE
-            </strong>
-
-            <small>
+            <div class="kofi-title">
               SUPPORT DEELMIND
-            </small>
+            </div>
 
+            <div class="kofi-subtitle">
+              BUY ME A COFFEE ☕
+            </div>
           </div>
-
 
           <button
             class="kofi-close"
-            @click="closeKofi"
             aria-label="Close"
+            @click="closeKofi"
           >
             ×
           </button>
 
         </div>
 
-
-        <!-- Ko-fi iframe -->
 
         <div class="kofi-content">
 
@@ -509,23 +406,18 @@
         </div>
 
       </div>
-
     </transition>
 
 
-
-    <!-- =====================================================
-         MOBILE OVERLAY - KO-FI
-    ===================================================== -->
-
-    <transition name="overlay">
-
+    <!-- =========================
+         Ko-fi Mobile Overlay
+    ========================== -->
+    <transition name="overlay-fade">
       <div
         v-if="isKofiOpen && isMobile"
         class="kofi-overlay"
         @click="closeKofi"
       ></div>
-
     </transition>
 
   </div>
@@ -539,153 +431,110 @@ export default {
   data() {
     return {
       isOpen: false,
-
       isKofiOpen: false,
-
       isMobile: false,
-
-      closeTimer: null
+      closeTimer: null,
     };
   },
 
-
   mounted() {
-
     this.checkMobile();
 
     window.addEventListener(
       "resize",
-      this.checkMobile
+      this.checkMobile,
+      { passive: true }
     );
-
   },
 
-
   beforeUnmount() {
-
     window.removeEventListener(
       "resize",
       this.checkMobile
     );
 
     this.clearCloseTimer();
-
   },
-
 
   methods: {
 
-    /* =====================================================
-       RESPONSIVE
-    ===================================================== */
-
+    /* =========================
+       Mobile Detection
+    ========================== */
     checkMobile() {
-
       this.isMobile =
         window.innerWidth <= 768;
-
     },
 
 
-    /* =====================================================
-       DEELMIND HUB
-    ===================================================== */
+    /* =========================
+       Hub
+    ========================== */
 
     openPanel() {
-
-      if (this.isMobile) {
-        return;
-      }
+      if (this.isMobile) return;
 
       this.clearCloseTimer();
 
       this.isOpen = true;
-
     },
-
 
     togglePanel() {
-
       this.clearCloseTimer();
 
-      this.isOpen =
-        !this.isOpen;
+      this.isOpen = !this.isOpen;
 
+      if (this.isOpen) {
+        this.isKofiOpen = false;
+      }
     },
 
-
     closePanel() {
-
       this.clearCloseTimer();
 
       this.isOpen = false;
-
     },
-
 
     scheduleClose() {
-
-      if (this.isMobile) {
-        return;
-      }
+      if (this.isMobile) return;
 
       this.clearCloseTimer();
 
-      this.closeTimer =
-        setTimeout(() => {
-
-          this.isOpen = false;
-
-        }, 350);
-
+      this.closeTimer = setTimeout(() => {
+        this.isOpen = false;
+      }, 180);
     },
-
 
     cancelClose() {
-
       this.clearCloseTimer();
+    },
 
+    clearCloseTimer() {
+      if (this.closeTimer) {
+        clearTimeout(this.closeTimer);
+        this.closeTimer = null;
+      }
     },
 
 
-    /* =====================================================
-       KO-FI
-    ===================================================== */
+    /* =========================
+       Ko-fi
+    ========================== */
 
     toggleKofi() {
-
       this.isKofiOpen =
         !this.isKofiOpen;
 
+      if (this.isKofiOpen) {
+        this.isOpen = false;
+      }
     },
-
 
     closeKofi() {
-
       this.isKofiOpen = false;
-
     },
 
-
-    /* =====================================================
-       TIMER
-    ===================================================== */
-
-    clearCloseTimer() {
-
-      if (this.closeTimer) {
-
-        clearTimeout(
-          this.closeTimer
-        );
-
-        this.closeTimer = null;
-
-      }
-
-    }
-
-  }
+  },
 };
 </script>
 
@@ -697,11 +546,11 @@ export default {
 ========================================================= */
 
 .deelmind-hub {
-
   --green: #00e89a;
+  --green-soft: #00c98b;
   --cyan: #00d9c8;
 
-  --panel: rgba(24, 32, 34, 0.92);
+  --panel: rgba(24, 32, 34, 0.96);
   --panel-soft: rgba(255, 255, 255, 0.045);
 
   --border: rgba(0, 255, 156, 0.18);
@@ -711,16 +560,20 @@ export default {
 
   position: relative;
 
-  z-index: 9999;
+  /*
+   * Very high stacking context.
+   * Prevents VuePress theme elements from
+   * covering the Hub.
+   */
+  z-index: 2147483000;
 }
 
 
 /* =========================================================
-   DEELMIND FLOATING BUTTON
+   HUB TRIGGER
 ========================================================= */
 
 .hub-trigger {
-
   position: fixed;
 
   top: 72px;
@@ -731,196 +584,188 @@ export default {
 
   padding: 0;
 
-  border: 1px solid
-    rgba(0, 255, 156, 0.35);
-
+  border: 1px solid rgba(0, 255, 156, 0.28);
   border-radius: 50%;
 
   background:
     radial-gradient(
       circle at center,
-      rgba(0, 255, 156, 0.14),
-      rgba(5, 14, 15, 0.96) 68%
-    );
-
-  box-shadow:
-    0 0 20px
       rgba(0, 255, 156, 0.12),
-
-    inset 0 0 15px
-      rgba(0, 255, 156, 0.08);
+      rgba(8, 18, 19, 0.96) 65%
+    );
 
   cursor: pointer;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
-  z-index: 10001;
+  box-shadow:
+    0 0 0 1px rgba(0, 255, 156, 0.04),
+    0 0 16px rgba(0, 255, 156, 0.18),
+    inset 0 0 18px rgba(0, 255, 156, 0.08);
+
+  z-index: 10002;
 
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-
-.hub-trigger:hover,
-.hub-trigger.active {
-
+.hub-trigger:hover {
   transform: scale(1.06);
 
-  border-color:
-    rgba(0, 255, 156, 0.7);
-
   box-shadow:
-
-    0 0 28px
-      rgba(0, 255, 156, 0.25),
-
-    inset 0 0 20px
-      rgba(0, 255, 156, 0.12);
-
+    0 0 0 1px rgba(0, 255, 156, 0.12),
+    0 0 25px rgba(0, 255, 156, 0.32),
+    inset 0 0 20px rgba(0, 255, 156, 0.12);
 }
 
 
 /* =========================================================
-   REACTOR
+   REACTOR RINGS
 ========================================================= */
 
-.reactor {
-
-  position: relative;
-
-  width: 34px;
-  height: 34px;
-
-}
-
-
 .reactor-ring {
-
   position: absolute;
 
   left: 50%;
   top: 50%;
 
-  border: 1px solid
-    rgba(0, 255, 156, 0.45);
-
   border-radius: 50%;
 
-  transform:
-    translate(-50%, -50%);
-
+  pointer-events: none;
 }
-
 
 .ring-1 {
+  width: 39px;
+  height: 39px;
 
-  width: 32px;
-  height: 32px;
+  transform: translate(-50%, -50%);
+
+  border: 1px solid rgba(0, 255, 156, 0.35);
 
   animation:
-    spin 8s linear infinite;
+    reactor-spin 7s linear infinite;
+}
 
+.ring-2 {
+  width: 45px;
+  height: 45px;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px dashed rgba(0, 217, 200, 0.3);
+
+  animation:
+    reactor-spin-reverse 10s linear infinite;
+}
+
+.ring-3 {
+  width: 49px;
+  height: 49px;
+
+  transform: translate(-50%, -50%);
+
+  border:
+    1px solid rgba(0, 255, 156, 0.08);
+
+  animation:
+    reactor-pulse-ring 2.5s ease-in-out infinite;
 }
 
 
-.ring-2 {
+/* =========================================================
+   LOGO CORE
+========================================================= */
+
+.reactor-core {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
 
   width: 24px;
   height: 24px;
 
-  border-style: dashed;
-
-  animation:
-    spinReverse 5s linear infinite;
-
-}
-
-
-.ring-3 {
-
-  width: 17px;
-  height: 17px;
-
-  border-color:
-    rgba(0, 217, 200, 0.8);
-
-}
-
-
-.reactor-core {
-
-  position: absolute;
-
-  left: 50%;
-  top: 50%;
-
-  width: 13px;
-  height: 13px;
-
-  transform:
-    translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
-  border-radius: 50%;
+  overflow: hidden;
 
-  background: #00e89a;
+  border-radius: 20px;
 
-  color: #07120f;
-
-  font-size: 8px;
-
-  font-weight: 900;
-
-  box-shadow:
-
-    0 0 10px #00e89a,
-
-    0 0 22px
-      rgba(0, 232, 154, 0.6);
-
-}
-
-
-.reactor-pulse {
-
-  position: absolute;
-
-  left: 50%;
-  top: 50%;
-
-  width: 38px;
-  height: 38px;
+  background:
+    rgba(4, 12, 13, 0.96);
 
   border:
-    1px solid
-    rgba(0, 255, 156, 0.3);
+    1px solid rgba(0, 255, 156, 0.45);
 
-  border-radius: 50%;
+  box-shadow:
+    0 0 10px rgba(0, 255, 156, 0.3),
+    inset 0 0 8px rgba(0, 255, 156, 0.08);
 
-  transform:
-    translate(-50%, -50%);
+  z-index: 3;
 
-  animation:
-    pulse 2.4s ease-out infinite;
+  pointer-events: none;
+}
 
+.reactor-core img {
+  width: 100%;
+  height: 100%;
+
+  padding: 3px;
+
+  display: block;
+
+  object-fit: contain;
+
+  box-sizing: border-box;
 }
 
 
 /* =========================================================
-   DEELMIND PANEL
+   PULSE
+========================================================= */
+
+.reactor-pulse {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 5px;
+  height: 5px;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: var(--green);
+
+  box-shadow:
+    0 0 7px var(--green),
+    0 0 14px rgba(0, 255, 156, 0.7);
+
+  opacity: 0.45;
+
+  pointer-events: none;
+
+  animation:
+    core-pulse 1.8s ease-in-out infinite;
+
+  z-index: 4;
+}
+
+
+/* =========================================================
+   HUB PANEL
 ========================================================= */
 
 .hub-panel {
-
   position: fixed;
 
   top: 68px;
@@ -928,40 +773,39 @@ export default {
 
   width: 350px;
 
-  padding: 17px;
+  padding: 16px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(29, 39, 41, 0.98),
+      rgba(18, 26, 28, 0.98)
+    );
 
   border:
-    1px solid
-    rgba(0, 255, 156, 0.18);
+    1px solid rgba(0, 255, 156, 0.18);
 
   border-radius: 18px;
 
-  background:
-
-    linear-gradient(
-      145deg,
-      rgba(31, 42, 44, 0.97),
-      rgba(17, 25, 27, 0.94)
-    );
-
-  backdrop-filter:
-    blur(26px)
-    saturate(130%);
-
-  -webkit-backdrop-filter:
-    blur(26px)
-    saturate(130%);
-
   box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.38),
+    0 0 30px rgba(0, 255, 156, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.045);
 
-    0 25px 70px
-      rgba(0, 0, 0, 0.45),
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
 
-    0 0 40px
-      rgba(0, 255, 156, 0.06);
+  overflow: hidden;
 
-  color: var(--text);
+  /*
+   * CRITICAL:
+   * Must be above mobile overlay.
+   */
+  z-index: 10001;
 
+  transform-origin: top right;
 }
 
 
@@ -969,168 +813,72 @@ export default {
    HEADER
 ========================================================= */
 
-.panel-header {
-
+.hub-header {
   display: flex;
 
   align-items: center;
   justify-content: space-between;
 
-  margin-bottom: 13px;
+  padding: 2px 2px 14px;
 
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.06);
 }
 
-
-.brand {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 10px;
-
-}
-
-
-.brand-mark {
-
-  width: 32px;
-  height: 32px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 9px;
-
-  background:
-    rgba(0, 232, 154, 0.1);
-
-  border:
-    1px solid
-    rgba(0, 232, 154, 0.3);
-
-  color: var(--green);
+.hub-title {
+  font-family:
+    "Orbitron",
+    "SF Mono",
+    monospace;
 
   font-size: 14px;
+  font-weight: 700;
 
-  font-weight: 900;
+  letter-spacing: 2px;
 
-  box-shadow:
-    0 0 14px
-    rgba(0, 232, 154, 0.1);
-
+  color: var(--text);
 }
 
+.hub-subtitle {
+  margin-top: 4px;
 
-.brand-text strong {
-
-  display: block;
-
-  font-size: 12px;
-
-  letter-spacing: 0.16em;
-
-}
-
-
-.brand-text small {
-
-  display: block;
-
-  margin-top: 2px;
-
-  color: var(--muted);
+  font-family: monospace;
 
   font-size: 8px;
 
-  letter-spacing: 0.18em;
+  letter-spacing: 1.4px;
 
+  color: var(--muted);
 }
 
-
-.close-btn {
-
-  width: 26px;
-  height: 26px;
-
-  border: 0;
-
-  border-radius: 7px;
-
-  background:
-    rgba(255, 255, 255, 0.04);
-
-  color: #8fa39e;
-
-  cursor: pointer;
-
-  font-size: 17px;
-
-  transition: 0.2s;
-
-}
-
-
-.close-btn:hover {
-
-  background:
-    rgba(255, 255, 255, 0.08);
-
-  color: white;
-
-}
-
-
-/* =========================================================
-   STATUS
-========================================================= */
-
-.system-line {
-
+.status {
   display: flex;
 
   align-items: center;
+  gap: 5px;
 
-  gap: 8px;
-
-  margin-bottom: 12px;
-
-  color: #657c76;
+  font-family: monospace;
 
   font-size: 8px;
 
-  letter-spacing: 0.16em;
+  letter-spacing: 1px;
 
+  color: var(--green);
 }
 
-
-.system-line i {
-
+.status-dot {
   width: 5px;
   height: 5px;
 
   border-radius: 50%;
 
-  background:
-    var(--green);
+  background: var(--green);
 
   box-shadow:
-    0 0 8px
-    var(--green);
+    0 0 8px var(--green);
 
-}
-
-
-.system-line em {
-
-  margin-left: auto;
-
-  color: var(--green);
-
-  font-style: normal;
-
+  animation:
+    core-pulse 1.6s ease-in-out infinite;
 }
 
 
@@ -1139,7 +887,6 @@ export default {
 ========================================================= */
 
 .nullmind-card {
-
   position: relative;
 
   display: flex;
@@ -1148,300 +895,159 @@ export default {
 
   gap: 12px;
 
-  padding: 13px;
+  margin-top: 14px;
 
-  margin-bottom: 16px;
+  padding: 14px;
 
   border:
-    1px solid
-    rgba(0, 232, 154, 0.22);
+    1px solid rgba(0, 255, 156, 0.25);
 
   border-radius: 13px;
 
   background:
-
     linear-gradient(
-      110deg,
-      rgba(0, 232, 154, 0.08),
-      rgba(0, 232, 154, 0.015)
+      135deg,
+      rgba(0, 255, 156, 0.09),
+      rgba(0, 217, 200, 0.025)
     );
+
+  overflow: hidden;
 
   text-decoration: none;
 
-  transition: 0.25s;
-
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
 }
-
 
 .nullmind-card:hover {
+  transform: translateY(-2px);
 
   border-color:
-    rgba(0, 232, 154, 0.55);
+    rgba(0, 255, 156, 0.48);
 
-  transform:
-    translateY(-1px);
-
-  box-shadow:
-
-    0 8px 25px
-      rgba(0, 232, 154, 0.08);
-
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 255, 156, 0.14),
+      rgba(0, 217, 200, 0.045)
+    );
 }
 
+.nullmind-glow {
+  position: absolute;
+
+  width: 100px;
+  height: 100px;
+
+  top: -55px;
+  right: -30px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0, 255, 156, 0.14),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
 
 .nullmind-icon {
-
   width: 38px;
   height: 38px;
 
   flex-shrink: 0;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   border-radius: 10px;
 
-  background: #071a15;
+  background:
+    rgba(0, 255, 156, 0.08);
 
   border:
-    1px solid
-    rgba(0, 232, 154, 0.35);
+    1px solid rgba(0, 255, 156, 0.2);
 
   color: var(--green);
 
-  font-weight: 900;
+  font-family: monospace;
 
+  font-size: 22px;
+
+  box-shadow:
+    0 0 14px rgba(0, 255, 156, 0.08);
 }
 
+.nullmind-info {
+  flex: 1;
+}
 
 .nullmind-title {
-
   color: var(--text);
 
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 700;
 
-  font-weight: 800;
-
-  letter-spacing: 0.08em;
-
+  letter-spacing: 0.5px;
 }
 
-
-.nullmind-title span {
-
-  margin-left: 5px;
-
-  padding: 2px 5px;
-
-  border-radius: 4px;
-
-  background:
-    rgba(0, 232, 154, 0.12);
-
-  color: var(--green);
-
-  font-size: 7px;
-
-}
-
-
-.nullmind-content p {
-
-  margin: 4px 0 0;
+.nullmind-desc {
+  margin-top: 4px;
 
   color: var(--muted);
 
-  font-size: 9px;
-
-}
-
-
-.arrow {
-
-  margin-left: auto;
-
-  color: var(--green);
-
-  font-size: 15px;
-
-}
-
-
-/* =========================================================
-   SECTION TITLE
-========================================================= */
-
-.section-title {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  margin:
-    13px 1px 8px;
-
-  color: #667d77;
+  font-family: monospace;
 
   font-size: 8px;
 
-  letter-spacing: 0.18em;
-
+  letter-spacing: 0.4px;
 }
 
+.arrow {
+  color: var(--green);
 
-.section-title b {
+  font-size: 17px;
 
-  flex: 1;
-
-  height: 1px;
-
-  background:
-    rgba(255, 255, 255, 0.07);
-
+  opacity: 0.75;
 }
 
 
 /* =========================================================
-   PLATFORM
+   SECTION LABEL
+========================================================= */
+
+.section-label {
+  margin: 16px 2px 8px;
+
+  color: #536c65;
+
+  font-family: monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 1.8px;
+}
+
+
+/* =========================================================
+   PLATFORM GRID
 ========================================================= */
 
 .platform-grid {
-
   display: grid;
 
   grid-template-columns:
-    1fr 1fr;
+    repeat(2, minmax(0, 1fr));
 
   gap: 7px;
-
 }
 
-
-.platform-item {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  min-height: 48px;
-
-  padding: 8px 9px;
-
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.055);
-
-  border-radius: 9px;
-
-  background:
-    rgba(255, 255, 255, 0.025);
-
-  text-decoration: none;
-
-  transition: 0.2s;
-
-}
-
-
-.platform-item:hover {
-
-  background:
-    rgba(0, 232, 154, 0.055);
-
-  border-color:
-    rgba(0, 232, 154, 0.22);
-
-}
-
-
-.platform-icon {
-
-  width: 25px;
-  height: 25px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 6px;
-
-  background:
-    rgba(255, 255, 255, 0.05);
-
-  color: #8eeed0;
-
-  font-size: 12px;
-
-}
-
-
-.platform-info strong {
-
-  display: block;
-
-  color: #d9e9e5;
-
-  font-size: 10px;
-
-}
-
-
-.platform-info small {
-
-  display: block;
-
-  margin-top: 2px;
-
-  color: #60736e;
-
-  font-size: 7px;
-
-  letter-spacing: 0.08em;
-
-}
-
-
-.platform-wide {
-
-  grid-column:
-    span 2;
-
-}
-
-
-/* =========================================================
-   SOCIAL NETWORK
-========================================================= */
-
-.social-heading {
-
-  margin-top: 17px;
-
-}
-
-
-.social-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap: 8px;
-
-}
-
-
-.social-card {
-
-  position: relative;
+.platform-card {
+  min-width: 0;
 
   display: flex;
 
@@ -1449,345 +1055,374 @@ export default {
 
   gap: 9px;
 
-  min-height: 58px;
+  padding: 10px;
 
-  padding: 9px;
+  border:
+    1px solid rgba(255, 255, 255, 0.06);
 
-  overflow: hidden;
+  border-radius: 10px;
 
-  border-radius: 11px;
+  background:
+    rgba(255, 255, 255, 0.025);
 
   text-decoration: none;
 
-  background:
-    rgba(255, 255, 255, 0.035);
-
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.07);
-
   transition:
-
-    transform 0.22s ease,
-
-    border-color 0.22s ease,
-
-    background 0.22s ease;
-
+    background 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease;
 }
 
+.platform-card:hover {
+  transform: translateY(-1px);
 
-.social-card:hover {
+  background:
+    rgba(0, 255, 156, 0.055);
 
-  transform:
-    translateY(-2px);
-
+  border-color:
+    rgba(0, 255, 156, 0.2);
 }
 
+.platform-wide {
+  grid-column: span 2;
+}
 
-.social-logo {
-
-  width: 34px;
-  height: 34px;
+.platform-icon {
+  width: 28px;
+  height: 28px;
 
   flex-shrink: 0;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
-  border-radius: 9px;
+  border-radius: 7px;
 
-  font-size: 16px;
+  font-size: 14px;
 
-  font-weight: 900;
-
+  font-family: monospace;
 }
 
+.security {
+  color: #00e89a;
 
-.social-info {
-
-  min-width: 0;
-
+  background:
+    rgba(0, 232, 154, 0.08);
 }
 
+.lab {
+  color: #00d9c8;
 
-.social-info strong {
+  background:
+    rgba(0, 217, 200, 0.08);
+}
 
-  display: block;
+.tools {
+  color: #b4ffdf;
 
-  color: #edf8f5;
+  background:
+    rgba(180, 255, 223, 0.07);
+}
+
+.board {
+  color: #c9fff0;
+
+  background:
+    rgba(201, 255, 240, 0.06);
+}
+
+.socialdb {
+  color: #9effd8;
+
+  background:
+    rgba(158, 255, 216, 0.07);
+}
+
+.platform-name {
+  color: #dffcf4;
 
   font-size: 10px;
+  font-weight: 600;
+}
 
+.platform-desc {
+  margin-top: 2px;
+
+  color: #60766f;
+
+  font-family: monospace;
+
+  font-size: 7px;
+}
+
+
+/* =========================================================
+   SOCIAL GRID
+========================================================= */
+
+.social-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 7px;
+}
+
+.social-card {
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 9px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  border: 1px solid transparent;
+
+  transition:
+    transform 0.18s ease,
+    filter 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.social-card:hover {
+  transform: translateY(-2px);
+
+  filter: brightness(1.08);
+}
+
+.social-logo {
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  font-size: 14px;
   font-weight: 800;
-
 }
 
+.social-text {
+  min-width: 0;
 
-.social-info span {
+  flex: 1;
 
-  display: block;
+  display: flex;
 
-  margin-top: 3px;
-
-  color: #6f8580;
-
-  font-size: 8px;
-
-  white-space: nowrap;
-
-  overflow: hidden;
-
-  text-overflow: ellipsis;
-
+  flex-direction: column;
 }
 
+.social-text span {
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.social-text small {
+  margin-top: 2px;
+
+  font-family: monospace;
+
+  font-size: 6px;
+
+  opacity: 0.58;
+}
 
 .social-arrow {
+  font-size: 12px;
 
-  position: absolute;
-
-  top: 7px;
-  right: 8px;
-
-  color:
-    rgba(255, 255, 255, 0.3);
-
-  font-size: 11px;
-
-  transition: 0.2s;
-
+  opacity: 0.65;
 }
 
 
-/* =========================================================
-   BILIBILI
-========================================================= */
+/* Bilibili */
 
 .bilibili {
+  background:
+    rgba(0, 174, 236, 0.1);
 
   border-color:
-    rgba(0, 174, 236, 0.16);
+    rgba(0, 174, 236, 0.22);
 
-  background:
-
-    linear-gradient(
-      135deg,
-      rgba(0, 174, 236, 0.10),
-      rgba(0, 174, 236, 0.025)
-    );
-
+  color: #bdefff;
 }
-
 
 .bilibili .social-logo {
-
   background:
-    rgba(0, 174, 236, 0.14);
+    rgba(0, 174, 236, 0.16);
 
-  color:
-    #00aeec;
-
-  border:
-    1px solid
-    rgba(0, 174, 236, 0.25);
-
+  color: #00aeec;
 }
 
 
-.bilibili:hover {
-
-  border-color:
-    rgba(0, 174, 236, 0.45);
-
-  box-shadow:
-    0 7px 25px
-    rgba(0, 174, 236, 0.08);
-
-}
-
-
-.bilibili:hover .social-arrow {
-
-  color:
-    #00aeec;
-
-}
-
-
-/* =========================================================
-   YOUTUBE
-========================================================= */
+/* YouTube */
 
 .youtube {
+  background:
+    rgba(255, 48, 48, 0.09);
 
   border-color:
-    rgba(255, 40, 40, 0.15);
+    rgba(255, 48, 48, 0.22);
 
-  background:
-
-    linear-gradient(
-      135deg,
-      rgba(255, 40, 40, 0.10),
-      rgba(255, 40, 40, 0.025)
-    );
-
+  color: #ffe2e2;
 }
-
 
 .youtube .social-logo {
-
   background:
-    rgba(255, 40, 40, 0.12);
+    rgba(255, 48, 48, 0.16);
 
-  color:
-    #ff3030;
-
-  border:
-    1px solid
-    rgba(255, 40, 40, 0.25);
-
+  color: #ff4040;
 }
 
 
-.youtube:hover {
-
-  border-color:
-    rgba(255, 40, 40, 0.45);
-
-  box-shadow:
-    0 7px 25px
-    rgba(255, 40, 40, 0.08);
-
-}
-
-
-.youtube:hover .social-arrow {
-
-  color:
-    #ff4040;
-
-}
-
-
-/* =========================================================
-   X
-========================================================= */
+/* X */
 
 .x {
+  background:
+    rgba(255, 255, 255, 0.045);
 
   border-color:
-    rgba(255, 255, 255, 0.10);
+    rgba(255, 255, 255, 0.12);
 
-  background:
-
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.055),
-      rgba(255, 255, 255, 0.018)
-    );
-
+  color: #f4f4f4;
 }
 
-
 .x .social-logo {
-
   background:
     rgba(255, 255, 255, 0.08);
 
-  color:
-    #ffffff;
-
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.15);
-
+  color: #ffffff;
 }
 
 
-.x:hover {
-
-  border-color:
-    rgba(255, 255, 255, 0.35);
-
-  box-shadow:
-    0 7px 25px
-    rgba(255, 255, 255, 0.04);
-
-}
-
-
-.x:hover .social-arrow {
-
-  color:
-    white;
-
-}
-
-
-/* =========================================================
-   TELEGRAM
-========================================================= */
+/* Telegram */
 
 .telegram {
+  background:
+    rgba(42, 171, 238, 0.09);
 
   border-color:
-    rgba(42, 171, 238, 0.15);
+    rgba(42, 171, 238, 0.22);
 
-  background:
-
-    linear-gradient(
-      135deg,
-      rgba(42, 171, 238, 0.10),
-      rgba(42, 171, 238, 0.025)
-    );
-
+  color: #d7f3ff;
 }
-
 
 .telegram .social-logo {
-
   background:
-    rgba(42, 171, 238, 0.13);
+    rgba(42, 171, 238, 0.16);
 
-  color:
-    #2aabee;
-
-  border:
-    1px solid
-    rgba(42, 171, 238, 0.25);
-
-}
-
-
-.telegram:hover {
-
-  border-color:
-    rgba(42, 171, 238, 0.45);
-
-  box-shadow:
-    0 7px 25px
-    rgba(42, 171, 238, 0.08);
-
-}
-
-
-.telegram:hover .social-arrow {
-
-  color:
-    #2aabee;
-
+  color: #2aabee;
 }
 
 
 /* =========================================================
-   KO-FI BUTTON
+   HUB LINKS
+========================================================= */
+
+.hub-links {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 7px;
+
+  margin-top: 14px;
+}
+
+.hub-link {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 9px 10px;
+
+  border-radius: 9px;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.055);
+
+  color: #809890;
+
+  font-family: monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.6px;
+
+  text-decoration: none;
+
+  transition:
+    color 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease;
+}
+
+.hub-link:hover {
+  color: var(--green);
+
+  border-color:
+    rgba(0, 255, 156, 0.18);
+
+  background:
+    rgba(0, 255, 156, 0.045);
+}
+
+
+/* =========================================================
+   MOBILE OVERLAY
+========================================================= */
+
+/*
+ * IMPORTANT:
+ *
+ * overlay < panel < trigger
+ *
+ * This fixes the original mobile issue where
+ * the panel looked blurred / couldn't be clicked.
+ */
+
+.mobile-overlay,
+.kofi-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background:
+    rgba(0, 0, 0, 0.42);
+
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+
+  z-index: 10000;
+}
+
+.mobile-overlay {
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   KOFI TRIGGER
 ========================================================= */
 
 .kofi-trigger {
-
   position: fixed;
 
   top: 138px;
@@ -1799,438 +1434,292 @@ export default {
   padding: 0;
 
   border:
-    1px solid
-    rgba(255, 255, 255, 0.14);
+    1px solid rgba(255, 190, 100, 0.22);
 
   border-radius: 50%;
 
   background:
-
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.10),
-      rgba(255, 255, 255, 0.035)
+    radial-gradient(
+      circle at center,
+      rgba(255, 190, 100, 0.11),
+      rgba(15, 18, 19, 0.96) 68%
     );
 
-  backdrop-filter:
-    blur(16px);
+  color: #ffd9a3;
 
-  -webkit-backdrop-filter:
-    blur(16px);
-
-  box-shadow:
-
-    0 8px 30px
-      rgba(0, 0, 0, 0.25);
+  font-size: 22px;
 
   cursor: pointer;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
-  z-index: 10001;
+  box-shadow:
+    0 0 18px rgba(255, 170, 80, 0.12),
+    inset 0 0 16px rgba(255, 180, 80, 0.05);
+
+  z-index: 10005;
 
   transition:
-
-    transform 0.25s ease,
-
-    border-color 0.25s ease,
-
-    box-shadow 0.25s ease;
-
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-
-.kofi-trigger:hover,
-.kofi-trigger.active {
-
-  transform:
-    scale(1.06);
-
-  border-color:
-    rgba(255, 255, 255, 0.35);
+.kofi-trigger:hover {
+  transform: scale(1.06);
 
   box-shadow:
-
-    0 10px 35px
-      rgba(0, 0, 0, 0.35);
-
-}
-
-
-.kofi-cup {
-
-  font-size: 22px;
-
-  filter:
-
-    grayscale(0.15)
-
-    drop-shadow(
-      0 2px 7px
-      rgba(0, 0, 0, 0.3)
-    );
-
-  transition:
-    transform 0.25s ease;
-
-}
-
-
-.kofi-trigger:hover .kofi-cup {
-
-  transform:
-    rotate(-8deg)
-    scale(1.08);
-
+    0 0 25px rgba(255, 170, 80, 0.24),
+    inset 0 0 18px rgba(255, 180, 80, 0.08);
 }
 
 
 /* =========================================================
-   KO-FI MODAL
+   KOFI MODAL
 ========================================================= */
 
 .kofi-modal {
-
   position: fixed;
-
-  z-index: 10002;
 
   top: 68px;
   right: 84px;
 
   width: 390px;
 
-  overflow: hidden;
-
-  border-radius: 18px;
-
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.13);
+  max-width: calc(100vw - 100px);
 
   background:
-    rgba(27, 32, 34, 0.97);
+    rgba(25, 29, 30, 0.98);
 
-  backdrop-filter:
-    blur(25px);
+  border:
+    1px solid rgba(255, 255, 255, 0.1);
 
-  -webkit-backdrop-filter:
-    blur(25px);
+  border-radius: 16px;
+
+  overflow: hidden;
 
   box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.48);
 
-    0 30px 90px
-      rgba(0, 0, 0, 0.55);
-
+  z-index: 10004;
 }
 
 
 /* =========================================================
-   KO-FI HEADER
+   KOFI HEADER
 ========================================================= */
 
-.kofi-modal-header {
+.kofi-header {
+  height: 58px;
 
-  height: 56px;
+  padding: 0 14px;
 
-  padding:
-    0 14px
-    0 17px;
+  box-sizing: border-box;
 
   display: flex;
 
   align-items: center;
-
   justify-content: space-between;
 
-  border-bottom:
-    1px solid
-    rgba(255, 255, 255, 0.07);
+  background:
+    rgba(255, 255, 255, 0.025);
 
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.07);
 }
 
+.kofi-title {
+  color: #f5f5f5;
 
-.kofi-modal-header strong {
-
-  display: block;
-
-  color: #f1f5f4;
+  font-family:
+    "Orbitron",
+    monospace;
 
   font-size: 11px;
 
-  letter-spacing: 0.14em;
-
+  letter-spacing: 1.4px;
 }
 
-
-.kofi-modal-header small {
-
-  display: block;
-
+.kofi-subtitle {
   margin-top: 3px;
 
-  color: #748580;
+  color: #a08d79;
+
+  font-family: monospace;
 
   font-size: 7px;
 
-  letter-spacing: 0.15em;
-
+  letter-spacing: 1px;
 }
 
-
-/* =========================================================
-   KO-FI CLOSE
-========================================================= */
-
 .kofi-close {
+  width: 30px;
+  height: 30px;
 
-  width: 29px;
-  height: 29px;
+  padding: 0;
 
-  border: 0;
+  border: none;
 
   border-radius: 8px;
 
   background:
-    rgba(255, 255, 255, 0.045);
+    rgba(255, 255, 255, 0.06);
 
-  color: #91a09d;
+  color: #999;
+
+  font-size: 20px;
+
+  line-height: 1;
 
   cursor: pointer;
 
-  font-size: 18px;
-
-  transition: 0.2s;
-
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
 }
 
-
 .kofi-close:hover {
-
   background:
-    rgba(255, 255, 255, 0.09);
+    rgba(255, 255, 255, 0.11);
 
   color: white;
-
 }
 
 
 /* =========================================================
-   KO-FI CONTENT
+   KOFI CONTENT
 ========================================================= */
 
 .kofi-content {
-
   width: 100%;
-
-  height: 712px;
-
-  overflow: hidden;
 
   background: #f9f9f9;
 
+  overflow-y: auto;
 }
 
-
 .kofi-content iframe {
-
   display: block;
 
   width: 100%;
 
-  height: 712px;
+  min-height: 712px;
 
   border: none;
-
 }
 
 
 /* =========================================================
-   MOBILE OVERLAY
+   TRANSITIONS
 ========================================================= */
 
-.mobile-overlay,
-.kofi-overlay {
-
-  position: fixed;
-
-  inset: 0;
-
-  background:
-    rgba(0, 0, 0, 0.42);
-
-  backdrop-filter:
-    blur(3px);
-
-}
-
-
-.mobile-overlay {
-
-  z-index: 9998;
-
-}
-
-
-.kofi-overlay {
-
-  z-index: 10000;
-
-}
-
-
-/* =========================================================
-   PANEL TRANSITION
-========================================================= */
-
-.panel-enter-active,
-.panel-leave-active {
-
+.hub-fade-enter-active,
+.hub-fade-leave-active {
   transition:
-
-    opacity 0.2s ease,
-
-    transform 0.25s ease;
-
+    opacity 0.18s ease,
+    transform 0.18s ease;
 }
 
-
-.panel-enter-from,
-.panel-leave-to {
-
+.hub-fade-enter-from,
+.hub-fade-leave-to {
   opacity: 0;
 
   transform:
-
-    translateX(12px)
+    translateY(-8px)
     scale(0.97);
-
 }
 
 
-/* =========================================================
-   KO-FI TRANSITION
-========================================================= */
-
-.kofi-enter-active,
-.kofi-leave-active {
-
-  transition:
-
-    opacity 0.22s ease,
-
-    transform 0.25s ease;
-
-}
-
-
-.kofi-enter-from,
-.kofi-leave-to {
-
-  opacity: 0;
-
-  transform:
-
-    translateX(12px)
-    scale(0.97);
-
-}
-
-
-/* =========================================================
-   OVERLAY TRANSITION
-========================================================= */
-
-.overlay-enter-active,
-.overlay-leave-active {
-
+.overlay-fade-enter-active,
+.overlay-fade-leave-active {
   transition:
     opacity 0.2s ease;
+}
 
+.overlay-fade-enter-from,
+.overlay-fade-leave-to {
+  opacity: 0;
 }
 
 
-.overlay-enter-from,
-.overlay-leave-to {
+.kofi-fade-enter-active,
+.kofi-fade-leave-active {
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
 
+.kofi-fade-enter-from,
+.kofi-fade-leave-to {
   opacity: 0;
 
+  transform:
+    translateY(-8px)
+    scale(0.98);
 }
 
 
 /* =========================================================
-   REACTOR ANIMATION
+   ANIMATIONS
 ========================================================= */
 
-@keyframes spin {
-
+@keyframes reactor-spin {
   from {
-
     transform:
       translate(-50%, -50%)
       rotate(0deg);
-
   }
 
   to {
-
     transform:
       translate(-50%, -50%)
       rotate(360deg);
-
   }
-
 }
 
-
-@keyframes spinReverse {
-
+@keyframes reactor-spin-reverse {
   from {
-
     transform:
       translate(-50%, -50%)
       rotate(360deg);
-
   }
 
   to {
-
     transform:
       translate(-50%, -50%)
       rotate(0deg);
-
   }
-
 }
 
-
-@keyframes pulse {
-
-  0% {
-
-    opacity: 0.7;
-
-    transform:
-
-      translate(-50%, -50%)
-      scale(0.8);
-
-  }
-
+@keyframes reactor-pulse-ring {
+  0%,
   100% {
-
-    opacity: 0;
+    opacity: 0.35;
 
     transform:
-
       translate(-50%, -50%)
-      scale(1.45);
-
+      scale(0.95);
   }
 
+  50% {
+    opacity: 0.8;
+
+    transform:
+      translate(-50%, -50%)
+      scale(1.05);
+  }
+}
+
+@keyframes core-pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
 
@@ -2240,10 +1729,7 @@ export default {
 
 @media (max-width: 768px) {
 
-  /* DeeLMind */
-
   .hub-trigger {
-
     top:
       calc(
         66px +
@@ -2254,14 +1740,10 @@ export default {
 
     width: 52px;
     height: 52px;
-
   }
 
 
-  /* Ko-fi */
-
   .kofi-trigger {
-
     top:
       calc(
         126px +
@@ -2272,43 +1754,93 @@ export default {
 
     width: 52px;
     height: 52px;
-
   }
 
 
-  /* DeeLMind Panel */
+  .reactor-ring.ring-1 {
+    width: 36px;
+    height: 36px;
+  }
+
+  .reactor-ring.ring-2 {
+    width: 42px;
+    height: 42px;
+  }
+
+  .reactor-ring.ring-3 {
+    width: 46px;
+    height: 46px;
+  }
+
+
+  .reactor-core {
+    width: 23px;
+    height: 23px;
+  }
+
+
+  /*
+   * Mobile panel:
+   * centered instead of attached to the button.
+   */
 
   .hub-panel {
-
     top:
       calc(
         58px +
         env(safe-area-inset-top)
       );
 
-    left: 10px;
     right: 10px;
+    left: 10px;
 
     width: auto;
 
     max-height:
       calc(
-        100vh - 75px
+        100vh -
+        78px -
+        env(safe-area-inset-top)
       );
 
     overflow-y: auto;
 
-    padding: 14px;
+    -webkit-overflow-scrolling: touch;
 
     border-radius: 16px;
 
+    /*
+     * Keep it above overlay.
+     */
+    z-index: 10001;
   }
 
 
-  /* Ko-fi Modal */
+  .hub-header {
+    padding-bottom: 12px;
+  }
+
+
+  .nullmind-card {
+    padding: 13px;
+  }
+
+
+  .platform-card {
+    padding: 10px;
+  }
+
+
+  .social-card {
+    padding: 9px;
+  }
+
+
+  /*
+   * Mobile Ko-fi
+   */
 
   .kofi-modal {
-
     top:
       calc(
         58px +
@@ -2320,53 +1852,91 @@ export default {
 
     width: auto;
 
+    max-width: none;
+
     max-height:
       calc(
-        100vh - 70px
+        100vh -
+        70px -
+        env(safe-area-inset-top)
       );
 
-    border-radius: 16px;
+    overflow: hidden;
 
+    border-radius: 14px;
+
+    z-index: 10004;
   }
 
 
   .kofi-content {
-
-    height:
+    max-height:
       calc(
-        100vh - 126px
+        100vh -
+        128px -
+        env(safe-area-inset-top)
       );
 
     overflow-y: auto;
-
   }
 
 
   .kofi-content iframe {
-
     min-height: 712px;
-
-    height: 712px;
-
   }
 
 
-  /* Grid */
+  /*
+   * Make touch targets easier to hit.
+   */
 
-  .platform-grid,
+  .platform-card,
+  .social-card,
+  .hub-link,
+  .nullmind-card {
+    -webkit-tap-highlight-color:
+      transparent;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .hub-panel {
+    left: 7px;
+    right: 7px;
+
+    padding: 13px;
+  }
+
+
+  .platform-grid {
+    gap: 6px;
+  }
+
+
   .social-grid {
-
-    grid-template-columns:
-      1fr 1fr;
-
+    gap: 6px;
   }
 
 
-  .platform-wide {
+  .hub-links {
+    gap: 6px;
+  }
 
-    grid-column:
-      span 2;
 
+  .platform-name {
+    font-size: 9px;
+  }
+
+
+  .platform-desc {
+    font-size: 6px;
   }
 
 }
