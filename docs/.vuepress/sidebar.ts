@@ -975,7 +975,7 @@ export default sidebar({
     // },
     "me",
     // "group",
-    "services",
+    "one2one",
     "com",
     "alive",
     "platform",
