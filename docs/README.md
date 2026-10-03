@@ -16,7 +16,7 @@ actions:
     type: primary
 
   - text: 商品&合作
-    link: /pay/com
+    link: https://deelmind.org
     type: primary
 
   - text: 新手【免费】网络安全【视频教程】学习👇路线👇

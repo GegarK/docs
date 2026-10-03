@@ -420,6 +420,83 @@
       ></div>
     </transition>
 
+
+    <!-- =========================
+         Alipay Trigger
+    ========================== -->
+    <button
+      class="alipay-trigger"
+      aria-label="支付宝支持 DeeLMind"
+      @click="toggleAlipay"
+    >
+      <span class="alipay-trigger-icon">支</span>
+    </button>
+
+
+    <!-- =========================
+         Alipay Modal
+    ========================== -->
+    <transition name="alipay-fade">
+      <div
+        v-if="isAlipayOpen"
+        class="alipay-modal"
+      >
+
+        <div class="alipay-header">
+
+          <div>
+            <div class="alipay-title">
+              SUPPORT DEELMIND
+            </div>
+
+            <div class="alipay-subtitle">
+              支付宝 / ALIPAY
+            </div>
+          </div>
+
+          <button
+            class="alipay-close"
+            aria-label="Close"
+            @click="closeAlipay"
+          >
+            ×
+          </button>
+
+        </div>
+
+
+        <div class="alipay-content">
+
+          <div class="alipay-qr-wrap">
+            <img
+              class="alipay-qr"
+              src="/alipaymoney.jpg"
+              alt="支付宝收款码"
+            />
+          </div>
+
+          <div class="alipay-tip">
+            <span class="alipay-tip-main">感谢支持呀🌞</span>
+            <small>SCAN WITH ALIPAY</small>
+          </div>
+
+        </div>
+
+      </div>
+    </transition>
+
+
+    <!-- =========================
+         Alipay Mobile Overlay
+    ========================== -->
+    <transition name="overlay-fade">
+      <div
+        v-if="isAlipayOpen && isMobile"
+        class="alipay-overlay"
+        @click="closeAlipay"
+      ></div>
+    </transition>
+
   </div>
 </template>
 
@@ -432,6 +509,7 @@ export default {
     return {
       isOpen: false,
       isKofiOpen: false,
+      isAlipayOpen: false,
       isMobile: false,
       closeTimer: null,
     };
@@ -477,6 +555,10 @@ export default {
       this.clearCloseTimer();
 
       this.isOpen = true;
+
+      // 悬停打开 Hub 时，关闭支持弹窗
+      this.isKofiOpen = false;
+      this.isAlipayOpen = false;
     },
 
     togglePanel() {
@@ -486,6 +568,7 @@ export default {
 
       if (this.isOpen) {
         this.isKofiOpen = false;
+        this.isAlipayOpen = false;
       }
     },
 
@@ -527,11 +610,31 @@ export default {
 
       if (this.isKofiOpen) {
         this.isOpen = false;
+        this.isAlipayOpen = false;
       }
     },
 
     closeKofi() {
       this.isKofiOpen = false;
+    },
+
+
+    /* =========================
+       Alipay
+    ========================== */
+
+    toggleAlipay() {
+      this.isAlipayOpen =
+        !this.isAlipayOpen;
+
+      if (this.isAlipayOpen) {
+        this.isOpen = false;
+        this.isKofiOpen = false;
+      }
+    },
+
+    closeAlipay() {
+      this.isAlipayOpen = false;
     },
 
   },
@@ -549,6 +652,9 @@ export default {
   --green: #00e89a;
   --green-soft: #00c98b;
   --cyan: #00d9c8;
+
+  --alipay: #1677ff;
+  --alipay-soft: #5aa2ff;
 
   --panel: rgba(24, 32, 34, 0.96);
   --panel-soft: rgba(255, 255, 255, 0.045);
@@ -1399,7 +1505,8 @@ export default {
  */
 
 .mobile-overlay,
-.kofi-overlay {
+.kofi-overlay,
+.alipay-overlay {
   position: fixed;
 
   inset: 0;
@@ -1611,6 +1718,276 @@ export default {
 
 
 /* =========================================================
+   ALIPAY TRIGGER
+========================================================= */
+
+.alipay-trigger {
+  position: fixed;
+
+  top: 204px;
+  right: 18px;
+
+  width: 56px;
+  height: 56px;
+
+  padding: 0;
+
+  border:
+    1px solid rgba(22, 119, 255, 0.3);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(22, 119, 255, 0.14),
+      rgba(10, 16, 24, 0.96) 68%
+    );
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 0 18px rgba(22, 119, 255, 0.16),
+    inset 0 0 16px rgba(22, 119, 255, 0.07);
+
+  z-index: 10005;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.alipay-trigger:hover {
+  transform: scale(1.06);
+
+  box-shadow:
+    0 0 26px rgba(22, 119, 255, 0.34),
+    inset 0 0 18px rgba(22, 119, 255, 0.12);
+}
+
+.alipay-trigger-icon {
+  width: 26px;
+  height: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: var(--alipay);
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  line-height: 1;
+
+  box-shadow:
+    0 0 10px rgba(22, 119, 255, 0.5);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   ALIPAY MODAL
+========================================================= */
+
+.alipay-modal {
+  position: fixed;
+
+  top: 68px;
+  right: 84px;
+
+  width: 330px;
+
+  max-width: calc(100vw - 100px);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(24, 31, 42, 0.98),
+      rgba(15, 21, 30, 0.98)
+    );
+
+  border:
+    1px solid rgba(22, 119, 255, 0.22);
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.48),
+    0 0 30px rgba(22, 119, 255, 0.08);
+
+  z-index: 10004;
+}
+
+
+/* =========================================================
+   ALIPAY HEADER
+========================================================= */
+
+.alipay-header {
+  height: 58px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  background:
+    rgba(22, 119, 255, 0.05);
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.07);
+}
+
+.alipay-title {
+  color: #f5f5f5;
+
+  font-family:
+    "Orbitron",
+    monospace;
+
+  font-size: 11px;
+
+  letter-spacing: 1.4px;
+}
+
+.alipay-subtitle {
+  margin-top: 3px;
+
+  color: var(--alipay-soft);
+
+  font-family: monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 1px;
+}
+
+.alipay-close {
+  width: 30px;
+  height: 30px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background:
+    rgba(255, 255, 255, 0.06);
+
+  color: #999;
+
+  font-size: 20px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
+}
+
+.alipay-close:hover {
+  background:
+    rgba(255, 255, 255, 0.11);
+
+  color: white;
+}
+
+
+/* =========================================================
+   ALIPAY CONTENT
+========================================================= */
+
+.alipay-content {
+  padding: 16px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.alipay-qr-wrap {
+  width: 100%;
+
+  padding: 8px;
+
+  box-sizing: border-box;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  border:
+    1px solid rgba(22, 119, 255, 0.35);
+
+  box-shadow:
+    0 0 20px rgba(22, 119, 255, 0.16);
+}
+
+.alipay-qr {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-height: 60vh;
+
+  object-fit: contain;
+
+  border-radius: 6px;
+}
+
+.alipay-tip {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+
+  gap: 3px;
+}
+
+.alipay-tip-main {
+  color: #dbe9ff;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.alipay-tip small {
+  color: #5f7799;
+
+  font-family: monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 1.4px;
+}
+
+
+/* =========================================================
    TRANSITIONS
 ========================================================= */
 
@@ -1644,14 +2021,18 @@ export default {
 
 
 .kofi-fade-enter-active,
-.kofi-fade-leave-active {
+.kofi-fade-leave-active,
+.alipay-fade-enter-active,
+.alipay-fade-leave-active {
   transition:
     opacity 0.2s ease,
     transform 0.2s ease;
 }
 
 .kofi-fade-enter-from,
-.kofi-fade-leave-to {
+.kofi-fade-leave-to,
+.alipay-fade-enter-from,
+.alipay-fade-leave-to {
   opacity: 0;
 
   transform:
@@ -1747,6 +2128,20 @@ export default {
     top:
       calc(
         126px +
+        env(safe-area-inset-top)
+      );
+
+    right: 14px;
+
+    width: 52px;
+    height: 52px;
+  }
+
+
+  .alipay-trigger {
+    top:
+      calc(
+        186px +
         env(safe-area-inset-top)
       );
 
@@ -1883,6 +2278,46 @@ export default {
 
   .kofi-content iframe {
     min-height: 712px;
+  }
+
+
+  /*
+   * Mobile Alipay
+   */
+
+  .alipay-modal {
+    top:
+      calc(
+        58px +
+        env(safe-area-inset-top)
+      );
+
+    left: 10px;
+    right: 10px;
+
+    width: auto;
+
+    max-width: none;
+
+    max-height:
+      calc(
+        100vh -
+        70px -
+        env(safe-area-inset-top)
+      );
+
+    overflow-y: auto;
+
+    -webkit-overflow-scrolling: touch;
+
+    border-radius: 14px;
+
+    z-index: 10004;
+  }
+
+
+  .alipay-qr {
+    max-height: 55vh;
   }
 
 

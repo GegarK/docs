@@ -8,4 +8,4 @@
 6. 软件开发
 7. 总而言之有任何需求可以[咨询我](/pay/me)
 
-# [商品购买&商务合作](https://shop.deelmind.com)
+# [商品购买&商务合作](https://deelmind.org)
