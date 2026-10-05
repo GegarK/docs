@@ -19,6 +19,10 @@ actions:
     link: https://deelmind.org
     type: primary
 
+  - text: AlphaFinHack
+    link: https://alpha.deelmind.com
+    type: primary
+
   - text: 新手【免费】网络安全【视频教程】学习👇路线👇
     link: /pay/video
     type: primary
