@@ -4,7 +4,7 @@ icon: home
 title: 極客方舟
 heroImage: /geekfz.png
 heroText: 極客方舟
-tagline: 懂進攻，知防守；先正向，後逆向
+tagline: 懂進攻，知防守；先正向，後逆向；精量化，善交易；
 
 actions:
   - text: 一对一辅导
